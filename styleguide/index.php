@@ -12,7 +12,7 @@
             
             <h2>UI Documentation</h2>
             <ul>
-                <li><a href="./styleguide/layout">Layout</a></li>
+                <li><a href="/styleguide/layout">Layout</a></li>
                 <li><a href="">Links go here</a></li>
             </ul>
             
