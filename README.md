@@ -2,6 +2,9 @@
 
 ## Website Links ##
 * Homepage:
-* Styleguide: 
+* Styleguide:
 
 _Markdown Cheatsheet_: https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
+
+## How to run Gitpod server ##
+`php -S localhost:8080`
