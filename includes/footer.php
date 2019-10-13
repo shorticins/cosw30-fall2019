@@ -15,7 +15,7 @@
 
         </div>
 
-        <hr>
+
 
         <div class="row">
             <a href="/" class="one column">About</a>
