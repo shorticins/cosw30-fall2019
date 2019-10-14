@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Treat Street</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
 </head>
