@@ -19,48 +19,48 @@
             you want it to be (ex. ".one", ".two", up to ".eleven") and add the ".column" or ".columns" class.</p>
             <div class="example-grid docs-example">
                 <div class="row">
-                  <div class="one column bg-color--grey margin-b--md">One</div>
-                  <div class="eleven columns bg-color--grey margin-b--md">Eleven</div>
+                  <div class="one column u-bg-color--grey-light margin-b--md">One</div>
+                  <div class="eleven columns u-bg-color--grey-light margin-b--md">Eleven</div>
                 </div>
                 <div class="row">
-                  <div class="two columns bg-color--grey margin-b--md">Two</div>
-                  <div class="ten columns bg-color--grey margin-b--md">Ten</div>
+                  <div class="two columns u-bg-color--grey-light margin-b--md">Two</div>
+                  <div class="ten columns u-bg-color--grey-light margin-b--md">Ten</div>
                 </div>
                 <div class="row">
-                  <div class="three columns bg-color--grey margin-b--md">Three</div>
-                  <div class="nine columns bg-color--grey margin-b--md">Nine</div>
+                  <div class="three columns u-bg-color--grey-light margin-b--md">Three</div>
+                  <div class="nine columns u-bg-color--grey-light margin-b--md">Nine</div>
                 </div>
                 <div class="row">
-                  <div class="four columns bg-color--grey margin-b--md">Four</div>
-                  <div class="eight columns bg-color--grey margin-b--md">Eight</div>
+                  <div class="four columns u-bg-color--grey-light margin-b--md">Four</div>
+                  <div class="eight columns u-bg-color--grey-light margin-b--md">Eight</div>
                 </div>
                 <div class="row">
-                  <div class="five columns bg-color--grey margin-b--md">Five</div>
-                  <div class="seven columns bg-color--grey margin-b--md">Seven</div>
+                  <div class="five columns u-bg-color--grey-light margin-b--md">Five</div>
+                  <div class="seven columns u-bg-color--grey-light margin-b--md">Seven</div>
                 </div>
                 <div class="row">
-                  <div class="six columns bg-color--grey margin-b--md">Six</div>
-                  <div class="six columns bg-color--grey margin-b--md">Six</div>
+                  <div class="six columns u-bg-color--grey-light margin-b--md">Six</div>
+                  <div class="six columns u-bg-color--grey-light margin-b--md">Six</div>
                 </div>
                 <div class="row">
-                  <div class="seven columns bg-color--grey margin-b--md">Seven</div>
-                  <div class="five columns bg-color--grey margin-b--md">Five</div>
+                  <div class="seven columns u-bg-color--grey-light margin-b--md">Seven</div>
+                  <div class="five columns u-bg-color--grey-light margin-b--md">Five</div>
                 </div>
                 <div class="row">
-                  <div class="eight columns bg-color--grey margin-b--md">Eight</div>
-                  <div class="four  columns bg-color--grey margin-b--md">Four</div>
+                  <div class="eight columns u-bg-color--grey-light margin-b--md">Eight</div>
+                  <div class="four  columns u-bg-color--grey-light margin-b--md">Four</div>
                 </div>
                 <div class="row">
-                  <div class="nine columns bg-color--grey margin-b--md">Nine</div>
-                  <div class="three columns bg-color--grey margin-b--md">Three</div>
+                  <div class="nine columns u-bg-color--grey-light margin-b--md">Nine</div>
+                  <div class="three columns u-bg-color--grey-light margin-b--md">Three</div>
                 </div>
                 <div class="row">
-                  <div class="ten columns bg-color--grey margin-b--md">Ten</div>
-                  <div class="two columns bg-color--grey margin-b--md">Two</div>
+                  <div class="ten columns u-bg-color--grey-light margin-b--md">Ten</div>
+                  <div class="two columns u-bg-color--grey-light margin-b--md">Two</div>
                 </div>
                 <div class="row">
-                  <div class="eleven columns bg-color--grey margin-b--md">Eleven</div>
-                  <div class="one column bg-color--grey margin-b--md">One</div>
+                  <div class="eleven columns u-bg-color--grey-light margin-b--md">Eleven</div>
+                  <div class="one column u-bg-color--grey-light margin-b--md">One</div>
                 </div>
              </div>
         </main>
