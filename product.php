@@ -1,9 +1,6 @@
 <?php include 'includes/header.php'; ?>
 
 
-<!--import css skeleton-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"/>
-
 <main>
 <!--Internal Product Navigation Links-->
     <div class="row"> <!--one-->
