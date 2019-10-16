@@ -3,33 +3,31 @@
 
 <main>
 <!--Internal Product Navigation Links-->
-    <div class="row"> <!--one-->
+    <div class="row">
         <div class="twelve columns">
             <nav>
-                <a href="">Home</a> >>
-                <a href="">Dogs</a> >>
-                <a href="">Food</a> >>
-                <a href="">Desserts</a>
+                <ul>
+                    <li><a href="">Home</a> >> </li>
+                    <li><a href="">Dogs</a> >> </li>
+                    <li><a href="">Food</a> >> </li>
+                    <li><a href="">Desserts</a></li>
+                </ul>
             </nav>
         </div>
     </div>
 
     <!--Product Name-->
-    <div class="row"> <!--two-->
-        <div class="six columns">
+    <div class="row">
+        <div class="twelve columns">
             <h1>Product Name</h1>
         </div>
-
-        <!--BLANK SIX CLOUMNS-->
-
     </div>
 
     <!--Product Image and purchasing information-->
-    <div class="row"> <!--three-->
+    <div class="row">
         <div class="six columns">
             <figure>
-                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:300px; height:400px" title="Main Image" alt"Sweet-tart cupcake"/>
-                <!--<figcaption></figcaption>-->
+                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:300px; height:400px" title="Main Image" alt="Sweet-tart cupcake">
             </figure>
         </div>
         <div class="six columns">
@@ -41,7 +39,7 @@
             <p>Price: $ price variable</p>
 
             <form action="" method="POST">
-                <label>Quantity
+                <label for="quantity">Quantity
                     <select id="quantity" name="quantity" size="1" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -78,7 +76,7 @@
     </div>
 
     <!--Thumbnail Images-->
-    <div class="row"> <!--four-->
+    <div class="row">
         <div class="six columns">
             <a href="">
                 <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Main Image 1" alt="Dessert"/>
@@ -91,12 +89,11 @@
             </a>
         </div>
 
-        <!--BLANK SIX CLOUMNS-->
 
     </div>
 
     <!--Product Description-->
-    <div class="row"> <!--five-->
+    <div class="row">
         <div class="twelve columns">
             <h3>Product Description</h3>
             <p>Bacon ipsum dolor amet pancetta doner filet mignon picanha salami cow.
@@ -108,7 +105,7 @@
     </div>
 
     <!--Product Ingredients-->
-    <div class="row"> <!--six-->
+    <div class="row">
         <div class="twelve columns">
             <h3>Ingredients</h3>
             <p>Bacon ipsum dolor amet pancetta doner filet mignon picanha salami cow.
@@ -120,7 +117,7 @@
     </div>
 
     <!--Customer Reviews-->
-    <div class="row" id="reviews"><!--seven-->
+    <div class="row" id="reviews">
         <div class="twelve columns">
             <h3>Customer Reviews</h3>
             <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-v1-0-outline-1/96/Review_Star-128.png" style="width:50px; height:50px" title="Ratings" alt="Three-star rating"/>
@@ -133,18 +130,18 @@
     </div>
 
     <!--Product Recommendation title-->
-    <div class="row"> <!--eight-->
+    <div class="row">
         <div class="twelve columns">
             <h3>More PAWS-itvely Awesome Products</h3>
         </div>
     </div>
 
     <!--Product Recommendation images and links-->
-    <div class="row"> <!--nine-->
+    <div class="row">
         <div class="four columns">
             <figure>
                 <a href="">
-                    <img src="https://images.pexels.com/photos/913134/pexels-photo-913134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Pupcorn Cake" alt"Pupcorn Cake"/>
+                    <img src="https://images.pexels.com/photos/913134/pexels-photo-913134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Pupcorn Cake" alt="Pupcorn Cake"/>
                 </a>
                 <figcaption>Pupcorn Cake</figcaption>
             </figure>
@@ -152,7 +149,7 @@
         <div class="four columns">
             <figure>
                 <a href="">
-                    <img src="https://images.pexels.com/photos/2957897/pexels-photo-2957897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Choco-buns" alt"Choco-buns"/>
+                    <img src="https://images.pexels.com/photos/2957897/pexels-photo-2957897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Choco-buns" alt="Choco-buns"/>
                 </a>
                 <figcaption>Choco-buns</figcaption>
             </figure>
@@ -160,22 +157,13 @@
         <div class="four columns">
             <figure>
                 <a href="">
-                    <img src="https://images.pexels.com/photos/2525682/pexels-photo-2525682.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Berry Tart Cake" alt"Berry Tart Cake"/>
+                    <img src="https://images.pexels.com/photos/2525682/pexels-photo-2525682.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Berry Tart Cake" alt="Berry Tart Cake"/>
                 </a>
                 <figcaption>Berry Tart Cake</figcaption>
             </figure>
         </div>
 
     </div>
-
-    <!--
-    row ten
-    <div class="row"></div>
-    row eleven
-    <div class="row"></div>
-    row twelve
-    <div class="row"></div>
-    -->
 
 </main>
 
