@@ -7,17 +7,17 @@
     </head>
     <body>
         <main class="container">
-            <h1>*Website Name* - Styleguide</h1>
+            <h1>Treat Street - Styleguide</h1>
             <p>This styleguide houses all of the styles and documentation related to the *website name* website.</p>
-            
+
             <h2>UI Documentation</h2>
             <ul>
                 <li><a href="/styleguide/layout">Layout</a></li>
                 <li><a href="">Links go here</a></li>
             </ul>
-            
+
             <h2>Branding</h2>
-            <p>You can put more information about the overall brand of our website here.</p> 
+            <p>You can put more information about the overall brand of our website here.</p>
         </main>
     </body>
 </html>
