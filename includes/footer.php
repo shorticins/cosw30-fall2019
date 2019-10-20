@@ -1,4 +1,5 @@
 <!-- START FOOTER -->
+
     <footer>
         <div class="row">
             <a href="/" class="one column"><i class="far fa-envelope"></i></a>
