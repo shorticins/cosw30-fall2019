@@ -3,7 +3,7 @@ function listOfLinks($category, $subcats) {
     echo "<Div id='$category'>
         <ul id=$category><a href='$category/' title='$category'>$category</a>";
     foreach ($subcats as $item){
-        echo "<li><a href='$item/' title='$item'>$item</a></li>";
+        echo "<li><a href='$category/$item.php' title='$item'>$item</a></li>";
     }
     echo "</ul>
         </div>";    
