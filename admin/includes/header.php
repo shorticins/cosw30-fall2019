@@ -17,7 +17,7 @@
     <!-- Sidebar -->
     <nav id="sidebar" class="bg-light">
         <div class="sidebar-header text-center">
-            <img id="admin_logo" src="includes/treatstreet_logo_ver02_logo_only1_wBACKGROUND%20%281%29.png" alt="logo">
+            <img id="treatstreet_logo" src="images/treatstreet_logo.png" alt=" treat steet logo">
             <h3 class="text-justify">Dashboard</h3>
         </div>
         <ul class="admin_menu text-justify">
