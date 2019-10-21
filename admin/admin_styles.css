@@ -1,0 +1,58 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    font-size: 16px;
+    width: 175px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    border-right: .25px solid #222;
+}
+#admin_logo{
+    padding-top: 20px;
+    width: 80%;
+    margin: auto;
+}
+#sidebar h3 {
+    padding-top: 15px;
+    padding-left: 35px;
+}
+#sidebar .admin_menu {
+    padding-left: 35px;
+   margin-top: 12px;
+    list-style-type: none;
+    width: 100%;
+
+}
+
+#productform-content{
+    padding-top: 75px;
+    width: 70%;
+    margin: auto;
+}
+#product_form{
+    position: relative;
+    padding-top: 50px;
+    width: 70%;
+    margin: 0 auto 50px 150px;
+    font-size: 20px;
+}
+#product_form_button{
+    margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#admin_footer {
+    align-items: flex-end;
+    flex-shrink: none;
+    font-size: 16px;
+    padding-top: 30px;
+    width: 100%;
+    margin-left: 50px;
+}
