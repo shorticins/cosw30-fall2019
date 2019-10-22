@@ -425,6 +425,18 @@ th {
     and modules
 
 -----------------------------------------------*/
+.pagination {
+  list-style: none;
+  text-align: center;
+}
+.pagination__button, .pagination__number {
+  display: inline-block;
+}
+.pagination__button a, .pagination__number a {
+  display: block;
+  padding: 10px 15.4375px;
+}
+
 /*
 * Skeleton V2.0.4
 * Copyright 2014, Dave Gamache
