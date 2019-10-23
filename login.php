@@ -3,9 +3,8 @@
 
     <div id="content-wrap">
 
+        <form action="" method="POST">
 
-
-        <form action="login.php" method="POST">
             <div class="container">
 
                 <h1>Login Form</h1>
@@ -26,5 +25,7 @@
                 </div>
             </div>
         </form>
-    <?php include('includes/footer.php');?>
+
     </div>
+</div>
+<?php include('includes/footer.php');?>

@@ -3,13 +3,12 @@
 
     <div id="content-wrap">
 
-
         <div class="container">
 
             <h1>Register Today</h1>
             <hr>
 
-            <form action="register.php" method="POST">
+            <form action="" method="POST">
 
                 <label>First Name:</label><br>
                 <input type="text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" >
@@ -31,6 +30,7 @@
             </form>
         </div>
 
-        <?php include('includes/footer.php');?>
     </div>
+
 </div>
+ <?php include('includes/footer.php');?>
