@@ -1,0 +1,69 @@
+
+.alert-primary {
+   background-color: $color__white;
+   font-family: $primary-font-family;
+   width: 40%;
+   margin:auto;
+   padding:15px;
+   border-radius: 5px;
+  border:solid 1px;
+   text-align: center;
+
+
+}
+
+.alert-success-h {
+  font-size:25px;
+  padding-top:15px;
+  color:$color__green;
+
+}
+
+.alert-p {
+  padding-bottom:15px;
+  margin:50px
+}
+
+.alert-success-btn {
+display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 250px;
+	height: 50px;
+	border: 2px solid $color__green;
+	border-radius: 40px;
+	background: transparent;
+	color:  $color__green;
+	letter-spacing: 1px;
+	font-size: 15px;
+
+
+}
+
+
+.alert-error-btn {
+  color:$color__red--dark;
+  display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 250px;
+	height: 50px;
+	border: 2px solid $color__red--dark;
+  background:$color__red--dark;
+  border-radius: 40px;
+	color:  $color__white;
+	letter-spacing: 1px;
+	font-size: 15px;
+
+}
+.alert-error-h {
+  color:$color__red--dark;
+  font-size:25px;
+}
+
+.alert-warning {
+  padding: 20px;
+  background: $color__error;
+  color: white;
+  font-family:$primary-font-family;
+}
