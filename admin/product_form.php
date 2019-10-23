@@ -1,10 +1,12 @@
 <?php include("includes/header.php")?>
- <div class="col offset-3" id="productform-content" style="height:100vh;">
-<div class="text-center">
+ <div class="col-offset-3 align-content-center" id="productform-content" style="height:100vh;">
+<div class="col-offset-3 align-content-center text-center">
 <h1>New Product Information Form</h1>
+</div>
+<div class="col-offset-3 align-content-center text-center">
 <h2>All fields are required.</h2>
 </div>
-        <form id="product_form" method="POST" action="product_form.php">
+        <form class="col-lg-6 offset-lg-3 align-content-center" id="product_form" method="POST" action="product_form.php">
         <div class="form-group">
             <label for="product_name">Product Name</label>
             <input type="text" class="form-control" name="product_name" required><br>
@@ -33,8 +35,9 @@
                 <option value="treats">Treats</option> <br>
                 <option value="clothing">Clothing</option> <br>
             </select><br>
-
-        <button class="button-primary text-center" id="product_form_button" type="submit">Submit</button>
+        <div class="text-center">
+        <button class="button-primary" id="product_form_button" type="submit">Submit</button>
+        </div>
 </form>
 </div>
 

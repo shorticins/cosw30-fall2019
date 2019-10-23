@@ -12,24 +12,29 @@
     </head>
 
     <body>
-    <div class="container-fluid">
-    <div class="wrapper bg-light">
-    <!-- Sidebar -->
-    <nav id="sidebar" class="bg-light">
-        <div class="sidebar-header text-center">
-            <img id="treatstreet_logo" src="images/treatstreet_logo.png" alt=" treat steet logo">
-            <h3 class="text-justify">Dashboard</h3>
-        </div>
-        <ul class="admin_menu text-justify">
-        <li class="nav_links"><a href="#">Home</a></li>
-        <li class="nav_links"><a href="product_form.php">Product Form</a></li>
-        <li class="nav_links"><a href="#">Placeholder</a></li>
-        <li class="nav_links"><a href="#">Placeholder</a></li>
-        <li class="nav_links"><a href="#">Placeholder</a></li>
-        <li class="nav_links"><a href="#">Placeholder</a></li>
-        </ul>
+    <header>
+<div class="nav-side-menu bg-light">
+    <div class="brand justify-content-center"><img id="treatstreet_logo" src="images/treatstreet_logo.png" alt="treat steet logo"></div>
 
-    </nav>
-    </div>
+
+        <div class="menu-list">
+
+            <ul class= "menu-content justify-content-center" style="list-style-type: none; font-size: 14px; padding-top: 12px;">
+                <li>
+                  <a href="#">Dashboard</a>
+                </li>
+                <li  class="active">
+                  <a href="#">Product Form</a>
+                </li>
+                <li>
+                  <a href="#">Placeholder</a>
+                </li>
+                <li>
+                  <a href="#">Placeholder</a>
+                </li>
+
+                </li>
+            </ul>
+     </div>
 </div>
-
+</header>
