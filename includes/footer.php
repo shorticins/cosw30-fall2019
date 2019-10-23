@@ -1,5 +1,5 @@
 <!-- START FOOTER -->
-    <footer>
+    <footer class="container">
         <div class="row">
             <a href="/" class="one column"><i class="far fa-envelope"></i></a>
             <a href="/" class="one column"><i class="fas fa-mobile-alt"></i></a>

@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="container">
         <div class="row">
             <h2 style="background-color: #2E9E47" class="three columns">Treat Street</h2><!--replace with image-->
             <form action="/" method="GET" class="eight columns">
