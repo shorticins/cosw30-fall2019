@@ -1,18 +1,20 @@
 <?php include("includes/header.php")?>
- <div class="col-offset-3 align-content-center" id="productform-content" style="height:100vh;">
-<div class="col-offset-3 align-content-center text-center">
-<h1>New Product Information Form</h1>
-</div>
-<div class="col-offset-3 align-content-center text-center">
-<h2>All fields are required.</h2>
-</div>
-        <form class="col-lg-6 offset-lg-3 align-content-center" id="product_form" method="POST" action="product_form.php">
+
+<div class="col-offset-3 align-content-center" id="productform-content" style="height:100vh;">
+    <div class="col-offset-3 align-content-center text-center">
+        <h1>New Product Information Form</h1>
+    </div>
+    <div class="col-offset-3 align-content-center text-center">
+        <h2>All fields are required.</h2>
+    </div>
+
+    <form class="col-lg-6 offset-lg-3 align-content-center" id="product_form" method="POST" action="product_form.php">
         <div class="form-group">
             <label for="product_name">Product Name</label>
             <input type="text" class="form-control" name="product_name" required><br>
         </div>
         <div class="form-group">
-             <label for="product_description">Product Description</label>
+                <label for="product_description">Product Description</label>
             <input type="text" class="form-control"name="product_description" required> <br>
         </div>
         <div class="form-group">
@@ -38,7 +40,7 @@
         <div class="text-center">
         <button class="button-primary" id="product_form_button" type="submit">Submit</button>
         </div>
-</form>
+    </form>
 </div>
 
 <?php include("includes/footer.php");?>
