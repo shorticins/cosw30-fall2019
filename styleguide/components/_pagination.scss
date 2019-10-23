@@ -1,0 +1,14 @@
+.pagination {
+    list-style: none;
+    text-align: center;
+
+    &__button,
+    &__number {
+        display: inline-block;
+
+        a {
+            display: block;
+            padding: 10px 15.4375px;
+        }
+    }
+}
