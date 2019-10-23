@@ -28,6 +28,7 @@
             <img src="https://res.cloudinary.com/bayleigh/image/upload/v1571865396/UX%20styleguide/home_lc_kl2scx.png"> alt="home">
             <br>
             <img src="https://res.cloudinary.com/bayleigh/image/upload/v1571865410/UX%20styleguide/sign_image_template_1_bojai8.png" alt="sign_template">
+            <br>
 
         </main>
     </body>
