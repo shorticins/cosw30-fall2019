@@ -498,22 +498,25 @@ th {
   padding: 0.75em 1.25em;
   font-size: 1em;
   color: #000;
+  /* REGULAR BUTTON COLORS */
+  /* OUTLINE BUTTONS */
 }
-
-/* REGULAR BUTTON COLORS */
 .btn--green {
   background-color: #2E9347;
   color: #FFF;
 }
-
 .btn--black {
   background-color: #000;
   color: #FFF;
 }
-
 .btn--blue--light {
   background-color: #9CC0F0;
   color: #000;
+}
+.btn--outline--green {
+  background-color: #FFF;
+  border-color: #2E9347;
+  color: #2E9347;
 }
 
 .btn--grey--light {
@@ -534,13 +537,6 @@ th {
 .btn--white {
   background-color: #FFF;
   color: #000;
-}
-
-/* OUTLINE BUTTONS */
-.btn--outline--green {
-  background-color: #FFF;
-  border-color: #2E9347;
-  color: #2E9347;
 }
 
 .btn--outline--black {
