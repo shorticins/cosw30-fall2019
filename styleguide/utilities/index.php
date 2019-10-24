@@ -1,14 +1,10 @@
-<?php
-include '../includes/header.php';
+<?php include 'styleguide_header.php';
+      include 'styleguide_navigation.php';
 ?>
+<main class="container">
+    <h1>Utilities</h1>
+    <p>The following utilities are related to the styleguide page</p>
+    <hr>
+</main>
 
-<?php
-echo "<h1>Utilities homepage</h1>";
-
-?>
-
-
-
-<?php
-include '../includes/footer.php';
-?>
+<?php include 'styleguide_footer.php'; ?>
