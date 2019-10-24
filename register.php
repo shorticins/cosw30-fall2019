@@ -4,6 +4,7 @@
     <div id="content-wrap">
 <?php
 
+<<<<<<< HEAD:register.php
 $first_name = $last_name = $email = $password = $confirm_password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -27,12 +28,18 @@ function test_input($data) {
 }
 ?>
 
+=======
+>>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb:registration.php
         <div class="container">
 
             <h1>Register Today</h1>
             <hr>
 
+<<<<<<< HEAD:register.php
             <form action="<?php echo htmlspecialchars($_SERVER["register1"]);?>" method="POST">
+=======
+            <form action="" method="POST">
+>>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb:registration.php
 
                 <label>First Name:</label><br>
                 <input type="text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" >
@@ -65,6 +72,7 @@ echo $password;
 
 ?>
 
-        <?php include('includes/footer.php');?>
     </div>
+
 </div>
+ <?php include('includes/footer.php');?>

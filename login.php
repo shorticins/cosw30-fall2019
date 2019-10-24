@@ -3,7 +3,9 @@
 
     <div id="content-wrap">
 
+        <form action="" method="POST">
 
+<<<<<<< HEAD
 <?php
              $email = $password = "";
              if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,6 +20,8 @@
 }
              ?>
         <form action="<?php echo htmlspecialchars($_SERVER["login1"]);?>" method="POST">
+=======
+>>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb
             <div class="container">
 
                 <h1>Login Form</h1>
@@ -39,6 +43,7 @@
             </div>
         </form>
 
+<<<<<<< HEAD
       <?php
 echo "<h2>Your Input:</h2>";
 
@@ -50,3 +55,8 @@ echo $password;
 
     <?php include('includes/footer.php');?>
     </div>
+=======
+    </div>
+</div>
+<?php include('includes/footer.php');?>
+>>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb
