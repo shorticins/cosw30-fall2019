@@ -7,22 +7,29 @@
     padding: 0.75em 1.25em;
     font-size: 1em;
     color: $color__black;
-}
 
-/* REGULAR BUTTON COLORS */
-.btn--green {
-    background-color: $color__green;
-    color: $color__white;
-}
-
-.btn--black {
-    background-color: $color__black;
-    color: $color__white;
-}
-
-.btn--blue--light {
-    background-color: $color__blue--light;
-    color: $color__black;
+    /* REGULAR BUTTON COLORS */
+    &--green {
+        background-color: $color__green;
+        color: $color__white;
+    }
+    &--black {
+        background-color: $color__black;
+        color: $color__white;
+    }
+    &--blue--light {
+        background-color: $color__blue--light;
+        color: $color__black;
+    }
+    /* OUTLINE BUTTONS */
+    // .btn--outline--green
+    &--outline {
+        &--green {
+            background-color: $color__white;
+            border-color: $color__green;
+            color: $color__green;
+        }
+    }
 }
 
 .btn--grey--light {
@@ -45,12 +52,7 @@
     color: $color__black;
 }
 
-/* OUTLINE BUTTONS */
-.btn--outline--green {
-    background-color: $color__white;
-    border-color: $color__green;
-    color: $color__green;
-}
+
 
 .btn--outline--black {
     background-color: $color__white;
