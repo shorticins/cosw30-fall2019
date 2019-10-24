@@ -2,14 +2,37 @@
 <div id="page-container">
 
     <div id="content-wrap">
+<?php
 
+$first_name = $last_name = $email = $password = $confirm_password = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $first_name = test_input($_POST["first_name"]);
+  $last_name = test_input($_POST["last_name"]);
+  $email = test_input($_POST["email"]);
+  $password = test_input($_POST["password"]);
+  $confirm_password = test_input($_POST["password"]);
+
+}
+else
+{
+    echo '<h1>Sorry try again</h1>';
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
 
         <div class="container">
 
             <h1>Register Today</h1>
             <hr>
 
-            <form action="register.php" method="POST">
+            <form action="<?php echo htmlspecialchars($_SERVER["register1"]);?>" method="POST">
 
                 <label>First Name:</label><br>
                 <input type="text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" >
@@ -30,6 +53,17 @@
                 <br><button>Register!</button>
             </form>
         </div>
+        <?php
+echo "<h2>Your Registration Details:</h2>";
+echo $first_name;
+echo "<br>";
+echo $last_name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $password;
+
+?>
 
         <?php include('includes/footer.php');?>
     </div>
