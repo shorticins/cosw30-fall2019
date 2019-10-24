@@ -1,78 +1,76 @@
 <?php include('includes/header.php');?>
-<div id="page-container">
 
-    <div id="content-wrap">
 <?php
 
-<<<<<<< HEAD:register.php
 $first_name = $last_name = $email = $password = $confirm_password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $first_name = test_input($_POST["first_name"]);
-  $last_name = test_input($_POST["last_name"]);
-  $email = test_input($_POST["email"]);
-  $password = test_input($_POST["password"]);
-  $confirm_password = test_input($_POST["password"]);
+  $first_name = ($_POST["first_name"]);
+  $last_name = ($_POST["last_name"]);
+  $email = ($_POST["email"]);
+  $password = ($_POST["password"]);
+  $confirm_password = ($_POST["confirm_password"]);
+
+
+//form validation
+if(empty($first_name)){
+    echo "<p> First name is required</p>";
+}
+if(empty($last_name)){
+    echo "<p> Last name is required</p>";
+}
+if(empty($email)){
+    echo "<p> Email is required</p>";
+}
+if(empty($password)){
+    echo "<p> Enter a password</p>";
+}
+if (empty($confirm_password)) {
+    echo "<p> Confirm the password</p>";
+}
+
+  if( !empty($first_name) && !empty($last_name) && !empty($email) && !empty($password) && $confirm_password === $password) {
+echo"<p> You have successfully registered. Your registration details:</p>";
+   echo "First name: " . $first_name . "<br>";
+           echo  "Last name: " . $last_name . "<br>";
+                echo "Email Address: " . $email . "<br>";
+} else {
+    echo "<p>The Passwords Do Not Match.</p>";
+    echo "<a href='register.php'>Go Back</a>";
+}
 
 }
-else
-{
-    echo '<h1>Sorry try again</h1>';
-}
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
 ?>
 
-=======
->>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb:registration.php
-        <div class="container">
+
+        <main class="container">
 
             <h1>Register Today</h1>
             <hr>
 
-<<<<<<< HEAD:register.php
-            <form action="<?php echo htmlspecialchars($_SERVER["register1"]);?>" method="POST">
-=======
             <form action="" method="POST">
->>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb:registration.php
 
-                <label>First Name:</label><br>
-                <input type="text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" >
+                <label for="first_name">First Name:</label><br>
+                <input type="text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" required>
 
-                <br><label>Last Name:</label><br>
-                <input type="text" name="last_name" id="last_name" value="<?php echo $last_name; ?>" >
+                <br><label for="last_name">Last Name:</label><br>
+                <input type="text" name="last_name" id="last_name" value="<?php echo $last_name; ?>" required>
 
-                <br><label>Email Address:</label><br>
-                <input type="email" name="email" id="email" value="<?php echo $email; ?>" >
+                <br><label for="email">Email Address:</label><br>
+                <input type="email" name="email" id="email" value="<?php echo $email; ?>" required>
 
-                <br><label>Password:</label><br>
-                <input type="password" name="password" id="password" value="<?php echo $password; ?>" >
+                <br><label for="password">Password:</label><br>
+                <input type="password" name="password" id="password" value="<?php echo $password; ?>" required>
 
-                <br><label>Confirm Password:</label><br>
-                <input type="password" name="confirm_password" id="confirm_password" value="<?php echo $confirm_password; ?>" >
+                <br><label for="confirm_password">Confirm Password:</label><br>
+                <input type="password" name="confirm_password" id="confirm_password" value="<?php echo $confirm_password; ?>" required>
 
 
                 <br><button>Register!</button>
             </form>
+
+
         </div>
-        <?php
-echo "<h2>Your Registration Details:</h2>";
-echo $first_name;
-echo "<br>";
-echo $last_name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $password;
 
-?>
-
-    </div>
-
-</div>
  <?php include('includes/footer.php');?>

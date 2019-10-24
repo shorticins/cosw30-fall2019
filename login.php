@@ -5,7 +5,6 @@
 
         <form action="" method="POST">
 
-<<<<<<< HEAD
 <?php
              $email = $password = "";
              if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -19,31 +18,32 @@
   return $data;
 }
              ?>
-        <form action="<?php echo htmlspecialchars($_SERVER["login1"]);?>" method="POST">
-=======
->>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb
-            <div class="container">
+
+<main class="container">
+
+    <form action="<?php echo ($_SERVER["login"]);?>" method="POST">
 
                 <h1>Login Form</h1>
                 <p>Please fill in this form to create an account.</p>
                 <hr>
 
-                <label>Email Address:</label><br>
+                <label = "email">Email Address:</label><br>
                 <input type="email" name="email" id="email" value="<?php echo $email; ?>">
 
-                <br><label>Password:</label><br>
-                <input type="password" name="password" id="password" >
+                <br><label = "password">Password:</label><br>
+                <input type= "password" name="password" id="password" >
 
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
 
                 <div class="clearfix">
-                    <button name="Cancel" class="cancelbutton">Cancel</button>
-                    <button name="Login in" class="loginbutton">Log in!</button>
+                    <button name="Cancel">Cancel</button>
+                    <button name="Login in">Log in!</button>
                 </div>
-            </div>
-        </form>
 
-<<<<<<< HEAD
+    </form>
+
+</main>
+
       <?php
 echo "<h2>Your Input:</h2>";
 
@@ -55,8 +55,6 @@ echo $password;
 
     <?php include('includes/footer.php');?>
     </div>
-=======
     </div>
 </div>
 <?php include('includes/footer.php');?>
->>>>>>> aa9c5fa8fbec1aff6a215e44665e3defc5885bcb
