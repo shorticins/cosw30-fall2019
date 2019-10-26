@@ -38,4 +38,10 @@
                 <li><code>.u-bg-color--white</code></li>
             </ul>
         </main>
+<!--
+    I added some Color and Background Color utility classes to the styleguide: http://treatstreet.herokuapp.com/styleguide/utilities/
+Please add either color swatches or examples of using these classes so that developers can visually see what happens when these classes are added.
+
+Edit
+-->
 <?php include 'styleguide_footer.php'; ?>
