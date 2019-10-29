@@ -77,7 +77,12 @@ $products = getProducts();
     if(is_array($products)) {
         echo "<tr>";
         foreach($products as $product){
+            echo "<td>".$product['product_id']."</td>";
             echo "<td>".$product['product_name']."</td>";
+            echo "<td>".$product['product_description']."</td>";
+            echo "<td>".$product['product_price']."</td>";
+            echo "<td>".$product['product_vendor']."</td>";
+            echo "<td>".$product['product_img_url']."</d>";
         }
         echo "</tr>";
     } else {
@@ -87,5 +92,5 @@ $products = getProducts();
 <?php
 
 
-include("includes/footer.php");
+include("../includes/footer.php");
 ?>
