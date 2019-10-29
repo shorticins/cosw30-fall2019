@@ -29,7 +29,4 @@ function getBrands() {
     }
 }
 
-getBrands();
-getBrand();
-
 ?>
