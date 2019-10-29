@@ -1,5 +1,6 @@
 <?php include 'styleguide_header.php';
     include 'styleguide_navigation.php';
+    include 'typogaphy.php';
  ?>
 <main class="container">
     <h1>Content</h1>
