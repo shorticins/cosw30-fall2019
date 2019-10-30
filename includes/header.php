@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+
+<link rel="shortcut icon" href="includes/favicon_ts.png" type="image/png">
     <title>Treat Street</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
