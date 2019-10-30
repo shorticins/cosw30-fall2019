@@ -4,7 +4,7 @@
 function getBrand($brand_id) {
     include('database.php');
 
-    $query = 'SELECT * FROM BRAND';
+    $query = "SELECT * FROM BRAND;
         WHERE Brand_ID = $brand_id";
     $result = mysqli_query($connection, $query);
 
@@ -20,7 +20,7 @@ function getBrand($brand_id) {
 function getBrands() {
     include('database.php');
 
-    $query = 'SELECT * FROM BRAND';
+    $query = "SELECT * FROM BRAND";
     $result = mysqli_query($connection, $query);
 
     if($result) {
@@ -30,4 +30,5 @@ function getBrands() {
     }
 }
 
+getBrand();
 ?>
