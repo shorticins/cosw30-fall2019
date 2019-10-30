@@ -30,5 +30,5 @@ function getBrands() {
     }
 }
 
-getBrand();
+
 ?>
