@@ -1,42 +1,6 @@
 <?php
 include("../includes/header.php");
-    ?>
-    <table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col"> Product Id </th>
-            <th scope="col"> Product Name </th>
-            <th scope="col"> Product Description </th>
-            <th scope="col"> Product Price </th>
-            <th scope="col"> Product Vendor </th>
-            <th scope="col"> Product Image URL </th>
-
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr>
-            <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-        </tr>
-        <tr>
-            <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-        </tr>
-        <tr>
-            <th scope="row"></th>
-                <td></td>
-                <td></td>
-                <td></td>
-         </tr>
-     </tbody>
-
-
-</table>
+?>
 
 <?php
 // Returns all products in the PRODUCTS table
@@ -58,22 +22,39 @@ $products = getProducts();
  include('database.php');
 
     if(is_array($products)) {
-        echo "<tr>";
+        echo "<table class='table'>
+    <thead class='thead-dark'>
+        <tr>
+            <th scope='col'> Product Id </th>
+            <th scope='col'> Product Name </th>
+            <th scope='col'> Product Description </th>
+            <th scope='col'> Product Price </th>
+            <th scope='col'> Product Vendor </th>
+            <th scope='col'> Product Image URL </th>
+            <th scope='col'> Edit / Delete </th>
+        </tr>
+    </thead>
+
+    <tbody>";
         foreach($products as $product){
-            echo "<td>".$product['product_id']."</td>";
+            echo "<tr><td>".$product['product_id']."</td>";
             echo "<td>".$product['product_name']."</td>";
-            echo "<td>".$product['product_description']."</td>";
+            echo "<td>".$product['product_desc']."</td>";
             echo "<td>".$product['product_price']."</td>";
             echo "<td>".$product['product_vendor']."</td>";
-            echo "<td>".$product['product_img_url']."</d>";
+            echo "<td>".$product['product_img_url']."<button> Edit </button> <button> Delete </button> </td></tr>";
+
+
         }
-        echo "</tr>";
+        echo "</tbody></table>";
     } else {
         echo $products;
     }
 ?>
+
+
 <?php
-
-
 include("../includes/footer.php");
 ?>
+
+
