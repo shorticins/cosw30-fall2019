@@ -14,6 +14,8 @@
             <h2>UI Documentation</h2>
             <ul>
                 <li><a href="/styleguide/layout">Layout</a></li>
+                <li><a href="/styleguide/components" >Components</a></li>
+                <li><a href="/styleguide/content" >Content</a></li>
                 <li><a href="/styleguide/utilities">Utilities</a></li>
             </ul>
 
