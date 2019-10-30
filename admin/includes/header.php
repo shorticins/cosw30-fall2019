@@ -12,17 +12,19 @@
 </head>
 
 <body>
-    <header>
-        <div class="nav-side-menu bg-light">
-            <div class="brand justify-content-center"><img id="treatstreet_logo" src="images/treatstreet_logo.png" alt="treat steet logo"></div>
-                <div class="menu-list">
-                    <ul class= "menu-content justify-content-center" style="list-style-type: none; font-size: 14px; padding-top: 12px;">
-                        <li><a href="#">Dashboard</a></li>
-                        <li  class="active"><a href="#">Product Form</a></li>
-                        <li><a href="#">Placeholder</a></li>
-                        <li><a href="#">Placeholder</a></li>
+    <div class="row">
+        <div class="col-lg-2 col-md-12 d-md-inline-flex bg-light sidebar">
+            <header>
+                <nav>
+                    <ul class="nav d-lg-inline">
+                        <li class="nav-item"><a class="nav-link" href="/"><img src="images/treatstreet_logo.png" alt="Treat Street Logo"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">Product Form</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">placeholder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">placeholder</a></li>
                     </ul>
-                </div>
-            </div>
+                </nav>
+            </header>
         </div>
-    </header>
+
+
