@@ -31,9 +31,16 @@
             </figure>
         </div>
         <div class="six columns">
-            <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-v1-0-outline-1/96/Review_Star-128.png" style="width:50px; height:50px" title="Ratings" alt="Three-star rating"/>
-            <a href="#reviews">Reviews</a>
-
+            <figure>
+                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:300px; height:400px" title="Main Image" alt="Sweet-tart cupcake">
+            </figure>
+        </div>
+        <div class="six columns">
+            <figure>
+                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:300px; height:400px" title="Main Image" alt="Sweet-tart cupcake">
+            </figure>
+        </div>
+        </div>
             <br>
 
             <p>Price: $ price variable</p>
