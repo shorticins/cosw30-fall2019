@@ -1,15 +1,16 @@
 <?php include 'includes/header.php'; ?>
 
 
-<main>
+<main class="container">
 <!--Internal Product Navigation Links-->
+<div class="ten columns offset-by-one">
     <div class="row">
         <div class="twelve columns">
             <nav>
                 <ul>
-                    <li><a href="">Home</a> >> </li>
-                    <li><a href="">Dogs</a> >> </li>
-                    <li><a href="">Food</a> >> </li>
+                    <li class="breadcrumbs"><a href="">Home</a></li>
+                    <li class="breadcrumbs"><a href="">Dogs</a></li>
+                    <li class="breadcrumbs"><a href="">Food</a></li>
                     <li><a href="">Desserts</a></li>
                 </ul>
             </nav>
@@ -19,27 +20,38 @@
     <!--Product Name-->
     <div class="row">
         <div class="twelve columns">
-            <h1>Product Name</h1>
+            <h2>Product Name</h2>
         </div>
     </div>
 
     <!--Product Image and purchasing information-->
     <div class="row">
-        <div class="six columns">
-            <figure>
-                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:300px; height:400px" title="Main Image" alt="Sweet-tart cupcake">
+        <div class="seven columns">
+            <figure class="img--centered">
+                <img class="img__main" src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" title="Main Image" alt="Sweet-tart cupcake">
             </figure>
+            <!--Thumbnail Images-->
+            <div class="img__small img--centered">
+                <a href=""><i class="fas fa-circle fa-lg u-color--black"></i></a>
+                <a href=""><i class="far fa-circle fa-lg u-color--black"></i></a>
+                <a href=""><i class="far fa-circle fa-lg u-color--black"></i></a>
+            </div>
         </div>
-        <div class="six columns">
-            <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-v1-0-outline-1/96/Review_Star-128.png" style="width:50px; height:50px" title="Ratings" alt="Three-star rating"/>
-            <a href="#reviews">Reviews</a>
-
-            <br>
+        <div class="five columns div__main">
+            <p>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star" title="Ratings"></i>
+                <a href="#reviews">Reviews</a>
+            </p>
 
             <p>Price: $ price variable</p>
 
             <form action="" method="POST">
-                <label for="quantity">Quantity
+                <label for="quantity">Quantity:
+
                     <select id="quantity" name="quantity" size="1" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -55,47 +67,23 @@
                         <option value="12">12</option>
                     </select>
                 </label>
-                <img src="https://cdn1.iconfinder.com/data/icons/material-core/20/shopping-cart-128.png" style="width:50px; height:50px" title="Cart Icon" alt="Shopping cart"/>
-                <input type="submit" value="Add to Cart">
+                <a class="btn btn--green"><i class="fas fa-shopping-cart u-color--white icon__social"></i>Add to Cart</a>
             </form>
 
-            <br>
             <!--social media links-->
-            <img src="https://cdn4.iconfinder.com/data/icons/43-social-media-line-icons/24/Share-128.png" style="width:50px; height:50px" title="Share" alt="Share Icon"/>
-            <a href="https://twitter.com/?lang=en">
-                <img src="https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/Twitter-128.png" style="width:50px; height:50px" title="Twitter" alt="Twitter Icon"/>
-            </a>
-            <a href="https://www.facebook.com/">
-                <img src="https://cdn3.iconfinder.com/data/icons/peelicons-vol-1/50/Facebook-128.png" style="width:50px; height:50px" title="Facebook" alt="Facebook Icon"/>
-            </a>
-            <a href="https://www.instagram.com/">
-                <img src="https://cdn3.iconfinder.com/data/icons/picons-social/57/38-instagram-128.png" style="width:50px; height:50px" title="Instagram" alt="Instagram Icon"/>
-            </a>
-
-        </div>
+                <i class="fas fa-share-alt fa-lg u-color--green icon__social" title="Share"></i>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter fa-lg u-color--green icon__social" title="Twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f fa-lg u-color--green icon__social" title="Facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg u-color--green icon__social" title="Instagram"></i></a>
+       </div>
     </div>
 
-    <!--Thumbnail Images-->
-    <div class="row">
-        <div class="six columns">
-            <a href="">
-                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Main Image 1" alt="Dessert"/>
-            </a>
-            <a href="">
-                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Main Image 2" alt="Dessert"/>
-            </a>
-            <a href="">
-                <img src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Main Image 3" alt="Dessert"/>
-            </a>
-        </div>
 
-
-    </div>
 
     <!--Product Description-->
     <div class="row">
         <div class="twelve columns">
-            <h3>Product Description</h3>
+            <h4>Product Description</h4>
             <p>Bacon ipsum dolor amet pancetta doner filet mignon picanha salami cow.
             Rump shankle jerky tongue pancetta, flank venison spare ribs hamburger meatball pork chuck.
             Sirloin meatloaf pig, capicola biltong boudin drumstick jerky shoulder picanha pancetta
@@ -107,7 +95,7 @@
     <!--Product Ingredients-->
     <div class="row">
         <div class="twelve columns">
-            <h3>Ingredients</h3>
+            <h4>Ingredients</h4>
             <p>Bacon ipsum dolor amet pancetta doner filet mignon picanha salami cow.
             Rump shankle jerky tongue pancetta, flank venison spare ribs hamburger meatball pork chuck.
             Sirloin meatloaf pig, capicola biltong boudin drumstick jerky shoulder picanha pancetta
@@ -119,8 +107,14 @@
     <!--Customer Reviews-->
     <div class="row" id="reviews">
         <div class="twelve columns">
-            <h3>Customer Reviews</h3>
-            <img src="https://cdn1.iconfinder.com/data/icons/ecommerce-v1-0-outline-1/96/Review_Star-128.png" style="width:50px; height:50px" title="Ratings" alt="Three-star rating"/>
+            <h4>Customer Reviews</h4>
+            <p>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star u-color--green" title="Ratings"></i>
+                <i class="far fa-star" title="Ratings"></i>
+            </p>
             <p>Bacon ipsum dolor amet pancetta doner filet mignon picanha salami cow.
             Rump shankle jerky tongue pancetta, flank venison spare ribs hamburger meatball pork chuck.
             Sirloin meatloaf pig, capicola biltong boudin drumstick jerky shoulder picanha pancetta
@@ -132,14 +126,14 @@
     <!--Product Recommendation title-->
     <div class="row">
         <div class="twelve columns">
-            <h3>More PAWS-itvely Awesome Products</h3>
+            <h4>More Treats on this Street</h4>
         </div>
     </div>
 
     <!--Product Recommendation images and links-->
     <div class="row">
         <div class="four columns">
-            <figure>
+            <figure class="img--centered">
                 <a href="">
                     <img src="https://images.pexels.com/photos/913134/pexels-photo-913134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Pupcorn Cake" alt="Pupcorn Cake"/>
                 </a>
@@ -147,7 +141,7 @@
             </figure>
         </div>
         <div class="four columns">
-            <figure>
+            <figure class="img--centered">
                 <a href="">
                     <img src="https://images.pexels.com/photos/2957897/pexels-photo-2957897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Choco-buns" alt="Choco-buns"/>
                 </a>
@@ -155,7 +149,7 @@
             </figure>
         </div>
         <div class="four columns">
-            <figure>
+            <figure class="img--centered">
                 <a href="">
                     <img src="https://images.pexels.com/photos/2525682/pexels-photo-2525682.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="width:82px; height:86px" title="Berry Tart Cake" alt="Berry Tart Cake"/>
                 </a>
@@ -164,7 +158,7 @@
         </div>
 
     </div>
-
+</div>
 </main>
 
 <?php include 'includes/footer.php'; ?>

@@ -7,7 +7,6 @@
         include('pagination.php');
         include('buttons.php');
         include('alerts.php');
-        ?>
     ?>
     <hr>
     <div>
