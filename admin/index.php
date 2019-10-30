@@ -1,3 +1,5 @@
 <?php
-echo 'Placeholder for admin console files';
+include('includes/header.php');
+echo 'Placeholder for admin dashboard';
+include('includes/footer.php');
 ?>

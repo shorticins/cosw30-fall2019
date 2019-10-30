@@ -1,21 +1,23 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Styleguide - Layout</title>
-        <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
-        <link href="/styleguide/styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <main class="container">
-        <h1>Layout</h1>
-        <p>The following styles and components are related to page layouts</p>
-        <hr>
-
-        <?php
+<?php include 'styleguide_header.php';?>
+<?php include 'styleguide_navigation.php';?>
+<main class="container">
+    <h1>Components</h1>
+    <p>The following components are related to the styleguide page</p>
+    <?php
         include('pagination.php');
-        ?>
+    ?>
+    <hr>
+    <div>
+    <h2></h2>
+    <h3><h3>
+    <p></p>
+    <h3><h3>
+    <p></p>
+    <h3><h3>
+    <p></p>
+    <h3><h3>
+    <p></p>
+     </div>
+</main>
 
-        </main>
-    </body>
-</html>
+<?php include 'styleguide_footer.php'; ?>

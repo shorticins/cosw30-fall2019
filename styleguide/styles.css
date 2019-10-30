@@ -9,6 +9,8 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Fonts
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* --------------------------------------------
 
     Imports for 3rd-party vendors/libraries
@@ -425,6 +427,167 @@ th {
     and modules
 
 -----------------------------------------------*/
+.alert-primary {
+  background-color: #FFF;
+  font-family: "Josefin Sans", sans-serif;
+  width: 40%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 5px;
+  border: solid 1px;
+  text-align: center;
+}
+
+.alert-success-h {
+  font-size: 25px;
+  padding-top: 15px;
+  color: #2E9347;
+}
+
+.alert-p {
+  padding-bottom: 15px;
+  margin: 50px;
+}
+
+.alert-success-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 250px;
+  height: 50px;
+  border: 2px solid #2E9347;
+  border-radius: 40px;
+  background: transparent;
+  color: #2E9347;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.alert-error-btn {
+  color: #B81F24;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 250px;
+  height: 50px;
+  border: 2px solid #B81F24;
+  background: #B81F24;
+  border-radius: 40px;
+  color: #FFF;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+.alert-error-h {
+  color: #B81F24;
+  font-size: 25px;
+}
+
+.alert-warning {
+  padding: 20px;
+  background: #B81F24;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* MAIN BUTTON CLASS */
+.btn {
+  text-decoration: none;
+  border-radius: 0.3em;
+  border: 1px solid #000;
+  padding: 0.75em 1.25em;
+  font-size: 1em;
+  color: #000;
+  /* REGULAR BUTTON COLORS */
+  /* OUTLINE BUTTONS */
+}
+.btn--green {
+  background-color: #2E9347;
+  color: #FFF;
+}
+.btn--black {
+  background-color: #000;
+  color: #FFF;
+}
+.btn--blue--light {
+  background-color: #9CC0F0;
+  color: #000;
+}
+.btn--outline--green {
+  background-color: #FFF;
+  border-color: #2E9347;
+  color: #2E9347;
+}
+
+.btn--grey--light {
+  background-color: #D3D3D3;
+  color: #000;
+}
+
+.btn--purple {
+  background-color: #7B4B94;
+  color: #FFF;
+}
+
+.btn--red--dark {
+  background-color: #B81F24;
+  color: #FFF;
+}
+
+.btn--white {
+  background-color: #FFF;
+  color: #000;
+}
+
+.btn--outline--black {
+  background-color: #FFF;
+  border-color: #000;
+  color: #000;
+}
+
+.btn--outline--blue--light {
+  background-color: #FFF;
+  border-color: #9CC0F0;
+  color: #9CC0F0;
+}
+
+.btn--outline--grey--light {
+  background-color: #FFF;
+  border-color: #D3D3D3;
+  color: #D3D3D3;
+}
+
+.btn--outline--purple {
+  background-color: #FFF;
+  border-color: #7B4B94;
+  color: #7B4B94;
+}
+
+.btn--outline--red--dark {
+  background-color: #FFF;
+  border-color: #B81F24;
+  color: #B81F24;
+}
+
+/* BUTTON SIZES */
+.btn--large {
+  padding: 0.6em 1.4em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.btn--small {
+  padding: 0.5em 0.8em;
+  font-size: 0.8em;
+}
+
+/* FULL-WIDTH BUUTON */
+.btn--block {
+  display: block;
+  width: 95%;
+  text-align: center;
+}
+
 .pagination {
   list-style: none;
   text-align: center;
@@ -466,7 +629,7 @@ th {
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
