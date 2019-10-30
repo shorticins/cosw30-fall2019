@@ -5,6 +5,7 @@ function getBrand($brand_id) {
     include('database.php');
 
     $query = 'SELECT * FROM BRAND';
+        WHERE Brand_ID = $brand_id";
     $result = mysqli_query($connection, $query);
 
     if($result) {
