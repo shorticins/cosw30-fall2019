@@ -1,5 +1,4 @@
-<?php include 'styleguide_header.php';?>
-<?php include 'styleguide_navigation.php';?>
+<?php include('../includes/header.php'); ?>
 <main class="container">
     <h1>Components</h1>
     <p>The following components are related to the styleguide page</p>
@@ -20,4 +19,6 @@
      </div>
 </main>
 
-<?php include 'styleguide_footer.php'; ?>
+<?php
+include('../includes/footer.php');
+?>

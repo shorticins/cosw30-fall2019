@@ -1,5 +1,5 @@
-<?php include 'styleguide_header.php';
-      include 'styleguide_navigation.php';
+<?php include('../includes/header.php');
+
 ?>
         <main class="container">
             <h1>Utilities</h1>
@@ -38,4 +38,4 @@
                 <li><code>.u-bg-color--white</code></li>
             </ul>
         </main>
-<?php include 'styleguide_footer.php'; ?>
+<?php include('../includes/footer.php'); ?>
