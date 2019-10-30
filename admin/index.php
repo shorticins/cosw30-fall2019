@@ -1,5 +1,7 @@
-<?php
-include('includes/header.php');
-echo 'Placeholder for admin dashboard';
-include('includes/footer.php');
-?>
+<?php include('includes/header.php'); ?>
+
+<main class="container">
+    <h1>Admin Dashboard</h1>
+</main>
+
+<?php include('includes/footer.php'); ?>

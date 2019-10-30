@@ -31,10 +31,11 @@
                 <li class="two columns"><a href="./styleguide">Styleguide</a></li>
                 <li class="two columns"><a href="./product.php">PDP</a></li>
                 <li class="two columns"><a href="/">PLP</a></li>
+                <li class="two columns"><a href="/admin">Admin Consoles</a></li>
                 <!--<li class="two columns"><a href="/">Snacks</a></li>-->
                 <!--<li class="two columns"><a href="/">Dress Up</a></li>-->
                 <!--<li class="two columns"><a href="/">Play Time</a></li>-->
-                <li class="two columns"><a href="/">Health</a></li>
+                <!--<li class="two columns"><a href="/">Health</a></li>-->
                 <li class="two columns"><a href="/">Just For You</a></li>
                 <li class="two columns"><a href="/">Adopt</a></li>
             </ul>
