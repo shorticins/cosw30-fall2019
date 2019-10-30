@@ -14,6 +14,7 @@
 
         <?php
         include('pagination.php');
+        include('buttons.php');
         ?>
 
         </main>
