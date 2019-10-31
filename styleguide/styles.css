@@ -1,5 +1,14 @@
 @charset "UTF-8";
 /* This is the "root" level of all our SCSS files */
+/*
+*
+* Global Level Variables
+* Can (and should) be used throughout the styleguide .SCSS files
+*/
+/* Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Fonts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* --------------------------------------------
 
     Imports for 3rd-party vendors/libraries
@@ -416,12 +425,16 @@ th {
     and modules
 
 -----------------------------------------------*/
-.bg-color--grey {
-  background-color: #CCC;
+.pagination {
+  list-style: none;
+  text-align: center;
 }
-
-.margin-b--md {
-  margin-bottom: 10px;
+.pagination__button, .pagination__number {
+  display: inline-block;
+}
+.pagination__button a, .pagination__number a {
+  display: block;
+  padding: 10px 15.4375px;
 }
 
 /*
@@ -995,6 +1008,62 @@ hr {
   content: "";
   display: table;
   clear: both;
+}
+
+.margin-b--md {
+  margin-bottom: 10px;
+}
+
+/* Utilities > Colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.u-color--black {
+  color: #000;
+}
+.u-color--blue-light {
+  color: #9CC0F0;
+}
+.u-color--error {
+  color: #B81F24;
+}
+.u-color--grey-light {
+  color: #D3D3D3;
+}
+.u-color--green {
+  color: #2E9347;
+}
+.u-color--purple {
+  color: #7B4B94;
+}
+.u-color--red-dark {
+  color: #B81F24;
+}
+.u-color--white {
+  color: #FFF;
+}
+
+.u-bg-color--black {
+  background-color: #000;
+}
+.u-bg-color--blue-light {
+  background-color: #9CC0F0;
+}
+.u-bg-color--error {
+  background-color: #B81F24;
+}
+.u-bg-color--grey-light {
+  background-color: #D3D3D3;
+}
+.u-bg-color--green {
+  background-color: #2E9347;
+}
+.u-bg-color--purple {
+  background-color: #7B4B94;
+}
+.u-bg-color--red-dark {
+  background-color: #B81F24;
+}
+.u-bg-color--white {
+  background-color: #FFF;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,39 +3,34 @@
 <head>
     <meta charset="utf-8">
     <title>Treat Street</title>
-
-   <style>
-    h1 {font-size: 3em; text-align: center; margin-top: 5%; margin-left: auto; margin-right: auto;}
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: green;
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover {
-      background-color: blue;
-    }
-
-    #container1 {width: 900px; text-align: center; margin-top: 5%;	margin-left: auto;	margin-right: auto;	padding-top: 50px;	padding-bottom: 150px; border-style: solid; border-radius: 25px;}
-
-            </style>
-
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
+    <link href="/styleguide/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <header>
+        <div class="row">
+            <h2 style="background-color: #2E9E47" class="three columns">Treat Street</h2><!--replace with image-->
+            <form action="/" method="GET" class="eight columns">
+                <input id="search" type="text" placeholder="Search">
+                <input id="submit" type="submit" value="Search">
+            </form>
+            <span class="one column">
+                <a href="/"><i class="fas fa-cart-plus"></i></a>
+                <a href="/"><i class="fas fa-question-circle"></i></a>
+                <a href="/"><i class="fas fa-user-circle"></i></a>
+            </span>
+        </div>
+        <div class="row">
+            <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
+        </div>
+        <nav class="row">
+            <a href="/" class="two columns">Snacks</a>
+            <a href="/" class="two columns">Dress Up</a>
+            <a href="/" class="two columns">Play Time</a>
+            <a href="/" class="two columns">Health</a>
+            <a href="/" class="two columns">Just For You</a>
+            <a href="/" class="two columns">Adopt</a>
+        </nav>
+    </header>
 <!-- END HEADER -->
