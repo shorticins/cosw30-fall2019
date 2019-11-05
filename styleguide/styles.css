@@ -601,7 +601,6 @@ th {
   padding: 10px 15.4375px;
 }
 
-<<<<<<< master
 /* main outline */
 ul.breadcrumb {
   padding: 10px 16px;
@@ -672,7 +671,8 @@ ul.breadcrumb li a:hover {
 /* Staying black for active a attribute */
 ul.breadcrumb li a.active {
   color: #000;
-=======
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -681,7 +681,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   font-style: italic;
->>>>>>> master
 }
 
 /*
@@ -1236,6 +1235,10 @@ hr {
   content: "";
   display: table;
   clear: both;
+}
+
+.product-list__img {
+  overflow: hidden;
 }
 
 h4 {
