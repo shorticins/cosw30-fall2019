@@ -1,3 +1,0 @@
-<!-- START FOOTER -->
-</body>
-</html>
