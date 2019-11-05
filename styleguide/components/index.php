@@ -5,6 +5,8 @@
     <p>The following components are related to the styleguide page</p>
     <?php
         include('pagination.php');
+        include('buttons.php');
+        include('alerts.php');
     ?>
     <hr>
     <div>
