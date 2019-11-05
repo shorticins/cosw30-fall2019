@@ -1,0 +1,31 @@
+h4 {
+    text-decoration: underline;
+}
+
+.breadcrumbs::after {
+    content: " / ";
+    font-size: 1.3em;
+    vertical-align: sub;
+}
+
+.icon__social {
+    padding-right: 1em;
+}
+
+.div__main {
+    padding-top: 5em;
+    text-align: center;
+}
+
+.img__main {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+.img__small {
+    width: 75%;
+}
+
+.img--centered {
+    text-align: center;
+}
