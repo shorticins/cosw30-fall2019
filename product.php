@@ -37,6 +37,7 @@
                 <a href=""><i class="far fa-circle fa-lg u-color--black"></i></a>
             </div>
         </div>
+
         <div class="five columns div__main">
             <p>
                 <i class="far fa-star u-color--green" title="Ratings"></i>
