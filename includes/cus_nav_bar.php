@@ -30,10 +30,10 @@
 
 <div id="header">
     <ul id="nav">
-        <li><a class="active" href="contact_us.html">Contact-Us</a></li>
-        <li><a href="ordering.html">Ordering</a></li>
-        <li><a href="payments_fees.html">Payments & Fees</a></li>
-        <li><a href="policies_terms.html">Policies & Terms</a></li>
-        <li><a href="shipping.html">Shipping</a></li>
+        <li><a class="active" href="/customer_service/contact.php">Contact-Us</a></li>
+        <li><a href="/customer_service/ordering.php">Ordering</a></li>
+        <li><a href="/customer_service/payments_fees.php">Payments & Fees</a></li>
+        <li><a href="/customer_service/policies_terms.php">Policies & Terms</a></li>
+        <li><a href="/customer_service/shipping.php">Shipping</a></li>
     </ul>
 </div>
