@@ -1,8 +1,8 @@
 # COSW 30 - Fall 2019 Class Project #
 
 ## Website Links ##
-* Homepage:
-* Styleguide:
+* Homepage: http://treatstreet.herokuapp.com/
+* Styleguide: http://treatstreet.herokuapp.com/styleguide/
 * Make sure to upstream
 
 ```bash
