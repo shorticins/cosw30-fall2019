@@ -1,6 +1,6 @@
 <?php include('../includes/header.php');?>
 
-<main class="container">
+<main class="styleguide__main nine columns">
     <h1>Content</h1>
     <p>The following contents are related to the styleguide page</p>
     <hr>
@@ -16,7 +16,8 @@
     <p>For paragraphs:</p>
     <ol>
       <li>Josefin Sans (Light)</li>
-    </ol>
+    </ol> -->
+    <?php include 'typography.php'; ?>
     <h3>Block Quotes<h3>
     <p></p>
     <h3>Lists<h3>

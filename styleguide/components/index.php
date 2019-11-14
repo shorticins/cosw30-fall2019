@@ -1,22 +1,13 @@
 <?php include('../includes/header.php'); ?>
-<main class="container">
+
+<main class="styleguide__main nine columns">
     <h1>Components</h1>
     <p>The following components are related to the styleguide page</p>
     <?php
+        include('alerts.php');
+        include('buttons.php');
         include('pagination.php');
     ?>
-    <hr>
-    <div>
-    <h2></h2>
-    <h3><h3>
-    <p></p>
-    <h3><h3>
-    <p></p>
-    <h3><h3>
-    <p></p>
-    <h3><h3>
-    <p></p>
-     </div>
 </main>
 
 <?php

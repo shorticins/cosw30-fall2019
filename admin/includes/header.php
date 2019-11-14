@@ -8,21 +8,23 @@
     <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="/styleguide/styles.css" rel="stylesheet">
-    <link href="./css/admin_styles.css" rel="stylesheet">
+    <link href="/admin/css/admin_styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="nav-side-menu bg-light">
-            <div class="brand justify-content-center"><img id="treatstreet_logo" src="images/treatstreet_logo.png" alt="treat steet logo"></div>
-                <div class="menu-list">
-                    <ul class= "menu-content justify-content-center" style="list-style-type: none; font-size: 14px; padding-top: 12px;">
-                        <li><a href="#">Dashboard</a></li>
-                        <li  class="active"><a href="#">Product Form</a></li>
-                        <li><a href="#">Placeholder</a></li>
-                        <li><a href="#">Placeholder</a></li>
+    <div class="row">
+        <div class="col-2 bg-light sidebar">
+            <header>
+                <nav>
+                    <ul class="nav d-lg-inline">
+                        <li class="nav-item"><a class="nav-link" href="/"><img src="/admin/images/treatstreet_logo.png" alt="Treat Street Logo"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/product.php">Product Form</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/products.php">Product List</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/">placeholder</a></li>
                     </ul>
-                </div>
-            </div>
+                </nav>
+            </header>
         </div>
-    </header>
+
+
