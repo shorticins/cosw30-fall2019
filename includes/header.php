@@ -9,26 +9,37 @@
     <style>
     ul {
         list-style-type: none;
-        margin: 0;
-        padding: 0;
+        margin: 10px;
+        padding: 3%;
         overflow: hidden;
-        width: 60%;
+        width: 100%;
     }
     .nav_li {
         float: left;
+        margin-left: 2.75%;
     }
    .nav_li a {
         display: block;
         color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 6px 10px;
         text-decoration: none;
         background-color: #59A472;
-        width: 150px;
-        border: 5px solid white;
-        border-radius: 5px;
+        /*width: 95%;*/
+        border: 2.5px solid white;
+        border-radius: 4px;
+        box-shadow: 0 0 0 6px #59A472;
         font-family: 'CarlitoRegular';
         font-weight: bold;
+        font-size: 1.25em;
+    }
+    .sign {
+        margin-left: 1%;
+        width: 95%;
+    }
+    .row {
+        margin-left: 29%;
+        
     }
     </style>
     <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
