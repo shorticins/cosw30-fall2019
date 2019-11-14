@@ -10,7 +10,7 @@ include('model/category.php');
 <html>
 <head>
         <meta charset="utf-8">
-        <title>My First CRUD</title>
+        <title>Category Functions</title>
         <style>
           body {background-color: blue;
                 background-position: center;
