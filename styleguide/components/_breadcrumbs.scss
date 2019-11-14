@@ -1,0 +1,80 @@
+/* main outline */
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+ul.breadcrumb--color{
+  padding: 10px 16px;
+  list-style: none;
+  background-color: $color__blue--light;
+}
+
+ul.breadcrumb--big{
+  padding: 15px 16px;
+  list-style: none;
+
+}
+
+ul.breadcrumb--samll{
+  padding: 5px 10px;
+  list-style: none;
+
+}
+/* inline styline
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+*/
+
+/* inline-block styling with Regular texdt */
+
+ul.breadcrumb li {
+  display: inline-block;
+  font-size: 18px;
+   padding-left: 20px;
+}
+
+/* inline-block styling with smaller text */
+
+ul.breadcrumb li--small {
+  display: inline-block;
+  font-size: 5px;
+   padding-left: 10px;
+}
+/*adding >> after each a attribute */
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: " >> ";
+
+}
+
+ /* ul.breadcrumb li+li::after {
+  padding: 8px;
+  color: $color_black;
+  content: " >> ";
+}
+*/
+/* can always chnage differnt color */
+
+ul.breadcrumb li a {
+  color: $color__grey--light;
+  text-decoration: none;
+}
+
+/* color change when mouse hover */
+
+ul.breadcrumb li a:hover {
+  color: $color__grey--light;
+  text-decoration: underline;
+}
+
+/* Staying black for active a attribute */
+
+ul.breadcrumb li a.active {
+  color: $color__black;
+}
