@@ -13,7 +13,7 @@ function getCategory($Category_id) {
     }
 }
 
-function getCategorys() {
+function getCategories() {
     include('database.php');
 
     $query = "SELECT * FROM CATEGORY";
