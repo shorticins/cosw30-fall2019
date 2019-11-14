@@ -68,7 +68,7 @@ include('model/category.php');
 
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    print_r(getCategory($id));
+    echo "getCategory($id)";
 } else {
 }
 
