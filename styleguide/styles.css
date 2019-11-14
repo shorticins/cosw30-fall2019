@@ -427,32 +427,27 @@ th {
     and modules
 
 -----------------------------------------------*/
-.alert-primary {
-  background-color: #FFF;
+.alert--success {
   font-family: "Josefin Sans", sans-serif;
   width: 40%;
   margin: auto;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 25px;
   border: solid 1px;
   text-align: center;
 }
-
-.alert-success-h {
+.alert--success .success--h {
   font-size: 25px;
   padding-top: 15px;
   color: #2E9347;
 }
-
-.alert-p {
+.alert--success .success--p {
   padding-bottom: 15px;
   margin: 50px;
 }
-
-.alert-success-btn {
+.alert--success .success--btn {
   display: block;
   margin: 0 auto;
-  padding: 0;
   width: 250px;
   height: 50px;
   border: 2px solid #2E9347;
@@ -463,11 +458,19 @@ th {
   font-size: 15px;
 }
 
-.alert-error-btn {
+.alert--error {
+  font-family: "Josefin Sans", sans-serif;
+  width: 40%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 25px;
+  border: solid 1px;
+  text-align: center;
+}
+.alert--error .error--btn {
   color: #B81F24;
   display: block;
   margin: 0 auto;
-  padding: 0;
   width: 250px;
   height: 50px;
   border: 2px solid #B81F24;
@@ -477,8 +480,7 @@ th {
   letter-spacing: 1px;
   font-size: 15px;
 }
-
-.alert-error-h {
+.alert--error .error--h {
   color: #B81F24;
   font-size: 25px;
 }
@@ -493,24 +495,51 @@ th {
 /* MAIN BUTTON CLASS */
 .btn {
   text-decoration: none;
+  text-align: center;
   border-radius: 0.3em;
   border: 1px solid #000;
-  padding: 0.75em 1.25em;
+  padding: 0.75em 1.5em;
   font-size: 1em;
   color: #000;
+  display: inline-block;
   /* REGULAR BUTTON COLORS */
   /* OUTLINE BUTTONS */
+  /* BUTTON SIZES */
+  /* FULL-WIDTH BUUTON */
 }
 .btn--green {
   background-color: #2E9347;
+  border-color: #2E9347;
   color: #FFF;
 }
 .btn--black {
   background-color: #000;
+  border-color: #000;
   color: #FFF;
 }
 .btn--blue--light {
   background-color: #9CC0F0;
+  border-color: #9CC0F0;
+  color: #000;
+}
+.btn--grey--light {
+  background-color: #D3D3D3;
+  border-color: #D3D3D3;
+  color: #000;
+}
+.btn--purple {
+  background-color: #7B4B94;
+  border-color: #D3D3D3;
+  color: #FFF;
+}
+.btn--red--dark {
+  background-color: #B81F24;
+  border-color: #B81F24;
+  color: #FFF;
+}
+.btn--white {
+  background-color: #FFF;
+  border-color: #FFF;
   color: #000;
 }
 .btn--outline--green {
@@ -518,70 +547,44 @@ th {
   border-color: #2E9347;
   color: #2E9347;
 }
-
-.btn--grey--light {
-  background-color: #D3D3D3;
-  color: #000;
-}
-
-.btn--purple {
-  background-color: #7B4B94;
-  color: #FFF;
-}
-
-.btn--red--dark {
-  background-color: #B81F24;
-  color: #FFF;
-}
-
-.btn--white {
-  background-color: #FFF;
-  color: #000;
-}
-
 .btn--outline--black {
   background-color: #FFF;
   border-color: #000;
   color: #000;
 }
-
 .btn--outline--blue--light {
   background-color: #FFF;
   border-color: #9CC0F0;
   color: #9CC0F0;
 }
-
 .btn--outline--grey--light {
   background-color: #FFF;
   border-color: #D3D3D3;
   color: #D3D3D3;
 }
-
 .btn--outline--purple {
   background-color: #FFF;
   border-color: #7B4B94;
   color: #7B4B94;
 }
-
 .btn--outline--red--dark {
   background-color: #FFF;
   border-color: #B81F24;
   color: #B81F24;
 }
-
-/* BUTTON SIZES */
+.btn--outline--white {
+  border-color: #FFF;
+  color: #FFF;
+}
 .btn--large {
-  padding: 0.6em 1.4em;
+  padding: 0.6em 1.6em;
   font-size: 1.5em;
   text-align: center;
 }
-
 .btn--small {
-  padding: 0.5em 0.8em;
+  padding: 0.5em 0.9em;
   font-size: 0.8em;
 }
-
-/* FULL-WIDTH BUUTON */
 .btn--block {
   display: block;
   width: 95%;
@@ -598,6 +601,88 @@ th {
 .pagination__button a, .pagination__number a {
   display: block;
   padding: 10px 15.4375px;
+}
+
+/* main outline */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+ul.breadcrumb--color {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #9CC0F0;
+}
+
+ul.breadcrumb--big {
+  padding: 15px 16px;
+  list-style: none;
+}
+
+ul.breadcrumb--samll {
+  padding: 5px 10px;
+  list-style: none;
+}
+
+/* inline styline
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+*/
+/* inline-block styling with Regular texdt */
+ul.breadcrumb li {
+  display: inline-block;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+/* inline-block styling with smaller text */
+ul.breadcrumb li--small {
+  display: inline-block;
+  font-size: 5px;
+  padding-left: 10px;
+}
+
+/*adding >> after each a attribute */
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: " >> ";
+}
+
+/* ul.breadcrumb li+li::after {
+  padding: 8px;
+  color: $color_black;
+  content: " >> ";
+}
+*/
+/* can always chnage differnt color */
+ul.breadcrumb li a {
+  color: #D3D3D3;
+  text-decoration: none;
+}
+
+/* color change when mouse hover */
+ul.breadcrumb li a:hover {
+  color: #D3D3D3;
+  text-decoration: underline;
+}
+
+/* Staying black for active a attribute */
+ul.breadcrumb li a.active {
+  color: #000;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-style: italic;
 }
 
 /*
@@ -812,7 +897,6 @@ body {
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
 }
 
@@ -1090,23 +1174,6 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1;
-}
-
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
@@ -1125,7 +1192,6 @@ pre,
 blockquote,
 dl,
 figure,
-table,
 p,
 ul,
 ol,
@@ -1171,6 +1237,57 @@ hr {
   content: "";
   display: table;
   clear: both;
+}
+
+.product-list__img {
+  overflow: hidden;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+.breadcrumbs::after {
+  content: " / ";
+  font-size: 1.3em;
+  vertical-align: sub;
+}
+
+.icon__social {
+  padding-right: 1em;
+}
+
+.div__main {
+  padding-top: 5em;
+  text-align: center;
+}
+
+.img__main {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.img__small {
+  width: 75%;
+}
+
+.img--centered {
+  text-align: center;
+}
+
+.site-footer {
+  background-image: url("/img/tile_black_asphault.jpg");
+}
+
+/*
+*   Contains styles related to the styleguide only
+*/
+.styleguide__header {
+  margin-top: 50px;
+}
+.styleguide__main {
+  margin-top: 50px;
 }
 
 .margin-b--md {

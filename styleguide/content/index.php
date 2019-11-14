@@ -1,27 +1,27 @@
-<?php include 'styleguide_header.php';
-    include 'styleguide_navigation.php';
- ?>
-<main class="container">
+<?php include('../includes/header.php');?>
+
+<main class="styleguide__main nine columns">
     <h1>Content</h1>
     <p>The following contents are related to the styleguide page</p>
     <hr>
     <div>
     <h2>Typography</h2>
     <h3>Headings</h3>
-    <p>For heading tags, h1, h2, h3 use:</p>
+    <p>For heading tags, h1, h2, h3:</p>
     <ol>
       <li>Josefin Sans (Bold Italic)</li><br>
-      <li>For h1, you may also use the logo</li>
+      <li>For h1, you may also the logo is acceptable</li>
     </ol>
     <h3>Paragraphs</h3>
-    <p>For paragraphs use:</p>
+    <p>For paragraphs:</p>
     <ol>
       <li>Josefin Sans (Light)</li>
-    </ol>
+    </ol> -->
+    <?php include 'typography.php'; ?>
     <h3>Block Quotes<h3>
     <p></p>
     <h3>Lists<h3>
     <p></p>
 </main>
 
-<?php include 'styleguide_footer.php'; ?>
+<?php include('../includes/footer.php'); ?>

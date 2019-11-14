@@ -48,7 +48,5 @@
         </div>
     </form>
 </main>
-</div> <!--closing out row-->
-
 
 <?php include("includes/footer.php");?>
