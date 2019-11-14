@@ -30,9 +30,11 @@ include('model/category.php');
 
 <body>
 
+    <h1>Test The Category Functions</h1>
+
     <div id="container">
 
-    <h1>Test The Category Functions</h1>
+    <h1>All Categories</h1>
 
     <div id="texting">
 
@@ -64,16 +66,25 @@ include('model/category.php');
     </div>
     </div>
 
+
+    <div id="container">
+
+    <h1>Category By Id</h1>
+
+    <div id="texting">
+
 <?php
 
 if(isset($_GET['id'])) {
     $id = $_GET['id'];
-    echo "getCategory($id)";
+    print_r(getCategory($id));
 } else {
 }
 
 ?>
 
+    </div>
+    </div>
 
 
 </body>
