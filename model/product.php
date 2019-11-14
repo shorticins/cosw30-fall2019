@@ -9,6 +9,8 @@ function getProduct($product_id) {
               WHERE product_id = $product_id";
     $result = mysqli_query($connection, $query);
 
+    
+
     if($result) {
         return mysqli_fetch_assoc($result);
     } else {
