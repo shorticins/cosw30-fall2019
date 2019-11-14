@@ -30,6 +30,13 @@ include('model/category.php');
 
 <body>
 
+    <div id="container">
+
+    <h1>Update User</h1>
+
+    <div id="texting">
+
+
     <table>
         <thead>
             <tr>
@@ -53,6 +60,9 @@ include('model/category.php');
 
         </tbody>
     </table>
+
+    </div>
+    </div>
 
 <?php
 
