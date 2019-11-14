@@ -897,12 +897,14 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB;
+  color: rgb(55, 134, 23);
+  text-decoration: none;
 }
 
 a:hover {
-  color: #0FA0CE;
+  color: rgb(55, 134, 23);
 }
+
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1156,6 +1158,37 @@ form {
 .u-pull-left {
   float: left;
 }
+
+/*  Footer 
+-------------------------------------------------- */
+#footerimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+#footerlink {
+    
+    
+   
+}
+
+
+/* Social Media Icons 
+--------------------------------------------------- */
+#social {
+    color: #000; 
+    padding: 40px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
