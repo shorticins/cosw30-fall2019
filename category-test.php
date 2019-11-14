@@ -54,6 +54,18 @@ include('model/category.php');
         </tbody>
     </table>
 
+<?php
+
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    print_r (getCategory($id));
+} else {
+}
+
+?>
+
+
+
 </body>
 
 </html>
