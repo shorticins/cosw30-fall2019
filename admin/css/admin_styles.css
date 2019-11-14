@@ -1,0 +1,26 @@
+.nav-side-menu {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+}
+.brand {
+  line-height: 50px;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    background-color: rgb(230, 215, 173);
+    color:red;
+  }
+}
+@media only screen and (max-width: 600px) {
+  header {
+
+    background-color: rgb(000, 000, 000);
+    color: purple;
+      }
+  }
+
