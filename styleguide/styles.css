@@ -1239,6 +1239,10 @@ hr {
   clear: both;
 }
 
+.homepage {
+  background-color: pink;
+}
+
 .product-list__img {
   overflow: hidden;
 }
