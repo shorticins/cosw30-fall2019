@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Styleguide</title>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
         <link href="/styleguide/styles.css" rel="stylesheet">
     </head>
     <body>
@@ -13,7 +14,7 @@
             <h2>UI Documentation</h2>
             <ul>
                 <li><a href="/styleguide/layout">Layout</a></li>
-                <li><a href="">Links go here</a></li>
+                <li><a href="/styleguide/utilities">Utilities</a></li>
             </ul>
 
             <h2>Branding</h2>
@@ -28,8 +29,6 @@
             <img src="https://res.cloudinary.com/bayleigh/image/upload/v1571865396/UX%20styleguide/home_lc_kl2scx.png" alt="home" width="500px">
             <br>
             <img src="https://res.cloudinary.com/bayleigh/image/upload/v1571865410/UX%20styleguide/sign_image_template_1_bojai8.png" alt="sign_template" width="500px">
-            <br>
-
         </main>
     </body>
 </html>
