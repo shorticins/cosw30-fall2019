@@ -22,7 +22,10 @@ $products = getProducts();
  include('database.php');
 
     if(is_array($products)) {
-        echo "<table class='table'>
+        echo "
+        <main class='col-md-8 m-1 col-sm-12'>
+    <div class='col align-content-center'>
+        <table class='table'>
     <thead class='thead-dark'>
         <tr>
             <th scope='col'> Product Id </th>
@@ -31,7 +34,7 @@ $products = getProducts();
             <th scope='col'> Product Price </th>
             <th scope='col'> Product Vendor </th>
             <th scope='col'> Product Image URL </th>
-            <th scope='col'> Edit / Delete </th>
+            <th scope='col'> Edit/Delete </th>
         </tr>
     </thead>
 
@@ -44,9 +47,8 @@ $products = getProducts();
             echo "<td>".$product['product_vendor']."</td>";
             echo "<td>".$product['product_img_url']."<button> Edit </button> <button> Delete </button> </td></tr>";
 
-
         }
-        echo "</tbody></table>";
+        echo "</tbody></table></div></main>";
     } else {
         echo $products;
     }
