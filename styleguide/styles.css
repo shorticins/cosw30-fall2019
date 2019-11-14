@@ -427,32 +427,27 @@ th {
     and modules
 
 -----------------------------------------------*/
-.alert-primary {
-  background-color: #FFF;
+.alert--success {
   font-family: "Josefin Sans", sans-serif;
   width: 40%;
   margin: auto;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 25px;
   border: solid 1px;
   text-align: center;
 }
-
-.alert-success-h {
+.alert--success .success--h {
   font-size: 25px;
   padding-top: 15px;
   color: #2E9347;
 }
-
-.alert-p {
+.alert--success .success--p {
   padding-bottom: 15px;
   margin: 50px;
 }
-
-.alert-success-btn {
+.alert--success .success--btn {
   display: block;
   margin: 0 auto;
-  padding: 0;
   width: 250px;
   height: 50px;
   border: 2px solid #2E9347;
@@ -463,11 +458,19 @@ th {
   font-size: 15px;
 }
 
-.alert-error-btn {
+.alert--error {
+  font-family: "Josefin Sans", sans-serif;
+  width: 40%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 25px;
+  border: solid 1px;
+  text-align: center;
+}
+.alert--error .error--btn {
   color: #B81F24;
   display: block;
   margin: 0 auto;
-  padding: 0;
   width: 250px;
   height: 50px;
   border: 2px solid #B81F24;
@@ -477,8 +480,7 @@ th {
   letter-spacing: 1px;
   font-size: 15px;
 }
-
-.alert-error-h {
+.alert--error .error--h {
   color: #B81F24;
   font-size: 25px;
 }
@@ -601,7 +603,11 @@ th {
   padding: 10px 15.4375px;
 }
 
+<<<<<<< HEAD
 /* main color for breadcrumb*/
+=======
+/* main outline */
+>>>>>>> 592aace36bd65cb5feee692df2c19bdbcfc1d4fd
 ul.breadcrumb {
   padding: 10px 10px;
   list-style: none;
@@ -1225,6 +1231,10 @@ hr {
   clear: both;
 }
 
+.product-list__img {
+  overflow: hidden;
+}
+
 h4 {
   text-decoration: underline;
 }
@@ -1250,6 +1260,20 @@ h4 {
 
 .img--centered {
   text-align: center;
+}
+
+.site-footer {
+  background-image: url("/img/tile_black_asphault.jpg");
+}
+
+/*
+*   Contains styles related to the styleguide only
+*/
+.styleguide__header {
+  margin-top: 50px;
+}
+.styleguide__main {
+  margin-top: 50px;
 }
 
 .margin-b--md {

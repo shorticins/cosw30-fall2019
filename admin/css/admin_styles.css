@@ -9,6 +9,7 @@
   line-height: 50px;
   display: block;
 }
+
 @media only screen and (max-width: 600px) {
   footer {
     background-color: rgb(230, 215, 173);
