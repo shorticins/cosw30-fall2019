@@ -1,0 +1,42 @@
+.category_section {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    margin-bottom: 5%;
+}
+
+.category_image {   
+    display: block;
+    max-width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category_item h3 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.category_item a {
+    display: block;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.hero_image {
+    display: block;
+    max-width: 100%;
+}
+
+.main_blurb {
+    margin-bottom: 3%;
+}

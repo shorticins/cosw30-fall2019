@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
+    <link href="index_styles.css" rel="stylesheet">
 </head>
 <body>
     <header class="container">
