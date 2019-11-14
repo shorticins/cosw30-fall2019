@@ -5,14 +5,53 @@
 
 <link rel="shortcut icon" href="includes/favicon_ts.png" type="image/png">
     <title>Treat Street</title>
-    <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/carlito" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
+    <style>
+    ul {
+        list-style-type: none;
+        margin: 10px;
+        padding: 3%;
+        overflow: hidden;
+        width: 100%;
+    }
+    .nav_li {
+        float: left;
+        margin-left: 2.75%;
+    }
+   .nav_li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 6px 10px;
+        text-decoration: none;
+        background-color: #59A472;
+        /*width: 95%;*/
+        border: 2.5px solid white;
+        border-radius: 4px;
+        box-shadow: 0 0 0 6px #59A472;
+        font-family: 'CarlitoRegular';
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+    .sign {
+        margin-left: 1%;
+        width: 95%;
+    }
+    .row {
+        margin-left: 29%;
+        
+    }
+    </style>
+    <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
-    <header class="container">
+    <!--<header class="container">
         <div class="row">
-            <h2 style="background-color: #2E9E47" class="three columns">Treat Street</h2><!--replace with image-->
+            <h2 style="background-color: #2E9E47" class="three columns">Treat Street</h2>
             <form action="/" method="GET" class="eight columns">
                 <input id="search" type="text" placeholder="Search">
                 <input id="submit" type="submit" value="Search">
@@ -25,6 +64,7 @@
         </div>
         <div class="row">
             <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
+<<<<<<< HEAD
         </div>
         <nav>
             <ul class="row">
@@ -39,6 +79,22 @@
                 <li class="two columns"><a href="/">Just For You</a></li>
                 <li class="two columns"><a href="/">Adopt</a></li>
             </ul>
+=======
+        </div> -->
+        <nav class="row">
+            <ul class="nav_ul">
+                <li class="nav_li"><a href="plp.php" class="sign">doghouse</a></li>
+                <li class="nav_li"><a href="" class="sign">barkery blvd</a></li>
+                <li class="nav_li"><a href="" class="sign">accessory ave</a></li>
+                <li class="nav_li"><a href="" class="sign">rescue road</li>
+            </ul>
+            <!-- <a href="/" class="two columns">Snacks</a>
+            <a href="/" class="two columns">Dress Up</a>
+            <a href="/" class="two columns">Play Time</a>
+            <a href="/" class="two columns">Health</a>
+            <a href="/" class="two columns">Just For You</a>
+            <a href="/" class="two columns">Adopt</a> -->
+>>>>>>> 0d7d5feb67e37635e2e0fe213d498fd064573f7e
         </nav>
     </header>
 <!-- END HEADER -->
