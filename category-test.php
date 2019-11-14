@@ -32,7 +32,7 @@ include('model/category.php');
 
     <div id="container">
 
-    <h1>Update User</h1>
+    <h1>Test The Category Functions</h1>
 
     <div id="texting">
 
