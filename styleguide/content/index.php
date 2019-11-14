@@ -1,6 +1,6 @@
 <?php include('../includes/header.php');?>
 
-<main class="container">
+<main class="styleguide__main nine columns">
     <h1>Content</h1>
     <p>The following contents are related to the styleguide page</p>
     <hr>

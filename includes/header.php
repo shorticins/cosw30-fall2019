@@ -20,7 +20,7 @@
             <span class="one column">
                 <a href="/"><i class="fas fa-cart-plus"></i></a>
                 <a href="/"><i class="fas fa-question-circle"></i></a>
-                <a href="/"><i class="fas fa-user-circle"></i></a>
+                <a href="/login.php"><i class="fas fa-user-circle"></i>Login</a>
             </span>
         </div>
         <div class="row">
@@ -30,7 +30,7 @@
             <ul class="row">
                 <li class="two columns"><a href="./styleguide">Styleguide</a></li>
                 <li class="two columns"><a href="./product.php">PDP</a></li>
-                <li class="two columns"><a href="/">PLP</a></li>
+                <li class="two columns"><a href="./plp.php">PLP</a></li>
                 <li class="two columns"><a href="/admin">Admin Consoles</a></li>
                 <!--<li class="two columns"><a href="/">Snacks</a></li>-->
                 <!--<li class="two columns"><a href="/">Dress Up</a></li>-->
