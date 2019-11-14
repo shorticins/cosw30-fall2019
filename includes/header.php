@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
     <style>
-    .logo_font {
-    font-family: 'CarlitoRegular';
-    font-weight: bold;
-    font-style: normal;
-    color: white;
-    text-align: center;
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 60%;
     }
     .nav_li {
         float: left;
@@ -24,10 +24,11 @@
         padding: 14px 16px;
         text-decoration: none;
         background-color: #59A472;
-        width: 100px;
+        width: 150px;
         border: 5px solid white;
         border-radius: 5px;
         font-family: 'CarlitoRegular';
+        font-weight: bold;
     }
     </style>
     <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
@@ -53,10 +54,10 @@
         </div> -->
         <nav class="row">
             <ul class="nav_ul">
-                <li class="nav_li"><a href="plp.php"><p class="logo_font">doghouse</p></a></li>
-                <li class="nav_li"><a href=""><p class="logo_font">barkery blvd</p></a></li>
-                <li class="nav_li"><a href=""><p class="logo_font">accessory ave</p></a></li>
-                <li class="nav_li"><a href="" class="logo_font">rescue road</a></li>
+                <li class="nav_li"><a href="plp.php" class="sign">doghouse</a></li>
+                <li class="nav_li"><a href="" class="sign">barkery blvd</a></li>
+                <li class="nav_li"><a href="" class="sign">accessory ave</a></li>
+                <li class="nav_li"><a href="" class="sign">rescue road</li>
             </ul>
             <!-- <a href="/" class="two columns">Snacks</a>
             <a href="/" class="two columns">Dress Up</a>
