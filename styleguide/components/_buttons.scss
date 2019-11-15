@@ -10,6 +10,24 @@
     color: $color__black;
     display: inline-block;
 
+    /* SIGN BUTTONS */
+    &--sign {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 6px 10px;
+        text-decoration: none;
+        background-color: #59A472;
+        border: 2.5px solid white;
+        border-radius: 4px;
+        box-shadow: 0 0 0 6px #59A472;
+        font-family: 'CarlitoRegular';
+        font-weight: bold;
+        font-size: 1.25em;
+        margin-left: 1%;
+        width: 95%;
+    }
+    
     /* REGULAR BUTTON COLORS */
     &--green {
         background-color: $color__green;

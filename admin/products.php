@@ -28,7 +28,9 @@ if(is_array($products)) {
         echo "<td>".$product['product_desc']."</td>";
         echo "<td>".$product['product_price']."</td>";
         echo "<td>".$product['product_vendor']."</td>";
-        echo "<td>".$product['product_img_url']."<button> Edit </button> <button> Delete </button> </td></tr>";
+        echo "<td>".$product['product_img_url']."
+        <a href='/admin/product.php?id=".$product['product_id']."> Edit </a> 
+         </td></tr>";
     }
     echo "</tbody></table>";
 } else {
