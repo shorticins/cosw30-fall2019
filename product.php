@@ -7,11 +7,11 @@
     <div class="row">
         <div class="twelve columns">
             <nav>
-                <ul>
-                    <li class="breadcrumbs"><a href="">Home</a></li>
-                    <li class="breadcrumbs"><a href="">Dogs</a></li>
-                    <li class="breadcrumbs"><a href="">Food</a></li>
-                    <li><a href="">Desserts</a></li>
+                <ul class="breadcrumb" >
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Dogs</a></li>
+                    <li><a href="">Food</a></li>
+                    <li><a class="active" href="">Desserts</a></li>
                 </ul>
             </nav>
         </div>
