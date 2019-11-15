@@ -8,7 +8,6 @@
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/carlito" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
-
     <style>
     ul {
         list-style-type: none;
