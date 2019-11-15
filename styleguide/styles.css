@@ -502,10 +502,27 @@ th {
   font-size: 1em;
   color: #000;
   display: inline-block;
+  /* SIGN BUTTONS */
   /* REGULAR BUTTON COLORS */
   /* OUTLINE BUTTONS */
   /* BUTTON SIZES */
   /* FULL-WIDTH BUUTON */
+}
+.btn--sign {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 6px 10px;
+  text-decoration: none;
+  background-color: #59A472;
+  border: 2.5px solid white;
+  border-radius: 4px;
+  box-shadow: 0 0 0 6px #59A472;
+  font-family: "CarlitoRegular";
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-left: 1%;
+  width: 95%;
 }
 .btn--green {
   background-color: #2E9347;
@@ -977,14 +994,12 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: rgb(55, 134, 23);
-  text-decoration: none;
+  color: #1EAEDB;
 }
 
 a:hover {
-  color: rgb(55, 134, 23);
+  color: #0FA0CE;
 }
-
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1221,37 +1236,6 @@ form {
   float: left;
 }
 
-/*  Footer 
--------------------------------------------------- */
-#footerimg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10%;
-}
-
-#footerlink {
-    
-    
-   
-}
-
-
-/* Social Media Icons 
---------------------------------------------------- */
-#social {
-    color: #000; 
-    padding: 40px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-   
-}
-
-
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
@@ -1272,8 +1256,47 @@ hr {
   clear: both;
 }
 
-.homepage {
-  background-color: pink;
+.category_section {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  margin-bottom: 5%;
+}
+
+.category_image {
+  display: block;
+  max-width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category_item h3 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.category_item a {
+  display: block;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.hero_image {
+  display: block;
+  max-width: 100%;
+}
+
+.main_blurb {
+  margin-bottom: 3%;
 }
 
 .product-list__img {
@@ -1315,6 +1338,21 @@ h4 {
 
 .site-footer {
   background-image: url("/img/tile_black_asphault.jpg");
+}
+
+/*
+*   Contains styles related to the header
+*/
+.site-header__nav {
+  list-style-type: none;
+  margin: 10px;
+  padding: 3%;
+  overflow: hidden;
+  width: 100%;
+}
+.site-header__nav-item {
+  float: left;
+  margin-left: 2.75%;
 }
 
 /*
