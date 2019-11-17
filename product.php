@@ -1,5 +1,32 @@
 <?php include 'includes/header.php'; ?>
+<?php include 'model/database.php'; ?>
 
+<?php
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else {
+    header('Location: plp.php');
+    exit;
+}
+
+$select_query = "SELECT * FROM PRODUCT WHERE product_id = $id";
+
+$result = mysqli_query($connection, $select_query);
+
+if ($result) {
+    $product = mysqli_fetch_assoc($result);
+    //print_r($user);
+    $product_name         = $product['product_name'];
+    $product_desc         = $product['product_desc'];
+    $Product_Ingredients  = $product['Product_Ingredients'];
+    $Product_Price        = $product['Product_Price'];
+    $Product_Image        = $product['Product_Image'];
+    $Product_Rating       = $product['Product_Rating'];
+} else {
+    echo "<h3 class=\"error--h\">Opps! Something went wrong... Try Again Later</h3>";
+}
+
+?>
 
 <main class="container">
 <!--Internal Product Navigation Links-->
@@ -20,7 +47,7 @@
     <!--Product Name-->
     <div class="row">
         <div class="twelve columns">
-            <h2>Product Name</h2>
+            <h2><?php echo $product_name; ?></h2>
         </div>
     </div>
 
@@ -28,7 +55,7 @@
     <div class="row">
         <div class="seven columns">
             <figure class="img--centered">
-                <img class="img__main" src="https://images.pexels.com/photos/913136/pexels-photo-913136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" title="Main Image" alt="Sweet-tart cupcake">
+                <img class="img__main" src="<?php echo $Product_Image; ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>">
             </figure>
             <!--Thumbnail Images-->
             <div class="img__small img--centered">
@@ -48,7 +75,7 @@
                 <a href="#reviews">Reviews</a>
             </p>
 
-            <p>Price: $ price variable</p>
+            <p>Price: $<?php echo $Product_Price; ?></p>
 
             <form action="" method="POST">
                 <label for="quantity">Quantity:
@@ -85,11 +112,7 @@
     <div class="row">
         <div class="twelve columns">
             <h4>Product Description</h4>
-            <p>Bacon ipsum dolor amet pancetta doner filet mignon picanha salami cow.
-            Rump shankle jerky tongue pancetta, flank venison spare ribs hamburger meatball pork chuck.
-            Sirloin meatloaf pig, capicola biltong boudin drumstick jerky shoulder picanha pancetta
-            ribeye beef ball tip. Shank beef ribs ham hock short loin spare ribs drumstick andouille
-            shoulder prosciutto strip steak brisket leberkas. Tail bacon cow flank.</p>
+            <p><?php echo $product_desc; ?></p>
         </div>
     </div>
 
@@ -97,11 +120,7 @@
     <div class="row">
         <div class="twelve columns">
             <h4>Ingredients</h4>
-            <p>Bacon ipsum dolor amet pancetta doner filet mignon picanha salami cow.
-            Rump shankle jerky tongue pancetta, flank venison spare ribs hamburger meatball pork chuck.
-            Sirloin meatloaf pig, capicola biltong boudin drumstick jerky shoulder picanha pancetta
-            ribeye beef ball tip. Shank beef ribs ham hock short loin spare ribs drumstick andouille
-            shoulder prosciutto strip steak brisket leberkas. Tail bacon cow flank.</p>
+            <p><?php echo $Product_Ingredients; ?></p>
         </div>
     </div>
 
