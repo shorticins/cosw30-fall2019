@@ -1,0 +1,78 @@
+/* main color for breadcrumb*/
+ul.breadcrumb {
+  padding: 10px 10px;
+  list-style: none;
+  background-color: $color__white;
+
+ /*Color that can be change to chose fromr*/
+        &--green {
+            background-color: $color__green;
+        }
+        &--black {
+            background-color: $color__black;
+           text-color: $color__white;
+        }
+
+        &--blue--light {
+            background-color: $color__blue--light;
+
+        }
+
+        &--grey--light {
+            background-color: $color__grey--light;
+
+        }
+
+        &--purple {
+            background-color: $color__purple;
+
+        }
+
+        &--red--dark {
+            background-color: $color__red--dark;
+
+        }
+
+        &--white {
+            border-color: $color__white;
+
+        }
+      }
+
+
+/* inline-block styling */
+
+ ul.breadcrumb li {
+  display: inline-block;
+  font-size: 18px;
+   padding-left: 10px;
+}
+
+/*adding >> after each a attribute */
+
+ul.breadcrumb li+li:before {
+  padding: 4px;
+  color: $color__black;
+  content: " >> ";
+
+}
+
+
+ul.breadcrumb li a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* color change when mouse hover */
+
+ul.breadcrumb li a:hover {
+  color: $color__grey--light;
+  text-decoration: underline;
+}
+
+/* Staying black for active a attribute */
+
+ul.breadcrumb li a.active {
+  color: $color__black;
+
+}

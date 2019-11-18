@@ -2,25 +2,74 @@
 /* MAIN BUTTON CLASS */
 .btn {
     text-decoration: none;
+    text-align: center;
     border-radius: 0.3em;
     border: 1px solid $color__black;
-    padding: 0.75em 1.25em;
+    padding: 0.75em 1.50em;
     font-size: 1em;
     color: $color__black;
+    display: inline-block;
 
+    /* SIGN BUTTONS */
+    &--sign {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 6px 10px;
+        text-decoration: none;
+        background-color: #59A472;
+        border: 2.5px solid white;
+        border-radius: 4px;
+        box-shadow: 0 0 0 6px #59A472;
+        font-family: 'CarlitoRegular';
+        font-weight: bold;
+        font-size: 1.25em;
+        margin-left: 1%;
+        width: 95%;
+    }
+    
     /* REGULAR BUTTON COLORS */
     &--green {
         background-color: $color__green;
+        border-color: $color__green;
         color: $color__white;
     }
     &--black {
         background-color: $color__black;
+        border-color: $color__black;
         color: $color__white;
     }
     &--blue--light {
         background-color: $color__blue--light;
+        border-color: $color__blue--light;
         color: $color__black;
     }
+
+    &--grey--light {
+        background-color: $color__grey--light;
+        border-color: $color__grey--light;
+        color: $color__black;
+    }
+
+    &--purple {
+        background-color: $color__purple;
+        border-color: $color__grey--light;
+        color: $color__white;
+    }
+
+    &--red--dark {
+        background-color: $color__red--dark;
+        border-color: $color__red--dark;
+        color: $color__white;
+    }
+
+    &--white {
+        background-color: $color__white;
+        border-color: $color__white;
+        color: $color__black;
+    }
+
+
     /* OUTLINE BUTTONS */
     // .btn--outline--green
     &--outline {
@@ -29,75 +78,57 @@
             border-color: $color__green;
             color: $color__green;
         }
+        &--black {
+            background-color: $color__white;
+            border-color: $color__black;
+            color: $color__black;
+        }
+
+        &--blue--light {
+            background-color: $color__white;
+            border-color: $color__blue--light;
+            color: $color__blue--light;
+        }
+
+        &--grey--light {
+            background-color: $color__white;
+            border-color: $color__grey--light;
+            color: $color__grey--light;
+        }
+
+        &--purple {
+            background-color: $color__white;
+            border-color: $color__purple ;
+            color: $color__purple ;
+        }
+
+        &--red--dark {
+            background-color: $color__white;
+            border-color: $color__red--dark;
+            color: $color__red--dark;
+        }
+
+        &--white {
+            border-color: $color__white;
+            color: $color__white;
+        }
     }
-}
 
-.btn--grey--light {
-    background-color: $color__grey--light;
-    color: $color__black;
-}
+    /* BUTTON SIZES */
+    &--large {
+        padding: 0.6em 1.60em;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    &--small {
+        padding: 0.5em 0.90em;
+        font-size: 0.8em;
+    }
 
-.btn--purple {
-    background-color: $color__purple;
-    color: $color__white;
-}
-
-.btn--red--dark {
-    background-color: $color__red--dark;
-    color: $color__white;
-}
-
-.btn--white {
-    background-color: $color__white;
-    color: $color__black;
-}
-
-
-
-.btn--outline--black {
-    background-color: $color__white;
-    border-color: $color__black;
-    color: $color__black;
-}
-
-.btn--outline--blue--light {
-    background-color: $color__white;
-    border-color: $color__blue--light;
-    color: $color__blue--light;
-}
-
-.btn--outline--grey--light {
-    background-color: $color__white;
-    border-color: $color__grey--light;
-    color: $color__grey--light;
-}
-
-.btn--outline--purple {
-    background-color: $color__white;
-    border-color: $color__purple ;
-    color: $color__purple ;
-}
-
-.btn--outline--red--dark {
-    background-color: $color__white;
-    border-color: $color__red--dark;
-    color: $color__red--dark;
-}
-
-/* BUTTON SIZES */
-.btn--large {
-    padding: 0.6em 1.4em;
-    font-size: 1.5em;
-    text-align: center;
-}
-.btn--small {
-    padding: 0.5em 0.8em;
-    font-size: 0.8em;
-}
-
-/* FULL-WIDTH BUUTON */
-.btn--block {
-    display: block;
-    width: 95%;
-    text-align: center;
+    /* FULL-WIDTH BUUTON */
+    &--block {
+        display: block;
+        width: 95%;
+        text-align: center;
+    }
 }

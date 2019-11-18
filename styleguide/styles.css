@@ -427,32 +427,27 @@ th {
     and modules
 
 -----------------------------------------------*/
-.alert-primary {
-  background-color: #FFF;
+.alert--success {
   font-family: "Josefin Sans", sans-serif;
   width: 40%;
   margin: auto;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 25px;
   border: solid 1px;
   text-align: center;
 }
-
-.alert-success-h {
+.alert--success .success--h {
   font-size: 25px;
   padding-top: 15px;
   color: #2E9347;
 }
-
-.alert-p {
+.alert--success .success--p {
   padding-bottom: 15px;
   margin: 50px;
 }
-
-.alert-success-btn {
+.alert--success .success--btn {
   display: block;
   margin: 0 auto;
-  padding: 0;
   width: 250px;
   height: 50px;
   border: 2px solid #2E9347;
@@ -463,11 +458,19 @@ th {
   font-size: 15px;
 }
 
-.alert-error-btn {
+.alert--error {
+  font-family: "Josefin Sans", sans-serif;
+  width: 40%;
+  margin: auto;
+  padding: 15px;
+  border-radius: 25px;
+  border: solid 1px;
+  text-align: center;
+}
+.alert--error .error--btn {
   color: #B81F24;
   display: block;
   margin: 0 auto;
-  padding: 0;
   width: 250px;
   height: 50px;
   border: 2px solid #B81F24;
@@ -477,8 +480,7 @@ th {
   letter-spacing: 1px;
   font-size: 15px;
 }
-
-.alert-error-h {
+.alert--error .error--h {
   color: #B81F24;
   font-size: 25px;
 }
@@ -493,24 +495,68 @@ th {
 /* MAIN BUTTON CLASS */
 .btn {
   text-decoration: none;
+  text-align: center;
   border-radius: 0.3em;
   border: 1px solid #000;
-  padding: 0.75em 1.25em;
+  padding: 0.75em 1.5em;
   font-size: 1em;
   color: #000;
+  display: inline-block;
+  /* SIGN BUTTONS */
   /* REGULAR BUTTON COLORS */
   /* OUTLINE BUTTONS */
+  /* BUTTON SIZES */
+  /* FULL-WIDTH BUUTON */
+}
+.btn--sign {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 6px 10px;
+  text-decoration: none;
+  background-color: #59A472;
+  border: 2.5px solid white;
+  border-radius: 4px;
+  box-shadow: 0 0 0 6px #59A472;
+  font-family: "CarlitoRegular";
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-left: 1%;
+  width: 95%;
 }
 .btn--green {
   background-color: #2E9347;
+  border-color: #2E9347;
   color: #FFF;
 }
 .btn--black {
   background-color: #000;
+  border-color: #000;
   color: #FFF;
 }
 .btn--blue--light {
   background-color: #9CC0F0;
+  border-color: #9CC0F0;
+  color: #000;
+}
+.btn--grey--light {
+  background-color: #D3D3D3;
+  border-color: #D3D3D3;
+  color: #000;
+}
+.btn--purple {
+  background-color: #7B4B94;
+  border-color: #D3D3D3;
+  color: #FFF;
+}
+.btn--red--dark {
+  background-color: #B81F24;
+  border-color: #B81F24;
+  color: #FFF;
+}
+.btn--white {
+  background-color: #FFF;
+  border-color: #FFF;
   color: #000;
 }
 .btn--outline--green {
@@ -518,70 +564,44 @@ th {
   border-color: #2E9347;
   color: #2E9347;
 }
-
-.btn--grey--light {
-  background-color: #D3D3D3;
-  color: #000;
-}
-
-.btn--purple {
-  background-color: #7B4B94;
-  color: #FFF;
-}
-
-.btn--red--dark {
-  background-color: #B81F24;
-  color: #FFF;
-}
-
-.btn--white {
-  background-color: #FFF;
-  color: #000;
-}
-
 .btn--outline--black {
   background-color: #FFF;
   border-color: #000;
   color: #000;
 }
-
 .btn--outline--blue--light {
   background-color: #FFF;
   border-color: #9CC0F0;
   color: #9CC0F0;
 }
-
 .btn--outline--grey--light {
   background-color: #FFF;
   border-color: #D3D3D3;
   color: #D3D3D3;
 }
-
 .btn--outline--purple {
   background-color: #FFF;
   border-color: #7B4B94;
   color: #7B4B94;
 }
-
 .btn--outline--red--dark {
   background-color: #FFF;
   border-color: #B81F24;
   color: #B81F24;
 }
-
-/* BUTTON SIZES */
+.btn--outline--white {
+  border-color: #FFF;
+  color: #FFF;
+}
 .btn--large {
-  padding: 0.6em 1.4em;
+  padding: 0.6em 1.6em;
   font-size: 1.5em;
   text-align: center;
 }
-
 .btn--small {
-  padding: 0.5em 0.8em;
+  padding: 0.5em 0.9em;
   font-size: 0.8em;
 }
-
-/* FULL-WIDTH BUUTON */
 .btn--block {
   display: block;
   width: 95%;
@@ -598,6 +618,80 @@ th {
 .pagination__button a, .pagination__number a {
   display: block;
   padding: 10px 15.4375px;
+}
+
+<<<<<<< HEAD
+/* main color for breadcrumb*/
+=======
+/* main outline */
+>>>>>>> 592aace36bd65cb5feee692df2c19bdbcfc1d4fd
+ul.breadcrumb {
+  padding: 10px 10px;
+  list-style: none;
+  background-color: #FFF;
+  /*Color that can be change to chose fromr*/
+}
+ul.breadcrumb--green {
+  background-color: #2E9347;
+}
+ul.breadcrumb--black {
+  background-color: #000;
+  text-color: #FFF;
+}
+ul.breadcrumb--blue--light {
+  background-color: #9CC0F0;
+}
+ul.breadcrumb--grey--light {
+  background-color: #D3D3D3;
+}
+ul.breadcrumb--purple {
+  background-color: #7B4B94;
+}
+ul.breadcrumb--red--dark {
+  background-color: #B81F24;
+}
+ul.breadcrumb--white {
+  border-color: #FFF;
+}
+
+/* inline-block styling */
+ul.breadcrumb li {
+  display: inline-block;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+/*adding >> after each a attribute */
+ul.breadcrumb li + li:before {
+  padding: 4px;
+  color: #000;
+  content: " >> ";
+}
+
+ul.breadcrumb li a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* color change when mouse hover */
+ul.breadcrumb li a:hover {
+  color: #D3D3D3;
+  text-decoration: underline;
+}
+
+/* Staying black for active a attribute */
+ul.breadcrumb li a.active {
+  color: #000;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-style: italic;
 }
 
 /*
@@ -812,7 +906,6 @@ body {
   /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
 }
 
@@ -1090,23 +1183,6 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1;
-}
-
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-
-th:last-child,
-td:last-child {
-  padding-right: 0;
-}
-
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
@@ -1125,7 +1201,6 @@ pre,
 blockquote,
 dl,
 figure,
-table,
 p,
 ul,
 ol,
@@ -1171,6 +1246,109 @@ hr {
   content: "";
   display: table;
   clear: both;
+}
+
+.category_section {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  margin-bottom: 5%;
+}
+
+.category_image {
+  display: block;
+  max-width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category_item h3 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.category_item a {
+  display: block;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.hero_image {
+  display: block;
+  max-width: 100%;
+}
+
+.main_blurb {
+  margin-bottom: 3%;
+}
+
+.product-list__img {
+  overflow: hidden;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+.icon__social {
+  padding-right: 1em;
+}
+
+.div__main {
+  padding-top: 5em;
+  text-align: center;
+}
+
+.img__main {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.img__small {
+  width: 75%;
+}
+
+.img--centered {
+  text-align: center;
+}
+
+.site-footer {
+  background-image: url("/img/tile_black_asphault.jpg");
+}
+
+/*
+*   Contains styles related to the header
+*/
+.site-header__nav {
+  list-style-type: none;
+  margin: 10px;
+  padding: 3%;
+  overflow: hidden;
+  width: 100%;
+}
+.site-header__nav-item {
+  float: left;
+  margin-left: 2.75%;
+}
+
+/*
+*   Contains styles related to the styleguide only
+*/
+.styleguide__header {
+  margin-top: 50px;
+}
+.styleguide__main {
+  margin-top: 50px;
 }
 
 .margin-b--md {
