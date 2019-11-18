@@ -1221,24 +1221,8 @@ form {
   float: left;
 }
 
-/*  Footer 
--------------------------------------------------- */
-#footerimg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10%;
-}
-
-#footerlink {
-    
-    
-   
-}
-
-
-/* Social Media Icons 
---------------------------------------------------- */
+/* Social 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 #social {
     color: #000; 
     padding: 40px;
@@ -1250,7 +1234,6 @@ form {
     margin-right: auto;
    
 }
-
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
