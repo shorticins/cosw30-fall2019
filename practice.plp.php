@@ -18,7 +18,7 @@ function getProductPag($page_number) {
 $page_number = $_GET['page'];
 $products = getProductPag($page_number); 
 foreach($products as $product) {
-        echo "<h2>$product['product_name']</h2>\n
-        <p>$product['product_desc']</p>\n";
+        echo "<h2>$product[product_name]</h2>\n
+        <p>$product[product_desc]</p>\n";
 }
 
