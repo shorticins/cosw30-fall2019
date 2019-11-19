@@ -1,63 +1,78 @@
-// slim down css page
+.welcome {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    h1 {
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: bold;
+    }
+}
 
-// .category {
-//     //.category_section
-//     &_section {
-//         display: flex;
-//         justify-content: center;
-//         align-content: flex-end;
-//         margin-bottom: 5%;
-//     }
-//     //.category_image
-//     &_image {
-//         display: block;
-//         max-width: 200px;
-//         height: 200px;
-//         overflow: hidden;
-//         margin-left: auto;
-//         margin-right: auto;
-//     }
-// }
-
-.category_section {
+.category {
     display: flex;
     justify-content: center;
     align-content: flex-end;
     margin-bottom: 5%;
+
+    &_item {
+        &_img {
+            height: 250px;
+            width: 250px;
+            position: relative;
+            overflow: hidden;
+            img {
+                display: block;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+        h3 {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            display: block;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
-.category_image {   
-    display: block;
-    max-width: 200px;
-    height: 200px;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+.banner {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    p {
+        position: absolute;
+        font-size: 4em;
+        font-weight: bold;
+        color: white;
+    }
+    .textLeft {
+        top: 35%;
+        left: 10px;
+    }
+    .textRight {
+        top: 40%;
+        right: 10px;
+    }
 }
 
-.category_item h3 {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.category_item a {
-    display: block;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h2 {
+.index_h2 {
     text-align: center;
     margin-bottom: 3%;
     margin-top: 3%;
 }
 
-.hero_image {
-    display: block;
-    max-width: 100%;
-}
-
-.main_blurb {
+.index_blurb {
     margin-bottom: 3%;
 }

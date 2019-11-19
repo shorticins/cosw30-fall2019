@@ -620,11 +620,7 @@ th {
   padding: 10px 15.4375px;
 }
 
-<<<<<<< HEAD
 /* main color for breadcrumb*/
-=======
-/* main outline */
->>>>>>> 592aace36bd65cb5feee692df2c19bdbcfc1d4fd
 ul.breadcrumb {
   padding: 10px 10px;
   list-style: none;
@@ -1248,46 +1244,78 @@ hr {
   clear: both;
 }
 
-.category_section {
+.welcome {
+  position: relative;
+}
+.welcome img {
+  width: 100%;
+}
+.welcome h1 {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.category {
   display: flex;
   justify-content: center;
   align-content: flex-end;
   margin-bottom: 5%;
 }
-
-.category_image {
-  display: block;
-  max-width: 200px;
-  height: 200px;
+.category_item_img {
+  height: 250px;
+  width: 250px;
+  position: relative;
   overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
 }
-
+.category_item_img img {
+  display: block;
+  height: 100%;
+  margin: 0 auto;
+}
 .category_item h3 {
   text-align: center;
   margin-top: 15px;
 }
-
 .category_item a {
   display: block;
-  width: 25%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
 }
 
-h2 {
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 100%;
+}
+.banner p {
+  position: absolute;
+  font-size: 4em;
+  font-weight: bold;
+  color: white;
+}
+.banner .textLeft {
+  top: 35%;
+  left: 10px;
+}
+.banner .textRight {
+  top: 40%;
+  right: 10px;
+}
+
+.index_h2 {
   text-align: center;
   margin-bottom: 3%;
   margin-top: 3%;
 }
 
-.hero_image {
-  display: block;
-  max-width: 100%;
-}
-
-.main_blurb {
+.index_blurb {
   margin-bottom: 3%;
 }
 

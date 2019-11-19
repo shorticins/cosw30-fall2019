@@ -1,0 +1,184 @@
+.category_section {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  margin-bottom: 5%;
+}
+
+.category_image {
+  display: block;
+  max-width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category_item h3 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.category_item a {
+  display: block;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.welcome {
+  position: relative;
+}
+
+.welcome img {
+  width: 100%;
+}
+
+.welcome h1 {
+  position: absolute;
+  top: 0;
+  color: blue;
+}
+
+.main_blurb {
+  margin-bottom: 3%;
+}
+
+.product-list__img {
+  overflow: hidden;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+.icon__social {
+  padding-right: 1em;
+}
+
+.div__main {
+  padding-top: 5em;
+  text-align: center;
+}
+
+.img__main {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.img__small {
+  width: 75%;
+}
+
+.img--centered {
+  text-align: center;
+}
+
+.site-footer {
+  background-image: url("/img/tile_black_asphault.jpg");
+}
+
+/*
+*   Contains styles related to the header
+*/
+.site-header__nav {
+  list-style-type: none;
+  margin: 10px;
+  padding: 3%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.site-header__nav-item {
+  float: left;
+  margin-left: 2.75%;
+}
+
+/*
+*   Contains styles related to the styleguide only
+*/
+.styleguide__header {
+  margin-top: 50px;
+}
+
+.styleguide__main {
+  margin-top: 50px;
+}
+
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+/*# sourceMappingURL=modules.css.map */
+
+/*# sourceMappingURL=modules.css.map */
