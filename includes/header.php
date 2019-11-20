@@ -5,20 +5,34 @@
     <title>Treat Street</title>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/carlito" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="/styleguide/styles.css" rel="stylesheet">
     <style>
     .header_buttons {
         display: block;
         background-color:white;
-        padding: 20px;
+        padding: 10px;
         border: 5px ridge #59A472;
         float: right;
-        margin: 3%;
+        margin: 1%;
+        
+    }
+    
+    .main_logo {
+        margin: 0px auto;
+        width: 100%;
+       clear: right;
+    }
+    .header-logo {
+        width: 50%;
     }
 
-
-
-
+    img {
+        max-width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     ul {
         list-style-type: none;
@@ -77,15 +91,21 @@
             <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
         </div> -->
         <div class="header_buttons">
-            <img src=""
+       
+            <a href="">
+            <i class="fas fa-dog fa-2x" style="color:black;"></i>
+            </a>
         </div>
-        <div class = "header_buttons">
-
+        <div class="header_buttons">
+            
+            <a href="">
+            <i class="fas fa-shopping-cart fa-2x" style="color:black;"></i>
+            </a>
         </div>
-
-
-
-
+            <br><br><br>
+        <div class="main_logo">
+            <img src="img/white background logo.png" class="header_logo" alt="treatstreet word logo">
+        </div>
 
 
         <nav class="row">
