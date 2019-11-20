@@ -76,38 +76,7 @@
 
 
 <body>
-    <!--<header class="container">
-        <div class="row">
-            <h2 style="background-color: #2E9E47" class="three columns">Treat Street</h2>
-            <form action="/" method="GET" class="eight columns">
-                <input id="search" type="text" placeholder="Search">
-                <input id="submit" type="submit" value="Search">
-            </form>
-            <span class="one column">
-                <a href="/"><i class="fas fa-cart-plus"></i></a>
-                <a href="/"><i class="fas fa-question-circle"></i></a>
-                <a href="/login.php"><i class="fas fa-user-circle"></i>Login</a>
-            </span>
-        </div>
-        <div class="row">
-            <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
-<<<<<<< HEAD
-        </div>
-        <nav>
-            <ul class="row">
-                <li class="two columns"><a href="./styleguide">Styleguide</a></li>
-                <li class="two columns"><a href="./product.php">PDP</a></li>
-                <li class="two columns"><a href="./plp.php">PLP</a></li>
-                <li class="two columns"><a href="/admin">Admin Consoles</a></li>
-                <!--<li class="two columns"><a href="/">Snacks</a></li>-->
-                <!--<li class="two columns"><a href="/">Dress Up</a></li>-->
-                <!--<li class="two columns"><a href="/">Play Time</a></li>-->
-                <!--<li class="two columns"><a href="/">Health</a></li>-->
-                <li class="two columns"><a href="/">Just For You</a></li>
-                <li class="two columns"><a href="/">Adopt</a></li>
-            </ul>
-=======
-        </div> -->
+    
         <div class="header_buttons">
        
             <a href="">
@@ -133,13 +102,7 @@
                 <li class="nav_li"><a href="" class="sign">accessory ave</a></li>
                 <li class="nav_li"><a href="" class="sign">rescue road</li>
             </ul>
-            <!-- <a href="/" class="two columns">Snacks</a>
-            <a href="/" class="two columns">Dress Up</a>
-            <a href="/" class="two columns">Play Time</a>
-            <a href="/" class="two columns">Health</a>
-            <a href="/" class="two columns">Just For You</a>
-            <a href="/" class="two columns">Adopt</a> -->
->>>>>>> 0d7d5feb67e37635e2e0fe213d498fd064573f7e
+            
         </nav>
     </header>
 <!-- END HEADER -->
