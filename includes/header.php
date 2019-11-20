@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+
+<link rel="shortcut icon" href="includes/favicon_ts.png" type="image/png">
     <title>Treat Street</title>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/carlito" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
@@ -84,11 +86,27 @@
             <span class="one column">
                 <a href="/"><i class="fas fa-cart-plus"></i></a>
                 <a href="/"><i class="fas fa-question-circle"></i></a>
-                <a href="/"><i class="fas fa-user-circle"></i></a>
+                <a href="/login.php"><i class="fas fa-user-circle"></i>Login</a>
             </span>
         </div>
         <div class="row">
             <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
+<<<<<<< HEAD
+        </div>
+        <nav>
+            <ul class="row">
+                <li class="two columns"><a href="./styleguide">Styleguide</a></li>
+                <li class="two columns"><a href="./product.php">PDP</a></li>
+                <li class="two columns"><a href="./plp.php">PLP</a></li>
+                <li class="two columns"><a href="/admin">Admin Consoles</a></li>
+                <!--<li class="two columns"><a href="/">Snacks</a></li>-->
+                <!--<li class="two columns"><a href="/">Dress Up</a></li>-->
+                <!--<li class="two columns"><a href="/">Play Time</a></li>-->
+                <!--<li class="two columns"><a href="/">Health</a></li>-->
+                <li class="two columns"><a href="/">Just For You</a></li>
+                <li class="two columns"><a href="/">Adopt</a></li>
+            </ul>
+=======
         </div> -->
         <div class="header_buttons">
        
@@ -121,6 +139,7 @@
             <a href="/" class="two columns">Health</a>
             <a href="/" class="two columns">Just For You</a>
             <a href="/" class="two columns">Adopt</a> -->
+>>>>>>> 0d7d5feb67e37635e2e0fe213d498fd064573f7e
         </nav>
     </header>
 <!-- END HEADER -->

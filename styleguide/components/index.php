@@ -1,21 +1,15 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Styleguide - Layout</title>
-        <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
-        <link href="/styleguide/styles.css" rel="stylesheet">
-    </head>
-    <body>
-        <main class="container">
-        <h1>Layout</h1>
-        <p>The following styles and components are related to page layouts</p>
-        <hr>
+<?php include('../includes/header.php'); ?>
 
-        <?php
+<main class="styleguide__main nine columns">
+    <h1>Components</h1>
+    <p>The following components are related to the styleguide page</p>
+    <?php
+        include('alerts.php');
+        include('buttons.php');
         include('pagination.php');
-        ?>
+    ?>
+</main>
 
-        </main>
-    </body>
-</html>
+<?php
+include('../includes/footer.php');
+?>

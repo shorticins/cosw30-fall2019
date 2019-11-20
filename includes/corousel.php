@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -105,11 +102,9 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 </style>
-</head>
-<body>
 
 
-<h1>COROUSEL</h1>
+<h1>News Bar</h1>
 
 
 <div class="slideshow-container">
@@ -173,5 +168,3 @@ function showSlides(n) {
 }
 </script>
 
-</body>
-</html>
