@@ -17,13 +17,14 @@ foreach ($rows as $row){
 
 <?php
 $i = 0;
+
 while($i < $totalRows){
 echo '
 <!--Product List-->
-    <div class="row"> <!--First row-->
+     <div class="row"><!--First row-->
         <div class="four columns">
                 <a href="">
-                    <img src="' . $rows[$i]['Product_Image'] . '" title="' . $rows[$i]['product_name'] .'" alt="' . $rows[$i]['product_name'] .'" height="350" width="350"/>
+                    <img src="https://via.placeholder.com/150" title="' . $rows[$i]['product_name'] .'" alt="' . $rows[$i]['product_name'] .'" height="350" width="350"/>
                 </a>
                 <h4>' . $rows[$i]['product_name'] .'</h4>
                 <p>' . $rows[$i]['product_desc'] .'</p>
@@ -33,7 +34,7 @@ echo '
 
         <div class="four columns">
                 <a href="">
-                    <img src="' . $rows[$i + 1]['Product_Image'] . '"  title="' . $rows[$i + 1]['product_name'] .'" alt="' . $rows[$i + 1]['product_name'] .'" height="350" width="350"/>
+                    <img src="https://via.placeholder.com/150"  title="' . $rows[$i + 1]['product_name'] .'" alt="' . $rows[$i + 1]['product_name'] .'" height="350" width="350"/>
                 </a>
                 <h4>' . $rows[$i + 1]['product_name'] .'</h4>
                 <p>' . $rows[$i + 1]['product_desc'] .'</p>
@@ -43,7 +44,7 @@ echo '
 
         <div class="four columns">
                 <a href="">
-                    <img src="' . $rows[$i + 2]['Product_Image'] . '" title="' . $rows[$i + 2]['product_name'] .'" alt="' . $rows[$i + 2]['product_name'] .'" height="350" width="350"/>
+                    <img src="https://via.placeholder.com/150" title="' . $rows[$i + 2]['product_name'] .'" alt="' . $rows[$i + 2]['product_name'] .'" height="350" width="350"/>
                 </a>
                 <h4>' . $rows[$i + 2]['product_name'] .'</h4>
                 <p>' . $rows[$i + 2]['product_desc'] .'</p>
