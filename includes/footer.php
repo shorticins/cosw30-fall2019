@@ -1,5 +1,8 @@
 <!-- START FOOTER -->
-    <div class="row">
+    <div class="road">
+<p><img src="img/roadlogo.png" height="190px" width="100%"></p>
+</div>
+          <div class="row">
         <p><img src="img/road.png" id="footerroad" style="width: 100%;, height:100px;" ></p>
 <!--    <p><img src="/admin/images/treatstreet_logo.png" id="footerimg"></p> -->
     </div>
@@ -14,7 +17,7 @@
             <a href="/" class="one column" id="social"><i class="fab fa-instagram"></i></a>
             <a href="/" class="one column" id="social"><i class="fas fa-map-marker-alt"></i></a>
         </div>
-        <div class="row">
+        <div class="about">
             <a href="/" class="one column" >About</a>
             <a href="/" class="one column" >News</a>
             <a href="/" class="one column" >Blog</a>
