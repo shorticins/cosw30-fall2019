@@ -502,10 +502,27 @@ th {
   font-size: 1em;
   color: #000;
   display: inline-block;
+  /* SIGN BUTTONS */
   /* REGULAR BUTTON COLORS */
   /* OUTLINE BUTTONS */
   /* BUTTON SIZES */
   /* FULL-WIDTH BUUTON */
+}
+.btn--sign {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 6px 10px;
+  text-decoration: none;
+  background-color: #59A472;
+  border: 2.5px solid white;
+  border-radius: 4px;
+  box-shadow: 0 0 0 6px #59A472;
+  font-family: "CarlitoRegular";
+  font-weight: bold;
+  font-size: 1.25em;
+  margin-left: 1%;
+  width: 95%;
 }
 .btn--green {
   background-color: #2E9347;
@@ -603,64 +620,52 @@ th {
   padding: 10px 15.4375px;
 }
 
-/* main outline */
+/* main color for breadcrumb*/
 ul.breadcrumb {
-  padding: 10px 16px;
+  padding: 10px 10px;
   list-style: none;
+  background-color: #FFF;
+  /*Color that can be change to chose fromr*/
 }
-
-ul.breadcrumb--color {
-  padding: 10px 16px;
-  list-style: none;
+ul.breadcrumb--green {
+  background-color: #2E9347;
+}
+ul.breadcrumb--black {
+  background-color: #000;
+  text-color: #FFF;
+}
+ul.breadcrumb--blue--light {
   background-color: #9CC0F0;
 }
-
-ul.breadcrumb--big {
-  padding: 15px 16px;
-  list-style: none;
+ul.breadcrumb--grey--light {
+  background-color: #D3D3D3;
+}
+ul.breadcrumb--purple {
+  background-color: #7B4B94;
+}
+ul.breadcrumb--red--dark {
+  background-color: #B81F24;
+}
+ul.breadcrumb--white {
+  border-color: #FFF;
 }
 
-ul.breadcrumb--samll {
-  padding: 5px 10px;
-  list-style: none;
-}
-
-/* inline styline
-ul.breadcrumb li {
-  display: inline;
-  font-size: 18px;
-}
-*/
-/* inline-block styling with Regular texdt */
+/* inline-block styling */
 ul.breadcrumb li {
   display: inline-block;
   font-size: 18px;
-  padding-left: 20px;
-}
-
-/* inline-block styling with smaller text */
-ul.breadcrumb li--small {
-  display: inline-block;
-  font-size: 5px;
   padding-left: 10px;
 }
 
 /*adding >> after each a attribute */
 ul.breadcrumb li + li:before {
-  padding: 8px;
-  color: black;
+  padding: 4px;
+  color: #000;
   content: " >> ";
 }
 
-/* ul.breadcrumb li+li::after {
-  padding: 8px;
-  color: $color_black;
-  content: " >> ";
-}
-*/
-/* can always chnage differnt color */
 ul.breadcrumb li a {
-  color: #D3D3D3;
+  color: blue;
   text-decoration: none;
 }
 
@@ -977,14 +982,12 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: rgb(55, 134, 23);
-  text-decoration: none;
+  color: #1EAEDB;
 }
 
 a:hover {
-  color: rgb(55, 134, 23);
+  color: #0FA0CE;
 }
-
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1221,6 +1224,7 @@ form {
   float: left;
 }
 
+
 /* Social 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #social {
@@ -1234,6 +1238,7 @@ form {
     margin-right: auto;
    
 }
+
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -1255,18 +1260,55 @@ hr {
   clear: both;
 }
 
+.category_section {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  margin-bottom: 5%;
+}
+
+.category_image {
+  display: block;
+  max-width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category_item h3 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.category_item a {
+  display: block;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.hero_image {
+  display: block;
+  max-width: 100%;
+}
+
+.main_blurb {
+  margin-bottom: 3%;
+}
+
 .product-list__img {
   overflow: hidden;
 }
 
 h4 {
   text-decoration: underline;
-}
-
-.breadcrumbs::after {
-  content: " / ";
-  font-size: 1.3em;
-  vertical-align: sub;
 }
 
 .icon__social {
@@ -1294,6 +1336,21 @@ h4 {
 
 .site-footer {
   background-image: url("/img/tile_black_asphault.jpg");
+}
+
+/*
+*   Contains styles related to the header
+*/
+.site-header__nav {
+  list-style-type: none;
+  margin: 10px;
+  padding: 3%;
+  overflow: hidden;
+  width: 100%;
+}
+.site-header__nav-item {
+  float: left;
+  margin-left: 2.75%;
 }
 
 /*

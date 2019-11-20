@@ -1,10 +1,13 @@
-//<!-- START FOOTER -->
-
-<div class="road">
+<!-- START FOOTER -->
+    <div class="road">
 <p><img src="img/roadlogo.png" height="190px" width="100%"></p>
 </div>
-    <footer class="row" >
-        <div class="iconrow">
+          <div class="row">
+        <p><img src="img/road.png" id="footerroad" style="width: 100%;, height:100px;" ></p>
+<!--    <p><img src="/admin/images/treatstreet_logo.png" id="footerimg"></p> -->
+    </div>
+    <footer class="container">
+        <div class="row">
             <a href="/" class="one column" id="social"><i class="far fa-envelope"></i></a>
             <a href="/" class="one column" id="social"><i class="fas fa-mobile-alt"></i></a>
             <a href="/" class="one column" id="social"><i class="fas fa-question-circle"></i></a>
