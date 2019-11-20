@@ -7,6 +7,19 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
     <style>
+    .header_buttons {
+        display: block;
+        background-color:white;
+        padding: 20px;
+        border: 5px ridge #59A472;
+        float: right;
+        margin: 3%;
+    }
+
+
+
+
+
     ul {
         list-style-type: none;
         margin: 10px;
@@ -63,6 +76,18 @@
         <div class="row">
             <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
         </div> -->
+        <div class="header_buttons">
+
+        </div>
+        <div class = "header_buttons">
+
+        </div>
+
+
+
+
+
+
         <nav class="row">
             <ul class="nav_ul">
                 <li class="nav_li"><a href="plp.php" class="sign">doghouse</a></li>
