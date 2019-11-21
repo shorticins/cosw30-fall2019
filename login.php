@@ -40,20 +40,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 <main class="container">
 
 <div class="card bg-light mb-3 m-auto">
-    <div class="card-header">Login Form</div>
+    <div class="card-header"><h1>Login Form</h1><p>Please enter your correct email and password to login!</p></div><br>
     <div class="card-body">
         <form action="login.php" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input id="email" type="email" name="email" class="form-control">
             </div>
+            <br>
 
             <div class="form-group">
                 <label for="password">Password</label>
                 <input id="password" type="password" name="password" class="form-control">
             </div>
+            <br>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button><button type="cancel" class="btn btn-primary">Cancel</button>
         </form>
     </div>
 </div> 
