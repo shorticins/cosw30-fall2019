@@ -1,60 +1,63 @@
-<?php include('includes/header.php');?>
-<div id="page-container">
-
-    <div id="content-wrap">
-
-        <form action="" method="POST">
-
 <?php
-             $email = $password = "";
-             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                 $email = test_input($_POST["email"]);
-                 $password = test_input($_POST["password"]);
-             }
-             function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
+  // start a seesion
+session_start();
+// Check if the user is already logged in
+// If they are, redirect to welcome.php
+if(isset($_SESSION['Customer_ID'])){
+    header('Location: welcome.php');
+    exit;
 }
-             ?>
+include('includes/header.php');
+include('includes/database.php');
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Grab values from the form inputs
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    // Validate the form data
+    // Check if the user's email and password are in the database
+    $query = "SELECT Customer_ID, Customer_First_Name
+                FROM CUSTOMER
+                WHERE email = '$email'
+                AND password = '$password'";
+    $result = mysqli_query($connection, $query);
+    // If they are, log them in
+    if($result) {
+        $user = mysqli_fetch_assoc($result);
+        // Add their user id to the $_SESSION
+        $_SESSION['Customer_ID']= $user['Customer_ID'];
+        $_SESSION['Customer_First_Name']= $user['Customer_First_Name'];
+        print_r($Customer);
+        print_r($_SESSION);
+        // Redirect to the welcome.php page
+        header('Location:welcome.php');
+        exit;
+    // If they aren't, show the log in form with an error
+    } else { 
+    }
+} // END of $_SERVER['REQUEST_METHOD']
+?>
 
 <main class="container">
 
-    <form action="<?php echo ($_SERVER["login"]);?>" method="POST">
+<div class="card bg-light mb-3 m-auto">
+    <div class="card-header">Login Form</div>
+    <div class="card-body">
+        <form action="login.php" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" class="form-control">
+            </div>
 
-                <h1>Login Form</h1>
-                <p>Please fill in this form to create an account.</p>
-                <hr>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" class="form-control">
+            </div>
 
-                <label = "email">Email Address:</label><br>
-                <input type="email" name="email" id="email" value="<?php echo $email; ?>">
-
-                <br><label = "password">Password:</label><br>
-                <input type= "password" name="password" id="password" >
-
-                <p>By creating an account you agree to our <a href="#" >Terms & Privacy</a>.</p>
-
-                <div class="clearfix">
-                    <button name="Cancel">Cancel</button>
-                    <button name="Login in">Log in!</button>
-                </div>
-
-    </form>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div> 
 
 </main>
 
-      <?php
-echo "<h2>Your Input:</h2>";
-
-echo $email;
-echo "<br>";
-echo $password;
-
-?>
-
-    <?php include('includes/footer.php');?>
-    </div>
-    </div>
-</div>
-<?php include('includes/footer.php');?>
+<?php include('includes/footer.php'); ?>
