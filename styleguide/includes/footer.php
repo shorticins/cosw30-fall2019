@@ -1,5 +1,8 @@
-<?php
+</div><!-- closing div.row opened in the header.php file -->
 
-echo "<footer> 2019 &copy; Treat Street</footer>";
+<footer>
+    2019 &copy; Treat Street StyleGuide
+</footer>
 
-?>
+</body>
+</html>

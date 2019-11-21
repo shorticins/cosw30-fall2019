@@ -1,4 +1,5 @@
 
+</div> <!--closing out row-->
 <!--admin footer start-->
 <div class="row bg-dark text-center">
     <footer class=" col-12 py-4 mx-auto">
