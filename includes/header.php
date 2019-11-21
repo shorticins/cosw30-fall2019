@@ -3,42 +3,46 @@
 <head>
     <meta charset="utf-8">
 
-<link rel="shortcut icon" href="includes/favicon_ts.png" type="image/png">
+    <link rel="shortcut icon" href="img/favicon_ts.png" type="image/png">
     <title>Treat Street</title>
-    <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/carlito" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
     <link href="/styleguide/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b25da52a36.js" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
-    <header class="container">
-        <div class="row">
-            <h2 style="background-color: #2E9E47" class="three columns">Treat Street</h2><!--replace with image-->
-            <form action="/" method="GET" class="eight columns">
-                <input id="search" type="text" placeholder="Search">
-                <input id="submit" type="submit" value="Search">
-            </form>
-            <span class="one column">
-                <a href="/"><i class="fas fa-cart-plus"></i></a>
-                <a href="/"><i class="fas fa-question-circle"></i></a>
-                <a href="/"><i class="fas fa-user-circle"></i></a>
-            </span>
+    
+    <header class="site-header container">
+
+        <div class="site-header__top-btn">
+            <a href=""><i class="fas fa-dog fa-2x""></i></a>
         </div>
-        <div class="row">
-            <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
+        <div class="site-header__top-btn">
+            <a href=""><i class="fas fa-shopping-cart fa-2x""></i></a>
         </div>
-        <nav>
-            <ul class="row">
-                <li class="two columns"><a href="./styleguide">Styleguide</a></li>
-                <li class="two columns"><a href="./product.php">PDP</a></li>
-                <li class="two columns"><a href="/">PLP</a></li>
-                <li class="two columns"><a href="/admin">Admin Consoles</a></li>
-                <!--<li class="two columns"><a href="/">Snacks</a></li>-->
-                <!--<li class="two columns"><a href="/">Dress Up</a></li>-->
-                <!--<li class="two columns"><a href="/">Play Time</a></li>-->
-                <!--<li class="two columns"><a href="/">Health</a></li>-->
-                <li class="two columns"><a href="/">Just For You</a></li>
-                <li class="two columns"><a href="/">Adopt</a></li>
+
+        <div class="site-header__main-logo">
+            <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
+        </div>
+
+        <nav class="row">
+            <ul class="site-header__nav">
+                <li class="site-header__nav-item">
+                    <a href="plp.php" class="btn--sign">doghouse</a>
+                </li>
+                <li class="site-header__nav-item">
+                    <a href="" class="btn--sign">barkery blvd</a>
+                </li>
+                <li class="site-header__nav-item">
+                    <a href="" class="btn--sign">accessory ave</a>
+                </li>
+                <li class="site-header__nav-item">
+                    <a href="" class="btn--sign">rescue road</a>
+                </li>
             </ul>
         </nav>
+
     </header>
 <!-- END HEADER -->

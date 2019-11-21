@@ -3,26 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>Styleguide</title>
-    <style>
-        ul{
-            list-style-type:none;
-        }
-        li{
-            display:inline;
-            padding:1%;
-        }
-    </style>
+    <link href="/styleguide/styles.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-        <ul>
-            <li><a href = "index.php">Home</a></li>
-            <li><a href = "/styleguide/layout">Layout</a></li>
-            <li><a href = "/styleguide/components">Components</a></li>
-            <li><a href = "/styleguide/content">Content</a></li>
-            <li><a href = "/styleguide/utilities">Utilities</a></li>
-        </ul>
-    </nav>
-    </header>
+    <div class="container row">
+        <header class="styleguide__header three columns">
+            <p><a href="/">Treat Street Homepage</a></p>
+            <p><a href="/styleguide/">Styleguide Homepage</a></p>
+            <nav><?php include('navigation.php'); ?></nav>
+        </header>
 <!-- END HEADER -->

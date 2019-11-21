@@ -39,27 +39,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <main class="container">
 
-<div class="card bg-light mb-3 m-auto">
-    <div class="card-header"><h1>Login Form</h1><p>Please enter your correct email and password to login!</p></div><br>
-    <div class="card-body">
-        <form action="login.php" method="POST">
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" type="email" name="email" class="form-control">
-            </div>
-            <br>
+    <h1>Login Form</h1>
+    <p>Please enter your correct email and password to login!</p>
+    <p>If you do not have an account please click here to create one: <a href="/register.php">Create Account</a></p>
+    <hr>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input id="password" type="password" name="password" class="form-control">
-            </div>
-            <br>
+    <form action="/login.php" method="POST">
+        <label for="email">Email Address:</label><br>
+        <input type="email" name="email" id="email" value=""><br>
 
-            <button type="submit" class="btn btn-primary">Submit</button><button type="cancel" class="btn btn-primary">Cancel</button>
-        </form>
-    </div>
-</div> 
+        <label for="password">Password:</label><br>
+        <input type= "password" name="password" id="password">
+
+        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        <div class="clearfix">
+            <button name="Cancel">Cancel</button>
+            <button name="Login in">Log in!</button>
+        </div>
+    </form>
 
 </main>
 
-<?php include('includes/footer.php'); ?>
+<?php include('includes/footer.php');?>
