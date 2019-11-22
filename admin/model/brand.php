@@ -22,13 +22,24 @@ function getBrands() {
 *   IN THE DATABASE
 */
 function updateDB(){
+
+include('database.php');/*
+if(isset($_GET['id'])) {
+    $id = $_GET['id'];
+    //echo $id;
+} 
+//else {
+    // redirect to crud.php
+   // header('Location: brands.php');
+    //exit;
+//}
+*/
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $brand_name = $_POST['brand_name'];
     $brand_description  = $_POST['brand_description'];
 
     // Validate the inputs (check if they're empty)!!!!
-    if(empty($first_name) || empty($last_name) || empty($email) ||
-        empty($password)) {
+    if(empty($brand_name) || empty($brand_description)) {
         echo '<p class="error">Error! One or more fields were left empty.</p>';
     } 
     else {

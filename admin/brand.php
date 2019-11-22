@@ -1,5 +1,6 @@
 <?php include("includes/header.php");
-      include('includes/database.php');
+      include('model/database.php');
+      include('model/brand.php');
 
       
 //QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
@@ -13,11 +14,12 @@ $result = mysqli_query($connection, $query);
 // Check if the database returned anything
 if($result) {
     $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    print_r($rows);
+    //print_r($rows);
 } else {
     // Output an error
     echo "<p>Error</p>";
 }
+updateDB();
 
 ?>
 
