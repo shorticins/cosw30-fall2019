@@ -604,7 +604,7 @@ th {
 }
 .btn--block {
   display: block;
-  width: 95%;
+  width: 98%;
   text-align: center;
 }
 
@@ -1318,6 +1318,10 @@ h4 {
   text-align: center;
 }
 
+.form__hide {
+  display: none;
+}
+
 .site-footer {
   color: #000;
   text-align: center;
@@ -1325,7 +1329,6 @@ h4 {
 .site-footer__list {
   list-style: none;
   margin: 0 auto;
-  max-width: 700px;
 }
 .site-footer__list-item {
   display: inline-block;

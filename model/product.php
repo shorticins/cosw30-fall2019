@@ -33,6 +33,58 @@ function getProducts() {
     }
 }
 
+
+
+// Accepts the product_id
+// Returns reviews associated to product_id
+//as a multi-dimensional array
+function getReviews($product_id) {
+    include ('database.php');
+
+    $query = "SELECT RATING.Rating_ID,
+                     RATING.Product_ID,
+                     RATING.Customer_ID,
+                     RATING.Rating_Score,
+                     RATING.Rating_Review, 
+                     CUSTOMER.Customer_First_Name, 
+                     CUSTOMER.Customer_Last_Name
+	          FROM RATING 
+	          INNER JOIN CUSTOMER
+	          ON RATING.Customer_ID = CUSTOMER.Customer_ID
+              WHERE RATING.Product_ID = $product_id
+              ORDER BY Rating_Score DESC";
+    $result = mysqli_query($connection, $query);
+
+    if ($result) {
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    } else {
+        return 'Error: getReviews()';
+    }
+}
+
+
+//Use random generator to select a product ID 
+//These products will be recommended at the bottom of each PDP page
+// Returns a single product as an associative array
+function recdProduct() {
+    include('database.php');
+
+    $query = 'SELECT * FROM PRODUCT 
+              ORDER BY RAND() 
+              LIMIT 1';
+    $result = mysqli_query($connection, $query);
+    
+    
+    if($result) {
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    } else {
+        return "Error: recdProduct()";
+    }
+}
+
+
+
+
 // allow a developer to get products in groups of X products
 // Input: Page #, # of Products you want to display
 function getProductPag($page_number) {
