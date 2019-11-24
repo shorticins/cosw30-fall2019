@@ -19,6 +19,7 @@ if($result) {
     // Output an error
     echo "<p>Error</p>";
 }
+
 updateDB();
 
 ?>
