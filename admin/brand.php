@@ -31,6 +31,10 @@ updateDB();
     </div>
 
     <form method="POST" action="brand.php">
+     <div class="form-group">
+            <label for="brand_id">Brand ID</label>
+            <input type="number" min="0" class="form-control form-control-sm" id="brand_id" name="brand_id" required>
+        </div>
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="brand_name">Brand Name</label>

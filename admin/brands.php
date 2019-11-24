@@ -19,14 +19,16 @@ if(is_array($brands)) {
     </thead>
 
     <tbody>";
-
+    
+        
     foreach($brands as $brand){
         
         echo "<tr><td>".$brand['Brand_ID']."</td>";
         echo "<td>".$brand['Brand_Name']."</td>";
         echo "<td>".$brand['Brand_Desc']."</td>";
-        echo "<td><a href='brand.php'> Edit </a> 
-         </td></tr>";
+        //echo "<td><a href='brand.php'> Edit </a> 
+         echo "<td><a href=\"brand.php?id=$brand[$id]\">Edit</a> | <a href=\"brand.php?id=$brand[$id]>Delete</a></td>";   
+  "/td></tr>";
     }
     echo "</tbody></table>";
 } else {
@@ -34,9 +36,6 @@ if(is_array($brands)) {
 }
 
 ?>
-
 </main>
 
 <?php include("includes/footer.php"); ?>
-
-
