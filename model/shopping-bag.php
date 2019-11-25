@@ -21,7 +21,7 @@
     </div>
     <div class="product-price"></div>
     <div class="product-quantity">
-      <input type="number" value="2" min="1">
+      <input type="number" value="" min="">
     </div>
     <div class="product-removal">
       <button class="remove-product">
@@ -41,7 +41,7 @@
     </div>
     <div class="product-price"></div>
     <div class="product-quantity">
-      <input type="number" value="1" min="1">
+      <input type="number" value="" min="">
     </div>
     <div class="product-removal">
       <button class="remove-product">
@@ -54,19 +54,19 @@
   <div class="totals">
     <div class="totals-item">
       <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">71.97</div>
+      <div class="totals-value" id="cart-subtotal"></div>
     </div>
     <div class="totals-item">
-      <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax">3.60</div>
+      <label>Tax (10.25%)</label>
+      <div class="totals-value" id="cart-tax"></div>
     </div>
     <div class="totals-item">
       <label>Shipping</label>
-      <div class="totals-value" id="cart-shipping">15.00</div>
+      <div class="totals-value" id="cart-shipping">/div>
     </div>
     <div class="totals-item totals-item-total">
       <label>Grand Total</label>
-      <div class="totals-value" id="cart-total">90.57</div>
+      <div class="totals-value" id="cart-total"></div>
     </div>
   </div>
       
