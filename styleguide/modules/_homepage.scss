@@ -5,7 +5,7 @@
     }
     h1 {
         position: absolute;
-        top: 40px;
+        top: 12%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-transform: uppercase;
@@ -15,17 +15,14 @@
 }
 
 .category {
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
-    margin-bottom: 5%;
-
     &_item {
+        margin-bottom: 10%;
         &_img {
             height: 250px;
             width: 250px;
             position: relative;
             overflow: hidden;
+            margin: 0 auto;
             img {
                 display: block;
                 height: 100%;
@@ -53,17 +50,20 @@
     }
     p {
         position: absolute;
-        font-size: 4em;
         font-weight: bold;
         color: white;
     }
     .textLeft {
-        top: 35%;
-        left: 10px;
+        top: 15%;
+        left: 15px;
+        font-size: 3em;
+        font-weight: bold;
+        width: 70%;
     }
     .textRight {
-        top: 40%;
-        right: 10px;
+        top: 30%;
+        right: 15px;
+        font-size: 3em;
     }
 }
 
@@ -75,4 +75,26 @@
 
 .index_blurb {
     margin-bottom: 3%;
+}
+
+@media (min-width: 750px) {
+    .category {
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        &_item {
+            margin: 0 1% 10%;
+        }
+    }
+
+    .banner {
+        .textLeft {
+            top: 20%;
+            font-size: 4.5em;
+        }
+        .textRight {
+            top: 35%;
+            font-size: 4em;
+        }
+    }
 }

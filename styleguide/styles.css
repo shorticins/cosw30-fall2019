@@ -1252,7 +1252,7 @@ hr {
 }
 .welcome h1 {
   position: absolute;
-  top: 40px;
+  top: 12%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
@@ -1260,17 +1260,15 @@ hr {
   font-weight: bold;
 }
 
-.category {
-  display: flex;
-  justify-content: center;
-  align-content: flex-end;
-  margin-bottom: 5%;
+.category_item {
+  margin-bottom: 10%;
 }
 .category_item_img {
   height: 250px;
   width: 250px;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 .category_item_img img {
   display: block;
@@ -1296,17 +1294,20 @@ hr {
 }
 .banner p {
   position: absolute;
-  font-size: 4em;
   font-weight: bold;
   color: white;
 }
 .banner .textLeft {
-  top: 35%;
-  left: 10px;
+  top: 15%;
+  left: 15px;
+  font-size: 3em;
+  font-weight: bold;
+  width: 70%;
 }
 .banner .textRight {
-  top: 40%;
-  right: 10px;
+  top: 30%;
+  right: 15px;
+  font-size: 3em;
 }
 
 .index_h2 {
@@ -1319,6 +1320,25 @@ hr {
   margin-bottom: 3%;
 }
 
+@media (min-width: 750px) {
+  .category {
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+  }
+  .category_item {
+    margin: 0 1% 10%;
+  }
+
+  .banner .textLeft {
+    top: 20%;
+    font-size: 4.5em;
+  }
+  .banner .textRight {
+    top: 35%;
+    font-size: 4em;
+  }
+}
 .product-list__img {
   overflow: hidden;
 }
