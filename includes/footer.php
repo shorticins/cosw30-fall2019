@@ -1,26 +1,30 @@
 <!-- START FOOTER -->
-    <div class="row">
-        <p><img src="img/road.png" id="footerroad" style="width: 100%;, height:100px;" ></p>
-<!--    <p><img src="/admin/images/treatstreet_logo.png" id="footerimg"></p> -->
+    <div class="road">
+        <p><img src="img/roadlogo.png" width="100%"></p>
     </div>
-    <footer class="container">
-        <div class="row">
-            <a href="/" class="one column" id="social"><i class="far fa-envelope"></i></a>
-            <a href="/" class="one column" id="social"><i class="fas fa-mobile-alt"></i></a>
-            <a href="/" class="one column" id="social"><i class="fas fa-question-circle"></i></a>
-            <a href="/" class="one column" id="social"><i class="fas fa-user-circle"></i></a>
-            <a href="/" class="one column" id="social"><i class="fab fa-facebook"></i></a>
-            <a href="/" class="one column" id="social"><i class="fab fa-twitter"></i></a>
-            <a href="/" class="one column" id="social"><i class="fab fa-instagram"></i></a>
-            <a href="/" class="one column" id="social"><i class="fas fa-map-marker-alt"></i></a>
-        </div>
-        <div class="row">
-            <a href="/" class="one column" >About</a>
-            <a href="/" class="one column" >News</a>
-            <a href="/" class="one column" >Blog</a>
-            <a href="/" class="one column" >Careers</a>
-            <a href="/" class="one column" >Contact</a>
-        </div>
+
+    <footer class="site-footer container">
+        <nav class="row">
+            <ul class="site-footer__list">
+                <li class="site-footer__list-item one column"><a href="/"><i class="far fa-envelope"></i></a></li>
+                <li class="site-footer__list-item one column"><a href="/"><i class="fas fa-mobile-alt"></i></a></li>
+                <li class="site-footer__list-item one column"><a href="/"><i class="fas fa-question-circle"></i></a></li>
+                <li class="site-footer__list-item one column"><a href="/"><i class="fas fa-user-circle"></i></a></li>
+                <li class="site-footer__list-item one column"><a href="/"><i class="fab fa-facebook"></i></a></li>
+                <li class="site-footer__list-item one column"><a href="/"><i class="fab fa-twitter"></i></a></li>
+                <li class="site-footer__list-item one column"><a href="/"><i class="fab fa-instagram"></i></a></li>
+                <li class="site-footer__list-item one column"><a href="/"><i class="fas fa-map-marker-alt"></i></a></li>
+            </ul>
+        </nav>
+        <nav class="row">
+            <ul class="site-footer__list">
+                <li class="site-footer__list-item one column"><a href="/">About</a></li>
+                <li class="site-footer__list-item one column"><a href="/">News</a></li>
+                <li class="site-footer__list-item one column"><a href="/">Blog</a></li>
+                <li class="site-footer__list-item one column"><a href="/">Careers</a></li>
+                <li class="site-footer__list-item one column"><a href="/">Contact</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

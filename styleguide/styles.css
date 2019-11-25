@@ -1371,12 +1371,38 @@ h4 {
 }
 
 .site-footer {
-  background-image: url("/img/tile_black_asphault.jpg");
+  color: #000;
+  text-align: center;
+}
+.site-footer__list {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 700px;
+}
+.site-footer__list-item {
+  display: inline-block;
+  padding: 40px;
+  font-size: 20px;
+}
+.site-footer__list-item a {
+  color: #000;
+  text-decoration: none;
 }
 
 /*
 *   Contains styles related to the header
 */
+.site-header__logo {
+  max-width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-header__main-logo {
+  margin: 0px auto;
+  width: 100%;
+  clear: right;
+}
 .site-header__nav {
   list-style-type: none;
   margin: 10px;
@@ -1387,6 +1413,17 @@ h4 {
 .site-header__nav-item {
   float: left;
   margin-left: 2.75%;
+}
+.site-header__top-btn {
+  display: block;
+  background-color: white;
+  padding: 10px;
+  border: 5px ridge #2E9347;
+  float: right;
+  margin: 1%;
+}
+.site-header__top-btn i {
+  color: #000;
 }
 
 /*

@@ -3,6 +3,17 @@
 */
 
 .site-header {
+    &__logo {
+        max-width: 75%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__main-logo {
+        margin: 0px auto;
+        width: 100%;
+       clear: right;    
+    }
     &__nav {
         list-style-type: none;
         margin: 10px;
@@ -13,6 +24,20 @@
         &-item {
             float: left;
             margin-left: 2.75%;
+        }
+    }
+    &__top {
+        &-btn {
+            display: block;
+            background-color:white;
+            padding: 10px;
+            border: 5px ridge $color__green;
+            float: right;
+            margin: 1%;
+
+            i {
+                color: $color__black;
+            }
         }
     }
 
