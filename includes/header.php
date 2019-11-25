@@ -13,7 +13,20 @@
 
 
 <body>
+    
     <header class="site-header container">
+
+        <div class="site-header__top-btn">
+            <a href=""><i class="fas fa-dog fa-2x""></i></a>
+        </div>
+        <div class="site-header__top-btn">
+            <a href=""><i class="fas fa-shopping-cart fa-2x""></i></a>
+        </div>
+
+        <div class="site-header__main-logo">
+            <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
+        </div>
+
         <nav class="row">
             <ul class="site-header__nav">
                 <li class="site-header__nav-item">
@@ -31,20 +44,5 @@
             </ul>
         </nav>
 
-        <!--<div class="row">
-            <h2 style="background-color: #2E9E47" class="three columns">Treat Street</h2>
-            <form action="/" method="GET" class="eight columns">
-                <input id="search" type="text" placeholder="Search">
-                <input id="submit" type="submit" value="Search">
-            </form>
-            <span class="one column">
-                <a href="/"><i class="fas fa-cart-plus"></i></a>
-                <a href="/"><i class="fas fa-question-circle"></i></a>
-                <a href="/login.php"><i class="fas fa-user-circle"></i>Login</a>
-            </span>
-        </div>
-        <div class="row">
-            <p class="twelve columns">Your One-Stop Shop For Your Furry Friends!</p>
-        </div> -->
     </header>
 <!-- END HEADER -->
