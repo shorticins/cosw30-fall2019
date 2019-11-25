@@ -1,4 +1,5 @@
 <?php
+include('model/database.php');
 include("includes/header.php");
 include("model/brand.php");
 
@@ -27,7 +28,7 @@ if(is_array($brands)) {
         echo "<td>".$brand['Brand_Name']."</td>";
         echo "<td>".$brand['Brand_Desc']."</td>";
         //echo "<td><a href='brand.php'> Edit </a> 
-         echo "<td><a href=\"brand.php?id=$brand[$id]\">Edit</a> | <a href=\"brand.php?id=$brand[$id]>Delete</a></td>";   
+         echo "<td><a href=\"brand.php?id=" .$brand['id'] . ">Edit</a>"; 
   "/td></tr>";
     }
     echo "</tbody></table>";

@@ -14,6 +14,9 @@ function getBrands() {
         return "Error: getBrands()";
     }
 }
+
+?>
+<?php
 /*
 
 */
@@ -62,7 +65,7 @@ $result = mysqli_query($connection, "SELECT * FROM BRAND WHERE id=$id");
  print_r($result);
 while($res = mysqli_fetch_array($result))
 {
-    $brand_name = $res['brand_name'];
-    $brand_description = $res['brand_description'];
+    $brand_name = $res['Brand_Name'];
+    $brand_description = $res['Brand_Desc'];
 }
 ?>
