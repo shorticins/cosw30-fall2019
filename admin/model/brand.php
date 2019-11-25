@@ -1,6 +1,6 @@
 <?php
 include('database.php');
-// Returns all products in the PRODUCTS table
+// Returns all brands in the BRAND table
 // as a multi-dimensional associative array
 function getBrands() {
     include('database.php');

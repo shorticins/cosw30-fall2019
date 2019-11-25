@@ -14,7 +14,7 @@ $result = mysqli_query($connection, $query);
 // Check if the database returned anything
 if($result) {
     $brands = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    //print_r($rows);
+    //print_r($brands);
 } else {
     // Output an error
     echo "<p>Error</p>";
@@ -52,7 +52,7 @@ if(isset($_POST['add'])) {
     }
 }
 //update brand information in db
-if(isset($_POST['update']))
+elseif(isset($_POST['update']))
 {    
     $id = $_POST['id'];
     $brand_id = $_POST['brand_id'];
@@ -80,6 +80,7 @@ if(isset($_POST['update']))
         header("Location: brands.php");
     }
 }
+else{
 $id = $_GET['id'];
  
 //selecting data associated with this particular id
@@ -90,7 +91,7 @@ while($res = mysqli_fetch_array($result))
     $brand_name = $res['brand_name'];
     $brand_description = $res['brand_description'];
 }
-
+}
 ?>
 
 <main class="col-lg-8 m-1 col-md-12">

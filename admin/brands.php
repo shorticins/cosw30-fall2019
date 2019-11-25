@@ -28,13 +28,13 @@ if(is_array($brands)) {
         echo "<td>".$brand['Brand_Name']."</td>";
         echo "<td>".$brand['Brand_Desc']."</td>";
         //echo "<td><a href='brand.php'> Edit </a> 
-         echo "<td><a href=\"brand.php?id=" .$brand['id'] . ">Edit</a>"; 
-  "/td></tr>";
-    }
+         echo "<td><a href=\"/brand.php?id=" .$brand['id']. ">Edit</a>". "</td></tr>";
     echo "</tbody></table>";
-} else {
-    echo $brands;
+    }
 }
+
+ else {
+    echo $brands;}
 
 ?>
 </main>

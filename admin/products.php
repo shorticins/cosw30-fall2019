@@ -29,7 +29,7 @@ if(is_array($products)) {
         echo "<td>".$product['product_price']."</td>";
         echo "<td>".$product['product_vendor']."</td>";
         echo "<td>".$product['product_img_url']."
-        <a href='/admin/product.php?id=".$product['product_id']."> Edit </a> 
+        <a href='product.php?id=".$product['product_id']."> Edit </a> 
          </td></tr>";
     }
     echo "</tbody></table>";
