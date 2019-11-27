@@ -1,6 +1,7 @@
 <?php
-  // start a seesion
+  // start a session
 session_start();
+
 // Check if the user is already logged in
 // If they are, redirect to welcome.php
 if(isset($_SESSION['Customer_ID'])){
@@ -9,6 +10,7 @@ if(isset($_SESSION['Customer_ID'])){
 }
 include('includes/header.php');
 include('includes/database.php');
+
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Grab values from the form inputs
     $email = $_POST['email'];
@@ -20,6 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 WHERE email = '$email'
                 AND password = '$password'";
     $result = mysqli_query($connection, $query);
+
     // If they are, log them in
     if($result) {
         $user = mysqli_fetch_assoc($result);

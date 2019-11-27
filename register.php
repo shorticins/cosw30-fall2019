@@ -1,4 +1,8 @@
-<?php include('includes/header.php');
+<?php 
+// start a session
+session_start();
+
+include('includes/header.php');
 
 $first_name = $last_name = $email = $password = $confirm_password = "";
 
