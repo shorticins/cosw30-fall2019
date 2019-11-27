@@ -122,7 +122,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="confirm_password">Confirm Password:</label><br>
             <input type="password" name="confirm_password" class="form-control" id="confirm_password" value="<?php echo $confirm_password; ?>" required><br>
 
-            <button class="btn btn--green" type="submit">Register!</button>
+            <div class="form-control">
+                <button class="btn btn--green" type="submit" name="register">Register!</button>
+            </div>
         </form>
 
     </main>
