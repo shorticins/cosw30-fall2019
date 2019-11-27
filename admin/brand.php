@@ -187,8 +187,6 @@ $result = mysqli_query($connection, $query);
         </div>
     </form>
 
-<p><a href='brands.php'>Return to Brand list.</a></p>
-
 </main>
 
 <?php include("includes/footer.php"); ?>
