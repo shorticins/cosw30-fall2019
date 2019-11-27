@@ -9,7 +9,7 @@ if(isset($_SESSION['Customer_ID'])){
     exit;
 }
 include('includes/header.php');
-include('includes/database.php');
+include('model/database.php');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Grab values from the form inputs
@@ -19,8 +19,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if the user's email and password are in the database
     $query = "SELECT Customer_ID, Customer_First_Name
                 FROM CUSTOMER
-                WHERE email = '$email'
-                AND password = '$password'";
+                WHERE Customer_Email = '$email'
+                AND Customer_Password = '$password'";
     $result = mysqli_query($connection, $query);
 
     // If they are, log them in
