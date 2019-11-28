@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     // Validate the form data
     // Check if the user's email and password are in the database
-    $query = "SELECT Customer_ID, Customer_First_Name
+    $query = "SELECT Customer_ID, Customer_First_Name, Customer_Last_Name
                 FROM CUSTOMER
                 WHERE email = '$email'
                 AND password = '$password'";
@@ -26,6 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Add their user id to the $_SESSION
         $_SESSION['Customer_ID']= $user['Customer_ID'];
         $_SESSION['Customer_First_Name']= $user['Customer_First_Name'];
+        $_SESSION['Customer_Last_Name']= $user['Customer_Last_Name'];
         print_r($Customer);
         print_r($_SESSION);
         // Redirect to the welcome.php page
