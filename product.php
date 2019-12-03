@@ -10,74 +10,36 @@ if(isset($_GET['id'])) {
     exit;
 }
 
-$select_query = "SELECT * FROM PRODUCT WHERE product_id = $id";
 
-$result = mysqli_query($connection, $select_query);
-
-if ($result) {
-    $product = mysqli_fetch_assoc($result);
-    //print_r($user);
+//Acquire all product information for this product
+$product = getProduct($id);
     $product_name         = $product['product_name'];
     $product_desc         = $product['product_desc'];
     $Product_Ingredients  = $product['Product_Ingredients'];
     $Product_Price        = $product['Product_Price'];
     $Product_Image        = $product['Product_Image'];
     $Product_Rating       = $product['Product_Rating'];
-} else {
-    echo "<h3 class=\"error--h\">Opps! Something went wrong... Try Again Later</h3>";
-}
 
 
 
-$rating_query = "SELECT * FROM RATING WHERE Product_ID = $id";
-
-$rating_result = mysqli_query($connection, $rating_query);
-
-if ($rating_result) {
-    $rating = mysqli_fetch_assoc($rating_result); 
-
+//Acquire all rating information for this product
+$rating = getRating($id);
     $Rating_ID      = $rating['Rating_ID'];
     $Product_ID     = $rating['Product_ID'];
     $Customer_ID    = $rating['Customer_ID'];
     $Rating_Score   = $rating['Rating_Score'];
     $Rating_Review  = $rating['Rating_Review '];
-} else {
-    echo "<h3 class=\"error--h\">Opps! Something went wrong... Try Again Later</h3>";
-}
 
 
 
 
-$avg_rating_query = "SELECT AVG(Rating_Score)
-                AS AVERAGE
-                FROM RATING
-                WHERE Product_ID = $id";
-
-$avg_rating_result = mysqli_query($connection, $avg_rating_query);    
-
-if ($avg_rating_result) {
-    $avg_rating_fetch = mysqli_fetch_assoc($avg_rating_result); 
-    $average_rating = $avg_rating_fetch['AVERAGE'];   
-} else {
-    echo "<h3 class=\"error--h\">Opps! Something went wrong... Try Again Later</h3>";
-}
+//Acquire average rating for this product
+$average_rating = getAvgRating($id);
 
 
 
-
-$total_reviews_query = "SELECT COUNT(*)
-                AS REVIEWS
-                FROM RATING 
-                WHERE Product_ID = $id";  
-
-$total_reviews_result = mysqli_query($connection, $total_reviews_query);   
-
-if ($total_reviews_result) {
-    $total_reviews_fetch = mysqli_fetch_assoc($total_reviews_result); 
-    $total_reviews = $total_reviews_fetch['REVIEWS'];
-} else {
-    echo "<h3 class=\"error--h\">Opps! Something went wrong... Try Again Later</h3>";
-}
+//Acquire total number of reviews for this product
+$total_reviews = getProductReviews($id);
 
 
 
