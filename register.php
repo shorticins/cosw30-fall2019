@@ -1,6 +1,30 @@
-<?php include('includes/header.php');
+<?php 
+// Start a session
+session_start();
 
-$first_name = $last_name = $email = $password = $confirm_password = "";
+// Check if the user is already logged in
+// If they are, redirect to welcome.php
+if(isset($_SESSION['Customer_ID'])){
+    header('Location: welcome.php');
+    exit;
+}
+
+include('includes/header.php');
+
+// Connect to database
+include('model/database.php');
+
+// Query the database 
+$results = $dbc->query("SELECT * FROM CUSTOMER") or die($dbc->error);
+$row = $results->fetch_assoc();
+
+
+
+$first_name = $row['Customer_First_Name'];
+$last_name = $row['Customer_Last_Name'];
+$email = $row['Customer_Email'];
+$password = $row['first_name'];
+$confirm_password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $first_name = ($_POST["first_name"]);
