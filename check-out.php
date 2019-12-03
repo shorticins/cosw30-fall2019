@@ -5,47 +5,106 @@
   </head>
   <body>
     <button>Sign in!</button> <button>Sign up!</button>
-    
-   <table>
-    <thead>
-        <tr>
-            <th colspan="4">Order Summary</th>
-        </tr>
-         <tr>
-           <th>Product Name</th>
-           <th>Description</th>
-           <th>Quantity</th>
-           <th>Price</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Pup Treats</td>
-            <td>16 oz bag</td>
-            <td>1</td>
-            <td>$12.99</td>
-            <td><button>Remove</button>
-        </tr>
-       <tr>
-            <td></td>
-            <td></td>
-            <td>Estimated Tax:</td>
-            <td>$3.99</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Estimated Shipping:</td>
-            <td>$5.99</td>
-        </tr>
-       <tr>
-            <td></td>
-            <td></td>
-            <td>Estimated Total:</td>
-            <td>$21.99</td>
-        </tr>
-    </tbody>
-</table>
-    
+        <h1>Shopping Bag</h1>
+        <section>
+            <image>
+                <a href="image pulled from database"></a>
+            </image>
+
+            <div class="container">
+                <div class="outter-box">
+                    <div class="top-box">
+                        <p>Label of Product</p>
+                        <p>Qualities or type</p>
+                    </div>
+                        <p>Price</p>
+                    <label class="">
+                        <select class="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                            <option value="32">32</option>
+                            <option value="33">33</option>
+                            <option value="34">34</option>
+                            <option value="35">35</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="bottom-box">
+                    <svg=delivery truck icon></svg>
+                    <p>Delivery <span>Est Delivery Date</span> </p>
+                </div>
+                
+                <div class="lower-box">
+                    <button>Remove</button>
+                    <button>Save for Later</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="4">Order Summary</th>
+                    </tr>
+                    <tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td><span>Cost</span></td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td><span>Amount</span></td>
+                    </tr>
+                    <tr>
+                        <td>Estimated Tax</td>
+                        <td><span>Amount</span></td>
+                    </tr>
+                    <tr>
+                        <td>Estimated Total</td>
+                        <td><span>Amount</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button>Checkout</button>
+        </section>
+
+        <section>
+                        <p>Have any question? Please Call </p>
+        </section>
   <!-- optional <button>Empty Cart</button>  -->
 
   <h4>Grand Total: $21.99</h4>
