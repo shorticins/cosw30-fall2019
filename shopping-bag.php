@@ -65,13 +65,13 @@
                             </select>
                         </label>
                     </div>
-                    <div class="box">
-                        <p>price</p>
-                    </div>
-            </div>
-        </section>
+                </div>
+                <div class="box">
+                    <p>price</p>
+                 </div>
+            </section>
 
-        <div class="lower-box">
+            <div class="lower-box">
                         <button>Remove</button>
                         <button>Save for Later</button>
                     </div>
