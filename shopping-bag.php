@@ -21,8 +21,8 @@
                 <div class="box">
                     <p>Label of Product</p>
                     <p>Qualities or type</p>
-                    <svg=delivery truck icon></svg>
-                    <p>Delivery <span>Est Delivery Date</span></p>
+                    <svg="delivery truck icon"></svg>
+                    <p>Delivery<span>Est Delivery Date</span></p>
                 </div>
                     <div class="box">
                         <label class="">
