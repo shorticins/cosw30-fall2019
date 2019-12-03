@@ -82,7 +82,6 @@
                     <tr>
                         <th colspan="4">Order Summary</th>
                     </tr>
-                    <tr>
                 </thead>
                 <tbody>
                     <tr>
