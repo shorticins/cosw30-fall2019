@@ -245,6 +245,8 @@ $recProd3 = recdProduct();
                     <input class="u-full-width" type="text" name="fname" id="fname" value="">
                 <label for="lname">Last Name: </label>
                     <input class="u-full-width" type="text" name="lname" id="lname" value=""> <br>
+                <label for="rating">Rating: </label>
+                    <input class="u-full-width" type="number" name="rating" id="rating" min="1" max="5" value=""> <br>
                 <label for="custRev">Customer Review: </label>
                     <textarea class="u-full-width" name="custRev" id="custRev" value=""
                          placeholder="Write your review here..." max="500"></textarea>
