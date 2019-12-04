@@ -7,7 +7,7 @@ include('model/category.php');
 
 <main class="col-lg-8 m-1 col-md-12">
     <div class="col align-content-center text-center">
-        <h1>New Product Form</h1>
+        <h1>Category Form</h1>
         <p class="font-weight-bold">All fields are required.</p>
     </div>
 
