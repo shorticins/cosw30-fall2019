@@ -24,8 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 FROM CUSTOMER
                 WHERE Customer_Email = '$email'
                 AND Customer_Password = '$password'";
+
     $result = mysqli_query($connection, $query);
-    
+
     // If they are, log them in
     if($result) {
         $user = mysqli_fetch_assoc($result);
@@ -35,6 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['Customer_Last_Name']= $user['Customer_Last_Name'];
         print_r($Customer);
         print_r($_SESSION);
+        
         // Redirect to the welcome.php page
         header('Location:welcome.php');
 
