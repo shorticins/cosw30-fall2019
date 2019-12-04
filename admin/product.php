@@ -6,7 +6,7 @@
         <p class="font-weight-bold">All fields are required.</p>
     </div>
 
-    <form method="POST" action="product_form.php">
+    <form method="POST" action="product.php">
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="product_name">Product Name</label>

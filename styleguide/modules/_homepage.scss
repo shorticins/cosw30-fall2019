@@ -1,63 +1,100 @@
-// slim down css page
-
-// .category {
-//     //.category_section
-//     &_section {
-//         display: flex;
-//         justify-content: center;
-//         align-content: flex-end;
-//         margin-bottom: 5%;
-//     }
-//     //.category_image
-//     &_image {
-//         display: block;
-//         max-width: 200px;
-//         height: 200px;
-//         overflow: hidden;
-//         margin-left: auto;
-//         margin-right: auto;
-//     }
-// }
-
-.category_section {
-    display: flex;
-    justify-content: center;
-    align-content: flex-end;
-    margin-bottom: 5%;
+.welcome {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    h1 {
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: bold;
+    }
 }
 
-.category_image {   
-    display: block;
-    max-width: 200px;
-    height: 200px;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
+.category {
+    &_item {
+        margin-bottom: 10%;
+        &_img {
+            height: 250px;
+            width: 250px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            img {
+                display: block;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+        h3 {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            display: block;
+            width: 40%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
 }
 
-.category_item h3 {
-    text-align: center;
-    margin-top: 15px;
+.banner {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    p {
+        position: absolute;
+        font-weight: bold;
+        color: white;
+    }
+    .textLeft {
+        top: 15%;
+        left: 15px;
+        font-size: 3em;
+        font-weight: bold;
+        width: 70%;
+    }
+    .textRight {
+        top: 30%;
+        right: 15px;
+        font-size: 3em;
+    }
 }
 
-.category_item a {
-    display: block;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-h2 {
+.index_h2 {
     text-align: center;
     margin-bottom: 3%;
     margin-top: 3%;
 }
 
-.hero_image {
-    display: block;
-    max-width: 100%;
+.index_blurb {
+    margin-bottom: 3%;
 }
 
-.main_blurb {
-    margin-bottom: 3%;
+@media (min-width: 750px) {
+    .category {
+        display: flex;
+        justify-content: center;
+        align-content: flex-end;
+        &_item {
+            margin: 0 1% 10%;
+        }
+    }
+
+    .banner {
+        .textLeft {
+            top: 20%;
+            font-size: 4.5em;
+        }
+        .textRight {
+            top: 35%;
+            font-size: 4em;
+        }
+    }
 }
