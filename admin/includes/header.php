@@ -19,9 +19,8 @@
                     <ul class="nav d-lg-inline">
                         <li class="nav-item"><a class="nav-link" href="/"><img src="/admin/images/treatstreet_logo.png" alt="Treat Street Logo"></a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin">Dashboard</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/admin/product.php">Product Form</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/admin/products.php">Product List</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/">placeholder</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/brands.php">Brands</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/products.php">Products</a></li>
                     </ul>
                 </nav>
             </header>
