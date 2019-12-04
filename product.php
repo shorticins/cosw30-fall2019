@@ -1,4 +1,6 @@
-<?php include 'includes/header.php'; ?>
+<?php 
+session_start();
+include 'includes/header.php'; ?>
 <?php include 'model/database.php'; ?>
 <?php include 'model/product.php'; ?>
 
@@ -25,12 +27,11 @@ $product = getProduct($id);
 //Acquire all rating information for this product
 $rating = getRating($id);
     $Rating_ID      = $rating['Rating_ID'];
-    $Product_ID     = $rating['Product_ID'];
-    $Customer_ID    = $rating['Customer_ID'];
     $Rating_Score   = $rating['Rating_Score'];
     $Rating_Review  = $rating['Rating_Review '];
-
-
+    // $Product_ID     = $rating['Product_ID'];
+    // $Customer_ID    = $rating['Customer_ID'];
+    
 
 
 //Acquire average rating for this product
@@ -67,18 +68,7 @@ function stars($rating){
 
 
 //Product Recommendations  
-$recProd1 = recdProduct();
-    $rec_id1     = $recProd1[0]['product_id'];
-    $rec_name1   = $recProd1[0]['product_name'];
-    $rec_img1    = $recProd1[0]['Product_Image'];
-$recProd2 = recdProduct();
-    $rec_id2     = $recProd2[0]['product_id'];
-    $rec_name2   = $recProd2[0]['product_name'];
-    $rec_img2    = $recProd2[0]['Product_Image'];
-$recProd3 = recdProduct();
-    $rec_id3     = $recProd3[0]['product_id'];
-    $rec_name3   = $recProd3[0]['product_name'];
-    $rec_img3    = $recProd3[0]['Product_Image'];
+$recProducts = recdProduct(3);
 
 ?>
 
@@ -113,14 +103,14 @@ $recProd3 = recdProduct();
     <div class="row">
         <div class="seven columns">
             <figure class="img--centered">
-                <img class="img__main" src="<?php echo $Product_Image; ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>">
+                <img class="img__main" src="img/<?php echo $Product_Image; ?>" title="<?php echo $product_name; ?>" alt="<?php echo $product_name; ?>">
             </figure>
             <!--Thumbnail Images-->
-            <div class="img__small img--centered">
+            <!-- <div class="img__small img--centered">
                 <a href=""><i class="fas fa-circle fa-lg u-color--black"></i></a>
                 <a href=""><i class="far fa-circle fa-lg u-color--black"></i></a>
                 <a href=""><i class="far fa-circle fa-lg u-color--black"></i></a>
-            </div>
+            </div> -->
         </div>
 
         <div class="five columns div__main">
@@ -226,7 +216,7 @@ $recProd3 = recdProduct();
                 echo '
                 <p title=" '. number_format($custReviews[$i]['Rating_Score'], 1) .' out of 5.0"> '. 
                     stars($custReviews[$i]['Rating_Score']), 
-                    $custReviews[$i]['Customer_First_Name'],
+                    $custReviews[$i]['Customer_First_Name'] . ' ',
                     $custReviews[$i]['Customer_Last_Name']
                         .' <br> &mdash; ' .
                     $custReviews[$i]['Rating_Review'] .'
@@ -250,30 +240,16 @@ $recProd3 = recdProduct();
 
     <!--Product Recommendation images and links-->
     <div class="row">
+        <?php foreach($recProducts as $recProduct): ?>
         <div class="four columns">
             <figure class="img--centered">
-                <a href="product.php?id=<?php echo $rec_id1; ?>">
-                    <img src="<?php echo $rec_img1; ?>" style="width:82px; height:86px" title="<?php echo $rec_name1; ?>" alt="<?php echo $rec_name1; ?>"/>
+                <a href="product.php?id=<?php echo $recProduct['product_id']; ?>">
+                    <img src="img/<?php echo $recProduct['Product_Image']; ?>" style="width:82px; height:86px" alt="<?php echo $recProduct['product_name']; ?>"/>
                 </a>
-                <figcaption><?php echo $rec_name1; ?></figcaption>
+                <figcaption><?php echo $recProduct['product_name']; ?></figcaption>
             </figure>
         </div>
-        <div class="four columns">
-            <figure class="img--centered">
-                <a href="product.php?id=<?php echo $rec_id2; ?>">
-                    <img src="<?php echo $rec_img2; ?>" style="width:82px; height:86px" title="<?php echo $rec_name2; ?>" alt="<?php echo $rec_name2; ?>"/>
-                </a>
-                <figcaption><?php echo $rec_name2; ?></figcaption>
-            </figure>
-        </div>
-        <div class="four columns">
-            <figure class="img--centered">
-                <a href="product.php?id=<?php echo $rec_id3; ?>">
-                    <img src="<?php echo $rec_img3; ?>" style="width:82px; height:86px" title="<?php echo $rec_name3; ?>" alt="<?php echo $rec_name3; ?>"/>
-                </a>
-                <figcaption><?php echo $rec_name3; ?></figcaption>
-            </figure>
-        </div>
+        <?php endforeach; ?>
 
     </div>
 </div>

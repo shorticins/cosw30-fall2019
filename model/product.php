@@ -131,12 +131,12 @@ function getReviews($product_id) {
 //Use random generator to select a product ID 
 //These products will be recommended at the bottom of each PDP page
 // Returns a single product as an associative array
-function recdProduct() {
+function recdProduct($num_of_products) {
     include('database.php');
 
-    $query = 'SELECT * FROM PRODUCT 
+    $query = "SELECT * FROM PRODUCT 
               ORDER BY RAND() 
-              LIMIT 1';
+              LIMIT $num_of_products";
     $result = mysqli_query($connection, $query);
     
     

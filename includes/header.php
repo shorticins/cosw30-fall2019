@@ -25,6 +25,9 @@
         <div class="site-header__top-btn">
             <a href="/login.php"><i class="fas fa-user-circle fa-2x""></i></a>
         </div>
+        <div class="site-header__top-btn">
+            <a href="/logout.php"><i class="fas fa-sign-out-alt fa-2x""></i></a>
+        </div>
 
         <div class="site-header__main-logo">
             <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
