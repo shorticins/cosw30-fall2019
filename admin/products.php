@@ -26,17 +26,17 @@ if(is_array($products)) {
         $product_id = $product['product_id'];
         $product_name = $product['product_name'];
         $product_desc = $product['product_desc'];
-        $product_price = $product['product_price'];
+        $product_price = $product['Product_Price'];
         $product_vendor = $product['product_vendor'];
-        $product_img_url = $product['product_img_url'];
-        
+        $product_image = $product['Product_Image'];
+
         echo "<tr>";
         echo "<td>$product_id</td>";
         echo "<td>$product_name</td>";
         echo "<td>$product_desc</td>";
-        echo "<td>$product_price</td>";
+        echo "<td>$$product_price</td>";
         echo "<td>$product_vendor</td>";
-        echo "<td>$product_img_url</td>";
+        echo "<td>$product_image</td>";
         echo "<td><a href='product.php?id=$product_id'>Edit</a></td>";
         echo "</tr>";
     }
