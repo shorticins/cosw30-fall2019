@@ -25,6 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 WHERE Customer_Email = '$email'
                 AND Customer_Password = '$password'";
     $result = mysqli_query($connection, $query);
+    
     // If they are, log them in
     if($result) {
         $user = mysqli_fetch_assoc($result);
