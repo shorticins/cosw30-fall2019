@@ -1341,6 +1341,11 @@ hr {
 }
 .product-list__img {
   overflow: hidden;
+  width: 350px;
+  height: 350px;
+}
+.product-list__img img {
+  width: 100%;
 }
 
 h4 {
