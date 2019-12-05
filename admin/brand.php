@@ -4,12 +4,12 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
-        if(empty($_POST['Brand_ID'])) {
-                $error_msg[0] = 'Brand ID field cannot be empty.';
+            if(empty($_POST['Brand_ID'])) {
+                //Ele what do we do
             } else {
                 $Brand_ID = trim($_POST['Brand_ID']);
-            }
-
+            }      
+        
             if(empty($_POST['Brand_Name'])) {
                 $error_msg[1] = 'Brand Name field cannot be empty.';
             } else {
@@ -26,10 +26,12 @@
             case "addBrand":
                 $add_msg = [];
                 if(empty($error_msg)) {
-                    $addBrand = "INSERT INTO BRAND (Brand_ID, Brand_Name, Brand_Desc) 
-                                 VALUES ('$Brand_ID','$Brand_Name','$Brand_Desc')";
+                    $addBrand = "INSERT INTO BRAND (Brand_Name, Brand_Desc) 
+                                 VALUES ('$Brand_Name','$Brand_Desc')";     
                     if($result = mysqli_query($connection, $addBrand)) {
                         $add_msg[0] = 'Brand has been added to the database.';
+                         header('Location: brands.php');
+                        exit;
                     } else {
                         $add_msg[1] = 'There was an error adding brand to the database, please try again.';
                     }
@@ -39,10 +41,11 @@
                 $update_msg = [];
                 if(empty($error_msg)) {
                     $updateBrand = "UPDATE BRAND
-                                     SET Brand_ID = '$Brand_ID',
-                                         Brand_Name = '$Brand_Name',
-                                         Brand_Desc = '$Brand_Desc',
-                                     WHERE id = $id";
+                                     SET Brand_Name = '$Brand_Name',
+                                         Brand_Desc = '$Brand_Desc'
+                                     WHERE Brand_ID = $Brand_ID";
+                     // Run your query
+                    
                     if($result = mysqli_query($connection, $updateBrand)) {
                         $update_msg[0] = 'Brand has been updated.';
                         header('Location: brands.php');
@@ -53,98 +56,36 @@
                 }  
             ;
             case "delete":
+                exit;
             ;
         }
+
     }
+elseif($_SERVER['REQUEST_METHOD'] == 'GET') {
+    //QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
+    //print $_GET["id"];
+    $get_id = $_GET["id"];
+    // Create your query
+    $query = "SELECT * FROM BRAND 
+              WHERE Brand_ID = $get_id";
+    //print $query;
+    // Run your query
+    $result_update = mysqli_query($connection, $query);
 
-
-//QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
-
-// Create your query
-$query = 'SELECT * FROM BRAND';
-
-// Run your query
-$result = mysqli_query($connection, $query);
-
-// // Check if the database returned anything
-// if($result) {
-//     $brands = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//     //print_r($rows);
-// } else {
-//     // Output an error
-//     echo "<p>Error</p>";
-// }
-
-//add brand informtation to db
-// if(isset($_POST['add'])) {    
-//     $Brand_ID = $_POST['Brand_ID'];
-//     $Brand_Name = $_POST['Brand_Name'];
-//     $Brand_Desc = $_POST['Brand_Desc'];    
-        
-//     // check empty fields
-//     if(empty($Brand_ID) || empty($Brand_Name) || empty($Brand_Desc)) {                
-//         if(empty($Brand_ID)) {
-//             echo "<font color='red'>ID field is empty.</font><br/>";
-//         }
-        
-//         if(empty($Brand_Name)) {
-//             echo "<font color='red'>Brand name field is empty.</font><br/>";
-//         }
-        
-//         if(empty($Brand_Desc)) {
-//             echo "<font color='red'>Brand description field is empty.</font><br/>";
-//         }
-        
-//         //link to the previous page
-//         echo "<br/><a href='brands.php'>Go Back</a>";
-//     } else { 
-//         // if all the fields are filled (not empty)             
-//         //insert data to database
-//         $result = mysqli_query($mysqli, "INSERT INTO BRAND(Brand_ID, Brand_Name, Brand_Desc) VALUES('$Brand_ID','$Brand_Name','$Brand_Desc')");
-        
-//         //redirect to brands list
-//          header("Location: brands.php");
-//     }
-// }
-// //update brand information in db
-// if(isset($_POST['update']))
-// {    
-//     $id = $_POST['id'];
-//     $Brand_ID = $_POST['Brand_ID'];
-//     $Brand_Name = $_POST['Brand_Name'];
-//     $Brand_Desc = $_POST['Brand_Desc'];    
-    
-//     // Check for empty fields
-//     if(empty($Brand_ID) || empty($Brand_Name) || empty($Brand_Desc)) {            
-//         if(empty($Brand_Name)) {
-//             echo "<font color='red'>Brand name field is empty.</font><br/>";
-//         }
-        
-//         if(empty($Brand_Desc)) {
-//             echo "<font color='red'>Brand description field is empty.</font><br/>";
-//         }
-            
-//     } else {    
-//         //Update Query
-//         $query = "UPDATE BRAND SET Brand_ID='$Brand_ID' Brand_Name='$Brand_Name', Brand_Desc='$Brand_Desc' WHERE id=$id";
-//         $result = mysqli_query($connection, $query);
-//        // print_r($result);
-        
-        
-//         //redirecting to brands list
-//         header("Location: brands.php");
-//     }
-// }
-// $id = $_GET['id'];
- 
-// //selecting data associated with this particular id
-// $result = mysqli_query($connection, "SELECT * FROM BRAND WHERE id=$id");
-//  print_r($result);
-// while($res = mysqli_fetch_array($result))
-// {
-//     $Brand_Name = $res['Brand_Name'];
-//     $Brand_Desc = $res['Brand_Desc'];
-// }
+    // Check if the database returned anything
+    if($result_update) {
+        $brands = mysqli_fetch_all($result_update, MYSQLI_ASSOC);    
+        foreach ($brands as $brand){            
+            $Brand_ID = $brand['Brand_ID'];
+            $Brand_Name = $brand['Brand_Name'];
+            $Brand_Desc = $brand['Brand_Desc'];
+        }
+    } 
+     // else {
+        // Output an error
+        //echo "<p>GET server request Error</p>";
+    //;}
+}    
 
 ?>
 
@@ -155,12 +96,8 @@ $result = mysqli_query($connection, $query);
     </div>
 
     <form method="POST" action="brand.php">
+        <input type="hidden" id="Brand_ID" name="Brand_ID" value="<?php echo $Brand_ID; ?>">
         <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="Brand_ID">Brand ID</label>
-                <input type="number" min="0" class="form-control form-control-lg" id="Brand_ID" name="Brand_ID" value="<?php echo $Brand_ID; ?>">
-                <?php if(isset($error_msg[0])) { echo '<p class="text-danger">' . $error_msg[0] . '</p>'; } ?>
-            </div>
             <div class="form-group col-md-6">
                 <label for="Brand_Name">Brand Name</label>
                 <input type="text" class="form-control form-control-lg" id="Brand_Name" name="Brand_Name" value="<?php echo $Brand_Name; ?>">
