@@ -1,5 +1,4 @@
 <?php include("includes/header.php");
-      include("model/database.php");
       include("model/category.php");
 
 
@@ -58,18 +57,18 @@
         }
     }
 
-$category_id = $_GET['id'];
+$Category_id = $_GET['id'];
 
-if(!isset($category_id)) {
-    header("Location: /admin/category.php");
+if(!isset($Category_id)) {
+    header("Location: category.php");
     exit;
 }
 
 
-$category = getcategory($category_id);
+$Category = getcategory($Category_id);
 
-$category_name = $category['category_name'];
-$category_desc = $category['category_desc'];
+$Category_name = $category['category_name'];
+$Category_desc = $category['category_desc'];
 
 ?>
 
