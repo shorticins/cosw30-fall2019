@@ -1,7 +1,6 @@
 <?php
-// start a session
+  // start a session
 session_start();
-
 print_r($_SESSION);
 
 // Check if the user is already logged in
@@ -20,11 +19,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Validate the form data
     // Check if the user's email and password are in the database
-    $query = "SELECT Customer_ID, Customer_First_Name, Customer_Last_Name
+    $query = "SELECT Customer_ID, Customer_First_Name
                 FROM CUSTOMER
                 WHERE Customer_Email = '$email'
                 AND Customer_Password = '$password'";
-
     $result = mysqli_query($connection, $query);
 
     // If they are, log them in
@@ -33,12 +31,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Add their user id to the $_SESSION
         $_SESSION['Customer_ID']= $user['Customer_ID'];
         $_SESSION['Customer_First_Name']= $user['Customer_First_Name'];
-        $_SESSION['Customer_Last_Name']= $user['Customer_Last_Name'];
-        print_r($Customer);
-        print_r($_SESSION);
-        
-        // Redirect to the welcome.php page
-        header('Location:welcome.php');
 
         // Redirect to the dashboard.php page
         header('Location: dashboard.php');
@@ -65,10 +57,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <form action="login.php" method="POST">
         <label for="email">Email Address:</label><br>
-        <input type="email" name="email" id="email" value=""><br>
+        <input type="email" name="email" id="email" value=""required><br>
 
         <label for="password">Password:</label><br>
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password"required>
 
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
