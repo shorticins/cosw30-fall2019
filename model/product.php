@@ -33,7 +33,20 @@ function getProducts() {
     }
 }
 
+function getProductsByCategory($category_id) {
+    include('database.php');
 
+    $query = " SELECT * FROM PRODUCT
+                WHERE Category_ID = $category_id";
+    $result = mysqli_query($connection, $query);
+
+    if($result) {
+        return mysqli_fetch_assoc($result);
+    }
+    else {
+        return "Error: getProduct()";
+    }
+}
 
 // Accepts the product_id
 // Returns rating information as an associative array
