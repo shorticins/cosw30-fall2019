@@ -16,21 +16,29 @@ if(is_array($products)) {
             <th>Product Price</th>
             <th>Product Vendor</th>
             <th>Product Image URL</th>
-            <th>Edit / Delete</th>
+            <th>Edit</th>
         </tr>
     </thead>
 
     <tbody>";
 
     foreach($products as $product){
-        echo "<tr><td>".$product['product_id']."</td>";
-        echo "<td>".$product['product_name']."</td>";
-        echo "<td>".$product['product_desc']."</td>";
-        echo "<td>".$product['product_price']."</td>";
-        echo "<td>".$product['product_vendor']."</td>";
-        echo "<td>".$product['product_img_url']."
-        <a href='/admin/product.php?id=".$product['product_id']."> Edit </a> 
-         </td></tr>";
+        $product_id = $product['product_id'];
+        $product_name = $product['product_name'];
+        $product_desc = $product['product_desc'];
+        $product_price = $product['Product_Price'];
+        $product_vendor = $product['product_vendor'];
+        $product_image = $product['Product_Image'];
+
+        echo "<tr>";
+        echo "<td>$product_id</td>";
+        echo "<td>$product_name</td>";
+        echo "<td>$product_desc</td>";
+        echo "<td>$$product_price</td>";
+        echo "<td>$product_vendor</td>";
+        echo "<td>$product_image</td>";
+        echo "<td><a href='product.php?id=$product_id'>Edit</a></td>";
+        echo "</tr>";
     }
     echo "</tbody></table>";
 } else {
