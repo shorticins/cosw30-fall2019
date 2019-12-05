@@ -51,7 +51,7 @@
                 if(empty($error_msg)) {
                     $updateCategory = "UPDATE CATEGORY
                                      SET Category_Name = '$Category_Name', Category_Desc = '$Category_Desc'
-                                     WHERE Category_ID = $_GET['id']";
+                                     WHERE Category_ID = $Category_ID";
                     if($result = mysqli_query($connection, $updateCategory)) {
                         $update_msg[0] = 'Category has been updated.';
                         header('Location: /admin/categories.php');
