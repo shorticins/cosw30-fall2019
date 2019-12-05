@@ -64,14 +64,13 @@
 if(isset($_GET['id'])) {
     $Category_ID = $_GET['id'];
 } else {
-    // redirect to crud.php
     header('Location: categories.php');
     exit;
 }
 
 
-$query = "SELECT * FROM CATEGORY
-          WHERE Category_ID = '$Category_ID'";
+$query = 'SELECT * FROM CATEGORY
+          WHERE Category_ID = $Category_ID';
 
 $result = mysqli_query($connection, $query);
 $category = mysqli_fetch_assoc($result);
