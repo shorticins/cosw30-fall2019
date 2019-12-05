@@ -6,8 +6,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($_POST['action_type'] == "deleteReview"){
         include("model/database.php");
         $ratingId = $_POST['review_id'];
-        $deleteQuery = "DELETE FROM RATING WHERE Rating_ID=$ratingId";
-        $deleteResult = mysqli_query($connection, $deleteQuery);
+        $deleteQuery = "DELETE FROM RATING WHERE Rating_ID = $ratingId";
+        echo 'Query: '. $deleteQuery;
+        $deleteResult = mysqli_query($connection, "DELETE FROM RATING WHERE Rating_ID = $ratingId");
         //if($deleteResult){echo "success!";} else{echo "failure";}
     }
 }
@@ -22,11 +23,13 @@ if(is_array($reviews)) {
         <tr>
             <th>Rating Id</th>
             <th>Product Id</th>
+            <th>Product Name</th>
             <th>Customer Id</th>
+            <th>Customer First Name</th>
+            <th>Customer Last Name</th>
             <th>Rating Score</th>
             <th>Rating Review</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Edit</th> 
         </tr>
     </thead>
 
@@ -35,7 +38,10 @@ if(is_array($reviews)) {
     foreach($reviews as $review){
         echo "<tr><td>".$review['Rating_ID']."</td>";
         echo "<td>".$review['Product_ID']."</td>";
+        echo "<td>".$review['product_name']."</td>";
         echo "<td>".$review['Customer_ID']."</td>";
+        echo "<td>".$review['Customer_First_Name']."</td>";
+        echo "<td>".$review['Customer_Last_Name']."</td>";
         echo "<td>".$review['Rating_Score']."</td>";
         echo "<td>".$review['Rating_Review']."</td>";
         echo '<form action="review.php" method="POST">
@@ -43,11 +49,12 @@ if(is_array($reviews)) {
               <input type="hidden" name="action_type" value="editReview">
               <td><input type="submit" value="Edit"></td>
               </form>';
-        echo '<form action="reviews.php" method="POST">
+        //tsuser does not have delete privilages
+        /*echo '<form action="reviews.php" method="POST">
               <input type="hidden" name="review_id" value="' . $review['Rating_ID'] . '">
               <input type="hidden" name="action_type" value="deleteReview">
               <td><input type="submit" value="Delete"></td>
-              </form>';
+              </form>';*/
 
                         
     }

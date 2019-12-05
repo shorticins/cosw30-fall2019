@@ -21,6 +21,7 @@
                         <li class="nav-item"><a class="nav-link" href="/admin">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin/brands.php">Brands</a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin/products.php">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/reviews.php">Reviews</a></li>
                     </ul>
                 </nav>
             </header>
