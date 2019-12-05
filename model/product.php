@@ -36,6 +36,71 @@ function getProducts() {
 
 
 // Accepts the product_id
+// Returns rating information as an associative array
+function getRating($product_id) {
+    include('database.php');
+
+    $query = "SELECT * FROM RATING WHERE Product_ID = $product_id";
+
+    $result = mysqli_query($connection, $query);
+
+    
+    if($result) {
+        return mysqli_fetch_assoc($result);
+    } else {
+        return "Error: getRating()";
+    }
+}
+
+
+
+// Accepts the product_id
+// Returns average rating for the product
+function getAvgRating($product_id) {
+    include('database.php');
+
+    $query = "SELECT AVG(Rating_Score)
+                AS AVERAGE
+                FROM RATING
+                WHERE Product_ID = $product_id";
+
+    $result = mysqli_query($connection, $query);
+
+    
+    if($result) {
+        $avg_rating_fetch = mysqli_fetch_assoc($result); 
+        return $avg_rating_fetch['AVERAGE'];   
+    } else {
+        return "Error: getAvgRating()";
+    }
+}
+
+
+
+// Accepts the product_id
+// Returns number of reviews for the product 
+function getProductReviews($product_id) {
+    include('database.php');
+
+    $query = "SELECT COUNT(*)
+                AS REVIEWS
+                FROM RATING 
+                WHERE Product_ID = $product_id";
+
+    $result = mysqli_query($connection, $query);
+
+    
+    if($result) {
+        $total_reviews_fetch = mysqli_fetch_assoc($result);
+        return $total_reviews_fetch['REVIEWS'];   
+    } else {
+        return "Error: getProductReviews()";
+    }
+}
+
+
+
+// Accepts the product_id
 // Returns reviews associated to product_id
 //as a multi-dimensional array
 function getReviews($product_id) {
