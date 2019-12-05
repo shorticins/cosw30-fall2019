@@ -8,6 +8,13 @@
         exit;
     }
 
+    $Category = getCategory($Category_id);
+
+    $Category_ID = $Category['Category_ID'];
+    $Category_Name = $Category['Category_Name'];
+    $Category_Desc = $Category['Category_Desc'];
+
+
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
 
@@ -61,11 +68,7 @@
 
 
 
-$Category = getCategory($Category_id);
 
-// $Category_ID = $Category['Category_ID'];
-$Category_Name = $Category['Category_Name'];
-$Category_Desc = $Category['Category_Desc'];
 
 ?>
 
