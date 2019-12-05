@@ -1,15 +1,26 @@
 <?php 
-//session_start();
+session_start();
 
 // Check if the user is already logged in
 // If they are, redirect to welcome.php
-// if(isset($_SESSION['Customer_ID'])){
-//     header('Location: welcome.php');
-//     exit;
-// }
+if(isset($_SESSION['Customer_ID'])){
+    header('Location: welcome.php');
+    exit;
+}
 
 include('includes/header.php');
 include('model/database.php');
+
+$first_name = "";
+$last_name = "";
+$email = "";
+$phone = "";
+$address = "";
+$city = "";
+$state = "";
+$zip = "";
+$password = "";
+$confirm_password = "";
 
 ?>
 
@@ -56,11 +67,7 @@ include('model/database.php');
     </main>
 
 <?php
-$first_name = "";
-$last_name = "";
-$email = "";
-$password = "";
-$confirm_password = "";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST["first_name"];
@@ -119,7 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
     
      // Create your query. The query has to match the names in the MySQL / phpMYADMIN
-        $query = "INSERT INTO CUSTOMERS (Customer_First_Name, Customer_Last_Name, Customer_Email, Customer_Phone, Customer_Address, Customer_City, Customer_State, Customer_Zip, Customer_Password)
+        $query = "INSERT INTO CUSTOMER (Customer_First_Name, Customer_Last_Name, Customer_Email, Customer_Phone, Customer_Address, Customer_City, Customer_State, Customer_Zip, Customer_Password)
         VALUES ('$first_name', '$last_name', '$email', '$phone', '$address', '$city', '$state', '$zip', '$password')";
 
      // Run your query
@@ -134,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Output an error
             echo '
                 <h1>System Error!</h1>
-                <p class="error">There was an error!</p>';
+                <p class="error">There was an error! Did not connect to database!</p>';
             
         }
 ?>

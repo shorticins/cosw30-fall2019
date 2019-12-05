@@ -7,7 +7,7 @@ print_r($_SESSION);
 // Check if the user is already logged in
 // If they are, redirect to welcome.php
 if(isset($_SESSION['Customer_ID'])){
-    header('Location: dashboard.php');
+    header('Location: welcome.php');
     exit;
 }
 include('includes/header.php');
