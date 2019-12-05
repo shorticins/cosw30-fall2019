@@ -58,22 +58,19 @@
         }
     }
 
-if(isset($_GET['id'])) {
-    $Category_ID = $_GET['id'];
-} else {
-    header('Location: categories.php');
+$category_id = $_GET['id'];
+
+if(!isset($category_id)) {
+    header("Location: /admin/products.php");
     exit;
 }
 
 
-$query = 'SELECT * FROM CATEGORY
-          WHERE Category_ID = $Category_ID';
+$category = getcategory($category_id);
 
-$result = mysqli_query($connection, $query);
-$category = mysqli_fetch_assoc($result);
+$category_name = $category['category_name'];
+$category_desc = $category['category_desc'];
 
-$Category_Name = $category['Name'];
-$Category_Desc = $category['Desc'];
 ?>
 
 <main class="col-lg-8 m-1 col-md-12">
