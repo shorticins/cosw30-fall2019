@@ -4,11 +4,6 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
-        if(empty($_POST['Category_ID'])) {
-                $error_msg[0] = 'Category ID field cannot be empty.';
-            } else {
-                $Category_ID = trim($_POST['Category_ID']);
-            }
 
             if(empty($_POST['Category_Name'])) {
                 $error_msg[1] = 'Category Name field cannot be empty.';
@@ -39,8 +34,7 @@
                 $update_msg = [];
                 if(empty($error_msg)) {
                     $updateCategory = "UPDATE Category
-                                     SET Category_ID = '$Category_ID',
-                                         Category_Name = '$Category_Name',
+                                     SET Category_Name = '$Category_Name',
                                          Category_Desc = '$Category_Desc',
                                      WHERE Category_ID = $Category_ID";
                     if($result = mysqli_query($connection, $updateCategory)) {
