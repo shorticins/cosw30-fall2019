@@ -57,7 +57,7 @@
         }
     }
 
-$query = 'SELECT * FROM Category';
+$query = 'SELECT * FROM CATEGORY';
 
 $result = mysqli_query($connection, $query);
 
