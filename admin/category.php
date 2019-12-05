@@ -4,6 +4,8 @@
 
 
 
+
+
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
         if(empty($_POST['Category_ID'])) {
@@ -59,7 +61,14 @@
         }
     }
 
-$Category_ID = $_GET['id'];
+if(isset($_GET['id'])) {
+    $Category_ID = $_GET['id'];
+} else {
+    // redirect to crud.php
+    header('Location: categories.php');
+    exit;
+}
+
 
 $query = "SELECT * FROM CATEGORY
           WHERE Category_ID = $Category_ID";
