@@ -3,7 +3,7 @@
     include("model/database.php");
     include("model/category.php");
 
-    $Categories = getCategories();
+    $categories = getCategories();
 ?>
 
 <main class="col-md-10">
