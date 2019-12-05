@@ -13,16 +13,7 @@
 
 
 <body>
-<?php
-    if(!isset($_SESSION['Customer_ID']))
-    {
-        echo '<li><a href="login.php">Login</a></li>';
-    }
-    else
-    {
-        echo '<li><a href="logout.php">Logout</a></li>';
-    }
-?>
+
     
     <header class="site-header container">
 
@@ -32,12 +23,19 @@
         <div class="site-header__top-btn">
             <a href=""><i class="fas fa-shopping-cart fa-2x""></i></a>
         </div>
-        <div class="site-header__top-btn">
+ <?php   
+    if(!isset($_SESSION['Customer_ID']))
+    {
+      echo  '<div class="site-header__top-btn">
             <a href="/login.php"><i class="fas fa-user-circle fa-2x""></i></a>
-        </div>
-        <div class="site-header__top-btn">
+        </div>';
+    } else {
+
+       echo '<div class="site-header__top-btn">
             <a href="/logout.php"><i class="fas fa-sign-out-alt fa-2x""></i></a>
-        </div>
+        </div>';
+    }    
+?>
 
         <div class="site-header__main-logo">
             <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
