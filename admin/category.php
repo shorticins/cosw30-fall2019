@@ -60,7 +60,7 @@
 $Category_id = $_GET['id'];
 
 if(!isset($Category_id)) {
-    header("Location: category.php");
+    header("Location: admin/category.php");
     exit;
 }
 
