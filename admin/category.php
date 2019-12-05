@@ -1,20 +1,7 @@
 <?php include("includes/header.php");
       include("model/category.php");
 
-    $Category_id = $_GET['id'];
-
-    if(!isset($Category_ID)) {
-        header("Location: /admin/categories.php");
-        exit;
-    }
-
-    $Category = getCategory($Category_id);
-
-    $Category_ID = $Category['Category_ID'];
-    $Category_Name = $Category['Category_Name'];
-    $Category_Desc = $Category['Category_Desc'];
-
-
+ 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
 
@@ -65,6 +52,18 @@
     }
 
 
+   $Category_id = $_GET['id'];
+
+    if(!isset($Category_ID)) {
+        header("Location: /admin/categories.php");
+        exit;
+    }
+
+    $Category = getCategory($Category_id);
+
+    $Category_ID = $Category['Category_ID'];
+    $Category_Name = $Category['Category_Name'];
+    $Category_Desc = $Category['Category_Desc'];
 
 
 
