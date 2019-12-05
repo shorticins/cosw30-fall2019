@@ -41,7 +41,7 @@ function getProductsByCategory($category_id) {
     $result = mysqli_query($connection, $query);
 
     if($result) {
-        return mysqli_fetch_assoc($result);
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
     }
     else {
         return "Error: getProductsbyCategory()";

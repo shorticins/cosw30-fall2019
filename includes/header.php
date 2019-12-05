@@ -41,13 +41,13 @@
                     <a href="index.php" class="btn--sign">doghouse</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="product.php?category_id=1" class="btn--sign">barkery blvd</a>
+                    <a href="plp.php?category_id=1" class="btn--sign">barkery blvd</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="product.php?category_id=2" class="btn--sign">accessory ave</a>
+                    <a href="plp.php?category_id=2" class="btn--sign">accessory ave</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="product.php?category_id=3" class="btn--sign">rescue road</a>
+                    <a href="plp.php?category_id=3" class="btn--sign">rescue road</a>
                 </li>
             </ul>
         </nav>
