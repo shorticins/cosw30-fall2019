@@ -11,8 +11,6 @@
 include('includes/header.php');
 include('model/database.php');
 
-//Query the database to SELECT all names and store it into a variable
-// $results = $dbc->query("SELECT * FROM CUSTOMERS") or die($dbc->error);
 ?>
 
 
@@ -34,16 +32,16 @@ include('model/database.php');
             <label for="phone">Phone Number:</label><br>
             <input type="text" name="phone" id="phone" value="<?php echo $phone; ?>" required><br>
 
-            <label for="address">Email Address:</label><br>
+            <label for="address">Address:</label><br>
             <input type="text" name="address" id="address" value="<?php echo $address; ?>" required><br>
 
-            <label for="city">Email Address:</label><br>
+            <label for="city">City:</label><br>
             <input type="text" name="city" id="city" value="<?php echo $city; ?>" required><br>
 
-            <label for="state">Email Address:</label><br>
+            <label for="state">State:</label><br>
             <input type="text" name="state" id="state" value="<?php echo $state; ?>" required><br>
 
-            <label for="zip">Email Address:</label><br>
+            <label for="zip">Zipcode:</label><br>
             <input type="number" name="zip" id="zip" value="<?php echo $zip; ?>" required><br>
 
             <label for="password">Password:</label><br>
