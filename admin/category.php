@@ -26,7 +26,7 @@
             case "addCategory":
                 $add_msg = [];
                 if(empty($error_msg)) {
-                    $addBrand = "INSERT INTO Category (Category_ID, Category_Name, Category_Desc) 
+                    $addCategory = "INSERT INTO Category (Category_ID, Category_Name, Category_Desc) 
                                  VALUES ('$Category_ID','$Category_Name','$Category_Desc')";
                     if($result = mysqli_query($connection, $addCategory)) {
                         $add_msg[0] = 'Category has been added to the database.';
