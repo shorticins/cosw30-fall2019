@@ -11,28 +11,19 @@ if(isset($_SESSION['Customer_ID'])){
 
 include('includes/header.php');
 
-// Connect to database
-include('model/database.php');
 
-// Query the database 
-$results = $dbc->query("SELECT * FROM CUSTOMER") or die($dbc->error);
-$row = $results->fetch_assoc();
-
-
-
-$first_name = $row['Customer_First_Name'];
-$last_name = $row['Customer_Last_Name'];
-$email = $row['Customer_Email'];
-$password = $row['first_name'];
+$first_name = "";
+$last_name = "";
+$email = "";
+$password = "";
 $confirm_password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $first_name = ($_POST["first_name"]);
-  $last_name = ($_POST["last_name"]);
-  $email = ($_POST["email"]);
-  $password = ($_POST["password"]);
-  $confirm_password = ($_POST["confirm_password"]);
-
+    $first_name = $_POST["first_name"];
+    $last_name = $_POST["last_name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirm_password = $_POST["confirm_password"];
 
     //form validation
     if(empty($first_name)){
@@ -58,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Email Address: " . $email . "<br>";
     } else {
         echo "<p>The Passwords Do Not Match.</p>";
-        echo "<a href='register.php'>Go Back</a>";
     }
 }
 ?>

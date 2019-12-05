@@ -2,5 +2,9 @@
 .product-list {
     &__img {
         overflow:hidden;
+        width: 350px;
+        height: 350px;
+
+        img { width: 100%; }
     }
 }
