@@ -2,9 +2,9 @@
       include("model/category.php");
 
 
-   $Category_id = $_GET['id'];
+   $Category_ID = $_GET['id'];
 
-    if(!isset($Category_id)) {
+    if(!isset($Category_ID)) {
         header("Location: /admin/categories.php");
         exit;
     }
@@ -44,7 +44,7 @@
                     $updateCategory = "UPDATE Category
                                      SET Category_Name = '$Category_Name',
                                          Category_Desc = '$Category_Desc',
-                                     WHERE Category_id = $Category_id";
+                                     WHERE Category_ID = $Category_ID";
                     if($result = mysqli_query($connection, $updateCategory)) {
                         $update_msg[0] = 'Category has been updated.';
                         header('Location: category.php');
@@ -64,7 +64,7 @@
 
     $Category = getCategory($Category_id);
 
-    $Category_ID = $Category['Category_id'];
+    $Category_ID = $Category['Category_ID'];
     $Category_Name = $Category['Category_Name'];
     $Category_Desc = $Category['Category_Desc'];
 
