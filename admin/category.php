@@ -6,19 +6,19 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
         if(empty($_POST['Category_ID'])) {
-                $error_msg[] = 'Category ID field cannot be empty.';
+                $error_msg[0] = 'Category ID field cannot be empty.';
             } else {
                 $Category_ID = trim($_POST['Category_ID']);
             }
 
             if(empty($_POST['Category_Name'])) {
-                $error_msg[] = 'Category Name field cannot be empty.';
+                $error_msg[1] = 'Category Name field cannot be empty.';
             } else {
                 $Category_Name = trim($_POST['Category_Name']);
             }
             
             if(empty($_POST['Category_Desc'])) {
-                $error_msg[] = 'Category Description field cannot be empty.';
+                $error_msg[2] = 'Category Description field cannot be empty.';
             } else {
                 $Category_Desc = trim($_POST['Category_Desc']);
             } 
@@ -30,9 +30,9 @@
                     $addCategory = "INSERT INTO Category (Category_ID, Category_Name, Category_Desc) 
                                  VALUES ('$Category_ID','$Category_Name','$Category_Desc')";
                     if($result = mysqli_query($connection, $addCategory)) {
-                        $add_msg[] = 'Category has been added to the database.';
+                        $add_msg[0] = 'Category has been added to the database.';
                     } else {
-                        $add_msg[] = 'There was an error adding category to the database, please try again.';
+                        $add_msg[1] = 'There was an error adding category to the database, please try again.';
                     }
                 }
             ;
@@ -45,11 +45,11 @@
                                          Category_Desc = '$Category_Desc',
                                      WHERE id = $id";
                     if($result = mysqli_query($connection, $updateCategory)) {
-                        $update_msg[] = 'Category has been updated.';
+                        $update_msg[0] = 'Category has been updated.';
                         header('Location: category.php');
                         exit;
                     } else {
-                        $update_msg[] = 'There was an error updating category, please try again.';
+                        $update_msg[1] = 'There was an error updating category, please try again.';
                     }
                 }  
             ;
@@ -58,7 +58,22 @@
         }
     }
 
+if(isset($_GET['id'])) {
+    $Category_ID = $_GET['id'];
+} else {
+    header('Location: categories.php');
+    exit;
+}
 
+
+$query = 'SELECT * FROM CATEGORY
+          WHERE Category_ID = $Category_ID';
+
+$result = mysqli_query($connection, $query);
+$category = mysqli_fetch_assoc($result);
+
+$Category_Name = $category['Name'];
+$Category_Desc = $category['Desc'];
 ?>
 
 <main class="col-lg-8 m-1 col-md-12">
@@ -72,19 +87,19 @@
             <div class="form-group col-md-6">
                 <label for="Category_ID">Category ID</label>
                 <input type="number" min="0" class="form-control form-control-lg" id="Category_ID" name="Category_ID" value="<?php echo $Category_ID; ?>">
-                <?php if(isset($error_msg[])) { echo '<p class="text-danger">' . $error_msg[0] . '</p>'; } ?>
+                <?php if(isset($error_msg[0])) { echo '<p class="text-danger">' . $error_msg[0] . '</p>'; } ?>
             </div>
             <div class="form-group col-md-6">
                 <label for="Category_Name">Category Name</label>
                 <input type="text" class="form-control form-control-lg" id="Category_Name" name="Category_Name" value="<?php echo $Category_Name; ?>">
-                <?php if(isset($error_msg[])) { echo '<p class="text-danger">' . $error_msg[1] . '</p>'; } ?>
+                <?php if(isset($error_msg[1])) { echo '<p class="text-danger">' . $error_msg[1] . '</p>'; } ?>
             </div>
         </div>
 
         <div class="form-group">
             <label for="Category_Desc">Category Description</label>
             <input type="text" class="form-control form-control-lg" id="Category_Desc" name="Category_Desc" value="<?php echo $Category_Desc; ?>">
-            <?php if(isset($error_msg[])) { echo '<p class="text-danger">' . $error_msg[2] . '</p>'; } ?>
+            <?php if(isset($error_msg[2])) { echo '<p class="text-danger">' . $error_msg[2] . '</p>'; } ?>
         </div>
 
         <div class="text-center">
