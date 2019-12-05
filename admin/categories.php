@@ -13,7 +13,7 @@
                 <th>Category ID</th>
                 <th>Category Name</th>
                 <th>Category Description</th>
-                <th>Edit / Delete</th>
+                <th>Edit</th>
             </tr>
         </thead>
 
@@ -24,7 +24,7 @@
                     <td>' .$category['Category_ID']. '</td>
                     <td>' .$category['Category_Name']. '</td>
                     <td>' .$category['Category_Desc']. '</td> 
-                    <td><a href="category.php?id=' . $category['Brand_ID'] . '">Edit</a></td></tr>';
+                    <td><a href="category.php?id=' . $category['Category_ID'] . '">Edit</a></td></tr>';
             }
         ?>
         </tbody>
