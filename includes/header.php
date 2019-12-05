@@ -13,6 +13,16 @@
 
 
 <body>
+<?php
+    if(!isset($_SESSION['user']))
+    {
+        echo '<li><a href="login.php">Login</a></li>';
+    }
+    else
+    {
+        echo '<li><a href="logout.php">Logout</a></li>';
+    }
+?>
     
     <header class="site-header container">
 
