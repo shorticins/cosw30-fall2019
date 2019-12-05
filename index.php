@@ -30,7 +30,7 @@ include('model/product.php');
         </div>
 
         <div class="category_item">
-            <div class="category_item_img"><a href=""><img src="/img/rescue_igby.jpg" alt="Igby"></a></div>
+            <div class="category_item_img"><a href=""><img src="/img/rescue_pumpkin.jpg" alt="Pumpkin"></a></div>
             <h3><a href="">Adoptables</a></h3>
             <p>Borkdrive shoob most angery pupper I have ever seen blep yapper, long doggo vvv big ol pupper. Puggo shooberino, pupperino. porgo. Ruff heckin good boys thicc long bois shoober, you are doing me a frighten wrinkler. Bork borkdrive doing me a frighten waggy wags, pupperino blop. Puggorino you are doin me a concern big ol pupper bork such treat shoob, heck yapper heck very taste wow heckin, sub woofer long woofer shoober long doggo.</p>
             <a class="btn btn--green">See More</a>
