@@ -1,6 +1,7 @@
 <?php include("includes/header.php");
       include("model/category.php");
 
+
    $Category_ID = $_GET['id'];
 
     if(!isset($Category_ID)) {
@@ -36,7 +37,7 @@
             case "addCategory":
                 $add_msg = [];
                 if(empty($error_msg)) {
-                    $addCategory = "INSERT INTO Category (Category_ID, Category_Name, Category_Desc) 
+                    $addCategory = "INSERT INTO CATEGORY (Category_ID, Category_Name, Category_Desc) 
                                  VALUES ('$Category_ID','$Category_Name','$Category_Desc')";
                     if($result = mysqli_query($connection, $addCategory)) {
                         $add_msg[0] = 'Category has been added to the database.';
@@ -48,7 +49,7 @@
             case "update":
                 $update_msg = [];
                 if(empty($error_msg)) {
-                    $updateCategory = "UPDATE Category
+                    $updateCategory = "UPDATE CATEGORY
                                      SET Category_ID = '$Category_ID',
                                          Category_Name = '$Category_Name',
                                          Category_Desc = '$Category_Desc',
@@ -66,8 +67,6 @@
             ;
         }
     }
-
-
 
 
 
