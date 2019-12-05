@@ -17,6 +17,7 @@ function getProductPag($page_number) {
     }
 }
 $page_number = $_GET['page'];
+
 $products = getProductPag($page_number);
 foreach($products as $product)
     echo "<a href='product.php?pid=" . $product['product_id'] . "'>\n
@@ -31,7 +32,4 @@ foreach($products as $product)
 
 
     
-    //    print_r( $products );
-      /*echo 
-
-*/
+   
