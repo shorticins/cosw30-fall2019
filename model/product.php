@@ -44,7 +44,7 @@ function getProductsByCategory($category_id) {
         return mysqli_fetch_assoc($result);
     }
     else {
-        return "Error: getProduct()";
+        return "Error: getProductsbyCategory()";
     }
 }
 
