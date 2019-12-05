@@ -1,8 +1,21 @@
-<?php include("includes/header.php")?>
+<?php 
+session_start();
+include("includes/header.php");
+include("model/category.php");
+include("model/product.php");
 
-<?php
-// include('database.php');
-include('model/category.php');
+$category_id = $_GET['id'];
+if(!isset($category_id)) {
+    header("Location: /admin/categories.php");
+    exit;
+}
+
+$category = getCategory($category_id);
+
+$category_name = $category['category_name'];
+$category_desc = $category['category_desc'];
+
+$categories = getCategories();
 ?>
 
 <main class="col-lg-8 m-1 col-md-12">
