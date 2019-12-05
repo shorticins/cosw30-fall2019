@@ -120,6 +120,22 @@ $recProd3 = recdProduct();
 
 ?>
 
+<?php 
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+             $first_name = $_POST['first_name'];
+             $last_name = $_POST['last_name'];
+             $email = $_POST['email'];
+             $password = $_POST['password'];    
+        
+             $insertQuery = "INSERT INTO USER_MORALES (first_name, last_name, email, password)
+                    VALUES ('$first_name', '$last_name', '$email', '$password')";
+                    
+             $insertResult = mysqli_query($connection, $insertQuery);
+}
+
+?>
+
 <main class="container">
 <!--Internal Product Navigation Links-->
 <div class="ten columns offset-by-one">
