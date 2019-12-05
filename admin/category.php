@@ -61,7 +61,7 @@
 $category_id = $_GET['id'];
 
 if(!isset($category_id)) {
-    header("Location: /admin/products.php");
+    header("Location: /admin/category.php");
     exit;
 }
 
