@@ -24,7 +24,8 @@
                     <td>' .$category['Category_ID']. '</td>
                     <td>' .$category['Category_Name']. '</td>
                     <td>' .$category['Category_Desc']. '</td> 
-                    <td><a href="category.php?id=' . $category['Category_ID'] . '">Edit</a></td></tr>';
+                    <td><a href="category.php?id=' . $category['Category_ID'] . '">Edit</a></td>
+                    </tr>';
             }
         ?>
         </tbody>
