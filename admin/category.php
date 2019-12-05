@@ -57,6 +57,8 @@
         }
     }
 
+
+
 $Category_id = $_GET['id'];
 
 if(!isset($Category_id)) {
@@ -64,8 +66,7 @@ if(!isset($Category_id)) {
     exit;
 }
 
-
-$Category = getcategory($Category_id);
+$Category = getCategory($Category_id);
 
 $Category_Name = $category['category_name'];
 $Category_Desc = $category['category_desc'];
