@@ -68,6 +68,7 @@ if(!isset($Category_id)) {
 
 $Category = getCategory($Category_id);
 
+$Category_ID = $Category['Category_ID'];
 $Category_Name = $Category['Category_Name'];
 $Category_Desc = $Category['Category_Desc'];
 
