@@ -16,22 +16,22 @@ include('model/product.php');
     <div class="category row">
     
         <div class="category_item">
-            <div class="category_item_img"><img src="/img/bone_pile.png" alt="Puppy Bone Cake"></div>
-            <h3>Food</h3>
+            <div class="category_item_img"><a href=""><img src="/img/bone_pile.png" alt="Puppy Bone Cake"></a></div>
+            <h3><a href="">Barkery</a></h3>
             <p>Borkdrive shoob most angery pupper I have ever seen blep yapper, long doggo vvv big ol pupper. Puggo shooberino, pupperino. porgo. Ruff heckin good boys thicc long bois shoober, you are doing me a frighten wrinkler. Bork borkdrive doing me a frighten waggy wags, pupperino blop. Puggorino you are doin me a concern big ol pupper bork such treat shoob, heck yapper heck very taste wow heckin, sub woofer long woofer shoober long doggo.</p>
             <a class="btn btn--green">See More</a>
         </div>
 
         <div class="category_item">
-            <div class="category_item_img"><img src="/img/stuffed_toy.jpg" alt="Stuffed Monkey Toy"></div>
-            <h3>Toys</h3>
+            <div class="category_item_img"><a href=""><img src="/img/stuffed_toy.jpg" alt="Stuffed Monkey Toy"></a></div>
+            <h3><a href="">>Accessories</a></h3>
             <p>Borkdrive shoob most angery pupper I have ever seen blep yapper, long doggo vvv big ol pupper. Puggo shooberino, pupperino. porgo. Ruff heckin good boys thicc long bois shoober, you are doing me a frighten wrinkler. Bork borkdrive doing me a frighten waggy wags, pupperino blop. Puggorino you are doin me a concern big ol pupper bork such treat shoob, heck yapper heck very taste wow heckin, sub woofer long woofer shoober long doggo.</p>
             <a class="btn btn--green">See More</a>
         </div>
 
         <div class="category_item">
-            <div class="category_item_img"><img src="/img/Starwars_petcostume.jpg" alt="Star Wars Dog Costume"></div>
-            <h3>Costumes</h3>
+            <div class="category_item_img"><a href""><img src="/img/Starwars_petcostume.jpg" alt="Star Wars Dog Costume"></a></div>
+            <h3><a href="">Adopt A Pet</a></h3>
             <p>Borkdrive shoob most angery pupper I have ever seen blep yapper, long doggo vvv big ol pupper. Puggo shooberino, pupperino. porgo. Ruff heckin good boys thicc long bois shoober, you are doing me a frighten wrinkler. Bork borkdrive doing me a frighten waggy wags, pupperino blop. Puggorino you are doin me a concern big ol pupper bork such treat shoob, heck yapper heck very taste wow heckin, sub woofer long woofer shoober long doggo.</p>
             <a class="btn btn--green">See More</a>
         </div>

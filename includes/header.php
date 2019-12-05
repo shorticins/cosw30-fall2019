@@ -30,11 +30,9 @@
         </div>
 
         <div class="site-header__main-logo">
-<<<<<<< HEAD
+
             <a href="/index.php"><img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo"></a>
-=======
-           <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
->>>>>>> origin/sun
+
         </div>
 
         <nav class="row">
