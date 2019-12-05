@@ -1,13 +1,13 @@
 <?php include("includes/header.php");
       include("model/category.php");
 
-
    $Category_ID = $_GET['id'];
 
     if(!isset($Category_ID)) {
         header("Location: /admin/categories.php");
         exit;
     }
+
 
  
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -62,7 +62,7 @@
 
 
 
-    $Category = getCategory($Category_id);
+    $Category = getCategory($Category_ID);
 
     $Category_ID = $Category['Category_ID'];
     $Category_Name = $Category['Category_Name'];
