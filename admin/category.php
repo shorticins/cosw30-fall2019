@@ -52,7 +52,7 @@
     }
 
 
-   $Category_id = $_GET['id'];
+   $Category_ID = $_GET['id'];
 
     if(!isset($Category_ID)) {
         header("Location: /admin/categories.php");
