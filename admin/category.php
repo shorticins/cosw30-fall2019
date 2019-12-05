@@ -56,7 +56,7 @@
                                      WHERE Category_ID = $Category_ID";
                     if($result = mysqli_query($connection, $updateCategory)) {
                         $update_msg[0] = 'Category has been updated.';
-                        header('Location: category.php');
+                        header('Location: /admin/categories.php');
                         exit;
                     } else {
                         $update_msg[1] = 'There was an error updating category, please try again.';
