@@ -1,6 +1,5 @@
 <?php
     include("includes/header.php");
-    include("model/database.php");
     include("model/category.php");
 
     $categories = getCategories();
