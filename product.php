@@ -70,6 +70,43 @@ function stars($rating){
 //Product Recommendations  
 $recProducts = recdProduct(3);
 
+
+
+
+
+//Once "Add a Review" form is submitted 
+//add data to RATING table 
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo "test";
+    $review_first_name  = $_POST['review_first_name'];
+    $review_last_name   = $_POST['review_last_name'];
+    $review_rating      = $_POST['review_rating'];
+    $review_custRev     = mysql_real_escape_string($_POST['review_custRev']);
+   
+    
+    if($_POST['formName'] == "formValue") {
+        if(empty($review_first_name) || empty($review_last_name) || empty($review_rating) || 
+            empty($review_custRev)) {
+            echo '<p class="alert--error">Error! One or more fields in the "Review From" were left empty.</p>';
+            
+        } else {
+            $insert_query = "INSERT INTO RATING (Product_ID, Customer_ID, Rating_Score, Rating_Review)
+	                        SELECT '$id', c.Customer_ID, '$review_rating', '$review_custRev'
+	                        FROM CUSTOMER c 
+	                        WHERE c.Customer_First_Name = '$review_first_name'
+	                        AND c.Customer_Last_Name = '$review_last_name'";
+            $result = mysqli_query($connection, $insert_query);
+        
+            if($result) {    
+                echo '<p class="success--p">New review was added</p>';
+            } else {
+                echo '<p class="alert--error">Error adding new review</p>';
+            }
+        }
+    }
+}
+
+
 ?>
 
 <main class="container">
@@ -193,15 +230,61 @@ $recProducts = recdProduct(3);
     <div class="row">
         <div class="twelve columns">
             <form id="addRevForm" class="form__hide" action="product.php?id=<?php echo $id; ?>" method="POST">
-                <label for="fname">First Name: </label>
-                    <input class="u-full-width" type="text" name="fname" id="fname" value="">
-                <label for="lname">Last Name: </label>
-                    <input class="u-full-width" type="text" name="lname" id="lname" value=""> <br>
-                <label for="rating">Rating: </label>
-                    <input class="u-full-width" type="number" name="rating" id="rating" min="1" max="5" value=""> <br>
-                <label for="custRev">Customer Review: </label>
-                    <textarea class="u-full-width" name="custRev" id="custRev" value=""
+                <label for="review_first_name">First Name: </label>
+                    <input class="u-full-width" type="text" name="review_first_name" id="review_first_name">
+                    
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_first_name)) {
+                                        echo '<p class="alert--error">First Name must be entered</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <label for="review_last_name">Last Name: </label>
+                    <input class="u-full-width" type="text" name="review_last_name" id="review_last_name">
+
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_last_name)) {
+                                        echo '<p class="alert--error">Last Name must be entered</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <label for="review_rating">Rating: </label>
+                    <input class="u-full-width" type="number" name="review_rating" id="review_rating" min="1" max="5" 
+                        placeholder="Rating score scale is 1 to 5"> 
+
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_rating)) {
+                                        echo '<p class="alert--error">Rating must be selected</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <label for="review_custRev">Customer Review: </label>
+                    <textarea class="u-full-width" name="review_custRev" id="review_custRev"
                          placeholder="Write your review here..." max="500"></textarea>
+
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_custRev)) {
+                                        echo '<p class="alert--error">Review comment must be entered</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <input type="hidden" name="formName" value="formValue"/>
                 <a class="btn btn--green btn--small btn--block" href="">Submit</a>
             </form>
         </div>
@@ -261,7 +344,11 @@ $recProducts = recdProduct(3);
     //Function sets Review Form to Display form upon 
     //clicking "Add a Review" button
     function showRevForm() {
-        revForm.style.display = "block";
+        if(revForm.style.display == "block") {
+            revForm.style.display = "none";
+        } else {
+            revForm.style.display = "block";
+        }
     }
     
 </script>
