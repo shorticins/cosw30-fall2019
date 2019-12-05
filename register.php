@@ -1,14 +1,29 @@
-<?php include('includes/header.php');
+<?php 
+// Start a session
+session_start();
 
-$first_name = $last_name = $email = $password = $confirm_password = "";
+// Check if the user is already logged in
+// If they are, redirect to welcome.php
+if(isset($_SESSION['Customer_ID'])){
+    header('Location: welcome.php');
+    exit;
+}
+
+include('includes/header.php');
+
+
+$first_name = "";
+$last_name = "";
+$email = "";
+$password = "";
+$confirm_password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $first_name = ($_POST["first_name"]);
-  $last_name = ($_POST["last_name"]);
-  $email = ($_POST["email"]);
-  $password = ($_POST["password"]);
-  $confirm_password = ($_POST["confirm_password"]);
-
+    $first_name = $_POST["first_name"];
+    $last_name = $_POST["last_name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirm_password = $_POST["confirm_password"];
 
     //form validation
     if(empty($first_name)){
@@ -34,7 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Email Address: " . $email . "<br>";
     } else {
         echo "<p>The Passwords Do Not Match.</p>";
-        echo "<a href='register.php'>Go Back</a>";
     }
 }
 ?>
