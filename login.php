@@ -32,8 +32,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['Customer_ID']= $user['Customer_ID'];
         $_SESSION['Customer_First_Name']= $user['Customer_First_Name'];
 
-        // Redirect to the dashboard.php page
-        header('Location: dashboard.php');
+        // Redirect to the welcome.php page
+        header('Location: welcome.php');
         exit;
     // If they aren't, show the log in form with an error
     } else { 
