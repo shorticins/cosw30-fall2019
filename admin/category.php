@@ -3,9 +3,6 @@
       include("model/category.php");
 
 
-
-
-
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
         if(empty($_POST['Category_ID'])) {
@@ -61,22 +58,7 @@
         }
     }
 
-if(isset($_GET['id'])) {
-    $Category_ID = $_GET['id'];
-} else {
-    header('Location: categories.php');
-    exit;
-}
 
-
-$query = 'SELECT * FROM CATEGORY
-          WHERE Category_ID = $Category_ID';
-
-$result = mysqli_query($connection, $query);
-$category = mysqli_fetch_assoc($result);
-
-$Category_Name = $category['Name'];
-$Category_Desc = $category['Desc'];
 ?>
 
 <main class="col-lg-8 m-1 col-md-12">
