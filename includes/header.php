@@ -30,7 +30,7 @@
         </div>
 
         <div class="site-header__main-logo">
-            <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
+            <a href="/index.php"><img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo"></a>
         </div>
 
         <nav class="row">
