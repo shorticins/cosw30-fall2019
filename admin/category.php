@@ -42,7 +42,7 @@
                                      SET Category_ID = '$Category_ID',
                                          Category_Name = '$Category_Name',
                                          Category_Desc = '$Category_Desc',
-                                     WHERE id = $id";
+                                     WHERE id = $Category_id";
                     if($result = mysqli_query($connection, $updateCategory)) {
                         $update_msg[0] = 'Category has been updated.';
                         header('Location: category.php');
