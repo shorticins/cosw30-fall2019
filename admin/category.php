@@ -2,22 +2,24 @@
       include("model/database.php");
       include("model/category.php");
 
+
+
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
         if(empty($_POST['Category_ID'])) {
-                $error_msg[0] = 'Category ID field cannot be empty.';
+                $error_msg[] = 'Category ID field cannot be empty.';
             } else {
                 $Category_ID = trim($_POST['Category_ID']);
             }
 
             if(empty($_POST['Category_Name'])) {
-                $error_msg[1] = 'Category Name field cannot be empty.';
+                $error_msg[] = 'Category Name field cannot be empty.';
             } else {
                 $Category_Name = trim($_POST['Category_Name']);
             }
             
             if(empty($_POST['Category_Desc'])) {
-                $error_msg[2] = 'Category Description field cannot be empty.';
+                $error_msg[] = 'Category Description field cannot be empty.';
             } else {
                 $Category_Desc = trim($_POST['Category_Desc']);
             } 
@@ -57,10 +59,15 @@
         }
     }
 
-$query = 'SELECT * FROM Category';
+$Category_ID = $_GET['id'];
+
+$query = "SELECT * FROM CATEGORY
+          WHERE Category_ID = $Category_ID";
 
 $result = mysqli_query($connection, $query);
+$category = mysqli_fetch_assoc($result);
 
+$Category_Name = $category['Name'];
 ?>
 
 <main class="col-lg-8 m-1 col-md-12">
