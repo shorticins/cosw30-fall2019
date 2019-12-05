@@ -77,30 +77,44 @@ $recProducts = recdProduct(3);
 //Once "Add a Review" form is submitted 
 //add data to RATING table 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    echo "test";
     $review_first_name  = $_POST['review_first_name'];
     $review_last_name   = $_POST['review_last_name'];
     $review_rating      = $_POST['review_rating'];
-    $review_custRev     = mysql_real_escape_string($_POST['review_custRev']);
+    $review_custRev     = mysqli_real_escape_string($connection, $_POST['review_custRev']);
    
     
     if($_POST['formName'] == "formValue") {
         if(empty($review_first_name) || empty($review_last_name) || empty($review_rating) || 
             empty($review_custRev)) {
-            echo '<p class="alert--error">Error! One or more fields in the "Review From" were left empty.</p>';
+            echo '<p class="alert--error alert-warning">Error! One or more fields in the "Review From" were left empty.</p>';
             
         } else {
-            $insert_query = "INSERT INTO RATING (Product_ID, Customer_ID, Rating_Score, Rating_Review)
-	                        SELECT '$id', c.Customer_ID, '$review_rating', '$review_custRev'
-	                        FROM CUSTOMER c 
-	                        WHERE c.Customer_First_Name = '$review_first_name'
-	                        AND c.Customer_Last_Name = '$review_last_name'";
-            $result = mysqli_query($connection, $insert_query);
-        
-            if($result) {    
-                echo '<p class="success--p">New review was added</p>';
-            } else {
-                echo '<p class="alert--error">Error adding new review</p>';
+            $query_customer = "SELECT Customer_ID FROM CUSTOMER 
+		                        WHERE Customer_First_Name = '$review_first_name'
+		                        AND Customer_Last_Name = '$review_last_name'";
+
+            $customer_result = mysqli_query($connection, $query_customer);
+            
+            
+            if ($customer_result) {
+	            $custId_fetch = mysqli_fetch_assoc($customer_result);
+                $custId = $custId_fetch['Customer_ID'];
+                
+                if (empty($custId)) {
+                    echo '<p class="alert--error alert-warning">Error: Customer does not exist';
+                } else {
+	
+                    $query_insert = "INSERT INTO 
+                                RATING (Product_ID, Customer_ID, Rating_Score, Rating_Review)
+	                            VALUES ($id, $custId, $review_rating, '$review_custRev')";
+	                $insert_result = mysqli_query($connection, $query_insert);
+                
+                    if ($insert_result) {
+                        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=product.php?id='.$id.'">';
+	                } else {
+		                echo '<p class="alert--error alert-warning">Error: Review was not added. Try Again Later<p>';
+	                }
+                }
             }
         }
     }
@@ -109,21 +123,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 
-<?php 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-             $first_name = $_POST['first_name'];
-             $last_name = $_POST['last_name'];
-             $email = $_POST['email'];
-             $password = $_POST['password'];    
-        
-             $insertQuery = "INSERT INTO USER_MORALES (first_name, last_name, email, password)
-                    VALUES ('$first_name', '$last_name', '$email', '$password')";
-                    
-             $insertResult = mysqli_query($connection, $insertQuery);
-}
-
-?>
 
 <main class="container">
 <!--Internal Product Navigation Links-->
@@ -132,7 +132,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         <div class="twelve columns">
             <nav>
                 <ul class="breadcrumb" >
-                    <li><a href="">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="">Dogs</a></li>
                     <li><a href="">Food</a></li>
                     <li><a class="active" href="">Desserts</a></li>
@@ -253,7 +253,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 if($_POST['formName'] == "formValue") {
                                     if(empty($review_first_name)) {
-                                        echo '<p class="alert--error">First Name must be entered</p>';
+                                        echo '<p class="alert--error alert-warning">First Name must be entered</p>';
                                     } 
                                 }
                             } 
@@ -266,7 +266,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 if($_POST['formName'] == "formValue") {
                                     if(empty($review_last_name)) {
-                                        echo '<p class="alert--error">Last Name must be entered</p>';
+                                        echo '<p class="alert--error alert-warning">Last Name must be entered</p>';
                                     } 
                                 }
                             } 
@@ -280,7 +280,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 if($_POST['formName'] == "formValue") {
                                     if(empty($review_rating)) {
-                                        echo '<p class="alert--error">Rating must be selected</p>';
+                                        echo '<p class="alert--error alert-warning">Rating must be selected</p>';
                                     } 
                                 }
                             } 
@@ -294,14 +294,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             if($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 if($_POST['formName'] == "formValue") {
                                     if(empty($review_custRev)) {
-                                        echo '<p class="alert--error">Review comment must be entered</p>';
+                                        echo '<p class="alert--error alert-warning">Review comment must be entered</p>';
                                     } 
                                 }
                             } 
                         ?>
 
                 <input type="hidden" name="formName" value="formValue"/>
-                <a class="btn btn--green btn--small btn--block" href="">Submit</a>
+                <button class="btn btn--green btn--small btn--block btn--post">SUBMIT</button>
             </form>
         </div>
     </div>
