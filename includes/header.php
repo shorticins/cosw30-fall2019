@@ -14,7 +14,7 @@
 
 <body>
 <?php
-    if(!isset($_SESSION['user']))
+    if(!isset($_SESSION['Customer_ID']))
     {
         echo '<li><a href="login.php">Login</a></li>';
     }
