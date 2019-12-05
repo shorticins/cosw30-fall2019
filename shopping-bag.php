@@ -2,101 +2,72 @@
 <main class="container">
     <h1>Shopping Bag</h1>
     
-        <image>
-            <a href="image pulled from database"></a>
-        </image>
+       
 
     <div class="row">
-        <div class="two columns">fdasf</div>
+        <div class="two columns">
+             <image>
+                <a href="image pulled from database"></a>
+            </image>
+        </div>
+        
         <div class="five columns">
-            <p>Product Name</p>
-            <p>Size</p>
-            <div>
+                <p>Label of Product</p>
+                <p>Description</p>
+                <p>Size</p>
+                <svg="truck icon"></svg>
                 <a href="">Remove product</a>
                 <a href="">Save for Later</a>
-            </div>
         </div>
-        <div class="three columns">fdasfdas</div>
-        <div class="two columns">fdsafdsa</div>
+        <div class="three columns">
+            <p>Quantity</p>
+            <label class="">
+                <select class=""><?php
+                    for ($i = 0; $i < 36; $i++) {
+                        echo "<option value='$i'>$i</option>";
+                    } ?>
+                </select>
+            </label>
+        </div>
+        
+        <div class="two columns">
+            <p>price</p>
+        </div>
     </div>
 
-    <section>
-        <div class="container">
-            <div class="box">
-                <p>Label of Product</p>
-                <p>Qualities or type</p>
-                <svg="delivery truck icon"></svg>
-                <p>Delivery<span>Est Delivery Date</span></p>
-            </div>
-
-             <div class="box">
-                        <label class="">
-                            <select class=""><?php
-                                for (i = 0, $i < 36, i++) {
-                                    echo "<option value='$i'>$i</option>";
-                                } ?>
-                                       </select>
-                        </label>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="nine columns">
+            <p>Have any question? Please Call </p>
+        </div>
+        <div class="three columns">
+                    <p>Subtotal</p>
+                    <p><span>Cost</span></p>
                 
-            <div class="box">
-                <p>price</p>
-                </div>
-        </section>
+                    <p>Shipping</p>
+                    <p><span>Amount</span></p>
+               
+                    <p>Estimated Tax</p>
+                    <p><span>Amount</span></p>
+                
+                    <p>Estimated Total</p>
+                    <p><span>Amount</span></p>
+            <button>Checkout</button>
+        </div>
+    </div>
 
-        <div class="lower-box">
-                    <button>Remove</button>
-                    <button>Save for Later</button>
-                </div>
-
-    <section id="totals">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="4">Order Summary</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Subtotal</td>
-                    <td><span>Cost</span></td>
-                </tr>
-                <tr>
-                    <td>Shipping</td>
-                    <td><span>Amount</span></td>
-                </tr>
-                <tr>
-                    <td>Estimated Tax</td>
-                    <td><span>Amount</span></td>
-                </tr>
-                <tr>
-                    <td>Estimated Total</td>
-                    <td><span>Amount</span></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <button>Checkout</button>
-    </section>
-
-    <section id="questions">
-                    <p>Have any question? Please Call </p>
-    </section>
 <!-- optional <button>Empty Cart</button>  -->
 
-        <h4>Grand Total: $21.99</h4>
-
-        <p>Payment Information</p>
+        
             <form method="POST" action='process.php'>
-            <p><label>Fullname:</label>
-            <input type='text' placeholder='First Last Name'>
-            </p>
+                <h4>Payment Information</h4>
+                <p><label>Fullname:</label>
+                    <input type='text' placeholder='First Last Name'>
+                </p>
                 <p><label>Credit Card Selection:</label>
                     <select>
-                    <option value="mastercard">Mastercard</option>
-                    <option value="visa">Visa</option>
-                    <option value="american express">American Express</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="visa">Visa</option>
+                        <option value="american express">American Express</option>
                     </select>
                 </p>
 
@@ -108,16 +79,16 @@
                     <input type='text' placeholder='MM/YYYY'>
                 </p>
 
-                <p><label>Num:</label>
+                <p><label>SSV</label>
                     <input type='numeric' placeholder='123'>
                 </p>
             </form>
 
         <h4>Shipping/Billing Info</h4>
             <form method="POST" action="process.php">
-            <p><label>First Name:</label>
-            <input type="text">
-            </p>
+                <p><label>First Name:</label>
+                    <input type="text">
+                </p>
                 <p><label>Last Name:</label>
                     <input type="text">
                 </p>
