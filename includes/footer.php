@@ -1,6 +1,6 @@
 <!-- START FOOTER -->
     <div class="road">
-        <p><img src="img/roadlogo.png" width="100%"></p>
+        <p><img src="/img/roadlogo.png" width="100%"></p>
     </div>
 
     <footer class="site-footer container">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="shortcut icon" href="img/favicon_ts.png" type="image/png">
+    <link rel="shortcut icon" href="/img/favicon_ts.png" type="image/png">
     <title>Treat Street</title>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/carlito" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@
         </div>
 
         <div class="site-header__main-logo">
-            <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
+            <img src="/img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
         </div>
 
         <nav class="row">
