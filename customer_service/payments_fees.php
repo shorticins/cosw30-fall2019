@@ -11,7 +11,7 @@
 
 <?php include('../includes/corousel.php'); ?>
 
-
+<main>
         <h1>Payments & Fees</h1>
 
 <div id="container1">
@@ -36,6 +36,6 @@
 
         </div>
 
-
+</main>
 
 <?php include('../includes/footer.php'); ?>
