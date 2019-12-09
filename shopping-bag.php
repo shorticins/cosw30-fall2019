@@ -1,5 +1,5 @@
 <?php include('includes/header.php'); ?>
-<main class="container">
+<main class="container shopping-bag">
     <h1>Shopping Bag</h1>
     
     <div class="row">

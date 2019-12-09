@@ -18,11 +18,10 @@
         list-style-type: none;
         margin: 10px;
         padding: 3%;
-        overflow: hidden;
-        width: 100%;
+        text-align: center;
 
         &-item {
-            float: left;
+            display: inline-block;
             margin-left: 2.75%;
         }
     }
