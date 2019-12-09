@@ -2,7 +2,12 @@
 <?php include 'model/product.php'; ?>
 
 <?php
-$rows = getProducts();
+if(isset($_GET['category_id'])){
+    $rows = getProductsByCategory($_GET['category_id']);
+} else {
+    $rows = getProducts();
+}
+
 $totalRows = 0;
 foreach ($rows as $row){
     $totalRows++;
