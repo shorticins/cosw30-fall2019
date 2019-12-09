@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <link rel="shortcut icon" href="img/favicon_ts.png" type="image/png">
+    <link rel="shortcut icon" href="/img/favicon_ts.png" type="image/png">
     <title>Treat Street</title>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/carlito" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700i&display=swap" rel="stylesheet">
@@ -13,6 +13,7 @@
 
 
 <body>
+
     
     <header class="site-header container">
 
@@ -30,22 +31,22 @@
         </div>
 
         <div class="site-header__main-logo">
-            <img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
+            <a href="/index.php"><img src="img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo"></a>
         </div>
 
         <nav class="row">
             <ul class="site-header__nav">
                 <li class="site-header__nav-item">
-                    <a href="plp.php" class="btn--sign">doghouse</a>
+                    <a href="index.php" class="btn--sign">doghouse</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="" class="btn--sign">barkery blvd</a>
+                    <a href="plp.php?category_id=1" class="btn--sign">barkery blvd</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="" class="btn--sign">accessory ave</a>
+                    <a href="plp.php?category_id=2" class="btn--sign">accessory ave</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="" class="btn--sign">rescue road</a>
+                    <a href="plp.php?category_id=3" class="btn--sign">rescue road</a>
                 </li>
             </ul>
         </nav>

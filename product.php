@@ -33,6 +33,8 @@ $rating = getRating($id);
     // $Customer_ID    = $rating['Customer_ID'];
     
 
+//Acquire total number of reviews for this product
+$total_reviews = getProductReviews($id);
 
 //Acquire average rating for this product
 $average_rating = getAvgRating($id);
@@ -70,7 +72,10 @@ function stars($rating){
 //Product Recommendations  
 $recProducts = recdProduct(3);
 
+
 ?>
+
+
 
 <main class="container">
 <!--Internal Product Navigation Links-->
@@ -79,7 +84,7 @@ $recProducts = recdProduct(3);
         <div class="twelve columns">
             <nav>
                 <ul class="breadcrumb" >
-                    <li><a href="">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="">Dogs</a></li>
                     <li><a href="">Food</a></li>
                     <li><a class="active" href="">Desserts</a></li>

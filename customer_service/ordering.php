@@ -1,4 +1,6 @@
 <?php include('../includes/header.php'); ?>
+<?php include('../includes/cus_nav_bar.php'); ?>
+<?php include('../includes/corousel.php'); ?>
 <style>
     h1 {font-size: 3em; text-align: center; margin-top: 5%; margin-left: auto; margin-right: auto;}
     #container1 {width: 900px; text-align: center; margin-top: 5%;	margin-left: auto;	margin-right: auto;	padding-top: 50px;	padding-bottom: 150px; border-style: solid; border-radius: 25px;}
@@ -7,9 +9,7 @@
 
 <main class="container">
 
-    <?php include('../includes/cus_nav_bar.php'); ?>
 
-    <?php include('../includes/corousel.php'); ?>
 
 
     <h1>Ordering</h1>
