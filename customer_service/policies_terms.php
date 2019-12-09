@@ -11,7 +11,7 @@
 
 <?php include('../includes/corousel.php'); ?>
 
-
+<main>
         <h1>Policies & Terms</h1>
 
 <div id="container1">
@@ -77,6 +77,6 @@ Our Global Sourcing team members, who manage the Owned Brand vendor relationship
 
         </div>
 
-
+</main>
 
 <?php include('../includes/footer.php'); ?>

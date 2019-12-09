@@ -11,6 +11,7 @@
 
 <?php include('../includes/corousel.php'); ?>
 
+<main>
 
         <h1>Shipping</h1>
 
@@ -44,5 +45,5 @@
 </div>
 
 
-
+</main>
 <?php include('../includes/footer.php'); ?>

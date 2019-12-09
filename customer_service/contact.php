@@ -1,4 +1,6 @@
 <?php include('../includes/header.php'); ?>
+<?php include('../includes/cus_nav_bar.php'); ?>
+<?php include('../includes/corousel.php'); ?>
 <style>
     h1 {
         font-size: 3em;
@@ -21,10 +23,6 @@
 </style>
 
 <main class="container">
-
-<?php include('../includes/cus_nav_bar.php'); ?>
-
-<?php include('../includes/corousel.php'); ?>
 
     <h1>Contact-Us</h1>
     <div id="container1">
