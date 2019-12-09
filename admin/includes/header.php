@@ -20,6 +20,7 @@
                         <li class="nav-item"><a class="nav-link" href="/"><img src="/admin/images/treatstreet_logo.png" alt="Treat Street Logo"></a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin/brands.php">Brands</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin/categories.php">Categories</a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin/products.php">Products</a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin/reviews.php">Reviews</a></li>
                     </ul>

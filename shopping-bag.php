@@ -1,5 +1,6 @@
 <?php include('includes/header.php'); ?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <main class="container">
     <h1>Shopping Bag</h1>
@@ -229,6 +230,9 @@
 <?php include('includes/footer.php'); ?>
 =======
 <main class="container">
+=======
+<main class="container shopping-bag">
+>>>>>>> c9bbd1537cfd592842bdc3c57d413e9c91d2e0b2
     <h1>Shopping Bag</h1>
     
     <div class="row">
