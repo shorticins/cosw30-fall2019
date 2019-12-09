@@ -1,15 +1,26 @@
 <?php include("includes/header.php");
-      include("model/database.php");
       include("model/category.php");
 
+
+   $Category_ID = $_GET['id'];
+
+    if(!isset($Category_ID)) {
+        header("Location: /admin/categories.php");
+        exit;
+    }
+
+
+    $Category = getCategory($Category_ID);
+
+    $Category_ID = $Category['Category_ID'];
+    $Category_Name = $Category['Category_Name'];
+    $Category_Desc = $Category['Category_Desc'];
+
+
+
+ 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
-        if(empty($_POST['Category_ID'])) {
-                $error_msg[0] = 'Category ID field cannot be empty.';
-            } else {
-                $Category_ID = trim($_POST['Category_ID']);
-            }
-
             if(empty($_POST['Category_Name'])) {
                 $error_msg[1] = 'Category Name field cannot be empty.';
             } else {
@@ -26,7 +37,7 @@
             case "addCategory":
                 $add_msg = [];
                 if(empty($error_msg)) {
-                    $addCategory = "INSERT INTO Category (Category_ID, Category_Name, Category_Desc) 
+                    $addCategory = "INSERT INTO CATEGORY (Category_ID, Category_Name, Category_Desc) 
                                  VALUES ('$Category_ID','$Category_Name','$Category_Desc')";
                     if($result = mysqli_query($connection, $addCategory)) {
                         $add_msg[0] = 'Category has been added to the database.';
@@ -38,14 +49,12 @@
             case "update":
                 $update_msg = [];
                 if(empty($error_msg)) {
-                    $updateCategory = "UPDATE Category
-                                     SET Category_ID = '$Category_ID',
-                                         Category_Name = '$Category_Name',
-                                         Category_Desc = '$Category_Desc',
-                                     WHERE id = $id";
+                    $updateCategory = "UPDATE CATEGORY
+                                     SET Category_Name = '$Category_Name', Category_Desc = '$Category_Desc'
+                                     WHERE Category_ID = $Category_ID";
                     if($result = mysqli_query($connection, $updateCategory)) {
                         $update_msg[0] = 'Category has been updated.';
-                        header('Location: category.php');
+                        header('Location: /admin/categories.php');
                         exit;
                     } else {
                         $update_msg[1] = 'There was an error updating category, please try again.';
@@ -57,9 +66,8 @@
         }
     }
 
-$query = 'SELECT * FROM CATEGORY';
 
-$result = mysqli_query($connection, $query);
+
 
 ?>
 
