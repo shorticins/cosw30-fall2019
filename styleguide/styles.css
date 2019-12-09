@@ -1379,6 +1379,15 @@ h4 {
   display: none;
 }
 
+<<<<<<< HEAD
+=======
+.btn--post {
+  width: 100%;
+  margin-top: 1em;
+  line-height: 1em;
+}
+
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
 .site-footer {
   color: #000;
   text-align: center;
@@ -1442,6 +1451,40 @@ h4 {
 }
 .styleguide__main {
   margin-top: 50px;
+}
+
+/* STICKY LEFT SIDEBAR NAVIGATION*/
+.sidebar {
+  height: 100%;
+  width: 10em;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2E9347;
+  overflow-x: hidden;
+  padding-top: 3em;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #FFF;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #000;
+}
+
+main {
+  margin-left: 10em;
+  /*AT LEAST SAME WIDTH AS SIDE NAVBAR*/
 }
 
 .margin-b--md {

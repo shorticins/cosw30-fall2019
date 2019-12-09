@@ -1,0 +1,32 @@
+/* STICKY LEFT SIDEBAR NAVIGATION*/
+.sidebar {
+  height: 100%; 
+  width: 10em; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: $color__green;
+  overflow-x: hidden; 
+  padding-top: 3em;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar a {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: $color__white;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: $color__black;
+}
+
+main {
+  margin-left: 10em; /*AT LEAST SAME WIDTH AS SIDE NAVBAR*/
+}
