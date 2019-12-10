@@ -1,8 +1,5 @@
 <?php include('../includes/header.php'); ?>
-<<<<<<< HEAD
 <?php include('../includes/cus_nav_bar.php'); ?>
-=======
->>>>>>> c9bbd1537cfd592842bdc3c57d413e9c91d2e0b2
 
 <style>
     h1 {font-size: 3em; text-align: center; margin-top: 5%; margin-left: auto; margin-right: auto;}
@@ -11,9 +8,6 @@
 </style>
 
 <main class="customer-service__main container">
-
-    <?php include('../includes/cus_nav_bar.php'); ?>
-    <?php include('../includes/corousel.php'); ?>
 
     <h1>Ordering</h1>
     <div id="container1">

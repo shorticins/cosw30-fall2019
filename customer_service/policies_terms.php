@@ -1,27 +1,18 @@
 <?php include('../includes/header.php'); ?>
+<?php include('../includes/cus_nav_bar.php'); ?>
+
 <style>
     h1 {font-size: 3em; text-align: center; margin-top: 5%; margin-left: auto; margin-right: auto;}
     #container1 {width: 900px; text-align: center; margin-top: 5%;	margin-left: auto;	margin-right: auto;	padding-top: 50px;	padding-bottom: 150px; border-style: solid; border-radius: 25px;}
 
 </style>
 
-
-<<<<<<< HEAD
-<?php include('../includes/header.php'); ?>
-
-<?php include('../includes/cus_nav_bar.php'); ?>
-
-
-=======
 <main class="customer-service__main container">
->>>>>>> c9bbd1537cfd592842bdc3c57d413e9c91d2e0b2
 
-    <?php include('../includes/cus_nav_bar.php'); ?>
-    <?php include('../includes/corousel.php'); ?>
-        <h1>Policies & Terms</h1>
+<h1>Policies & Terms</h1>
 
 <div id="container1">
-            <p>Gift Card Terms of Use<br><br><br>
+<p>Gift Card Terms of Use<br><br><br>
 Your use of a Petco Gift Card constitutes acceptance of these terms:<br>
 
 Petco Gift Cards are redeemable in Petco and Unleashed by Petco stores nationwide and online at petco.com.
@@ -81,7 +72,7 @@ If we discover a violation of our Code of Conduct for our Owned Brand manufactur
 
 Our Global Sourcing team members, who manage the Owned Brand vendor relationships, participate in annual Code of Ethics training. The training highlights the importance of safe and ethical working conditions to our business and to the workers who produce the merchandise we sell. We encourage anyone who is aware of violations of the law or our Code to notify their management, our Human Resources team, Legal Department or the Petco Hotline.</p>
 
-        </div>
+</div>
 
 </main>
 
