@@ -19,6 +19,7 @@ if ($connection->query($sql) === TRUE) {
 */
 ?>
 <main class="container">
+
     <h1>Shopping Bag</h1>
     
     <div class="row">

@@ -6,7 +6,7 @@ print_r($_SESSION);
 // Check if the user is already logged in
 // If they are, redirect to welcome.php
 if(isset($_SESSION['Customer_ID'])){
-    header('Location: dashboard.php');
+    header('Location: welcome.php');
     exit;
 }
 include('includes/header.php');
@@ -32,8 +32,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['Customer_ID']= $user['Customer_ID'];
         $_SESSION['Customer_First_Name']= $user['Customer_First_Name'];
 
-        // Redirect to the dashboard.php page
-        header('Location: dashboard.php');
+        // Redirect to the welcome.php page
+        header('Location: welcome.php');
         exit;
     // If they aren't, show the log in form with an error
     } else { 
@@ -57,10 +57,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <form action="login.php" method="POST">
         <label for="email">Email Address:</label><br>
-        <input type="email" name="email" id="email" value=""><br>
+        <input type="email" name="email" id="email" value=""required><br>
 
         <label for="password">Password:</label><br>
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password"required>
 
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 
