@@ -13,39 +13,47 @@
 
 
 <body>
+
     
     <header class="site-header container">
 
         <div class="site-header__top-btn">
-            <a href=""><i class="fas fa-dog fa-2x""></i></a>
+            <a href=""><i class="fas fa-dog fa-2x"></i></a>
         </div>
         <div class="site-header__top-btn">
-            <a href=""><i class="fas fa-shopping-cart fa-2x""></i></a>
+            <a href="/shopping-bag.php"><i class="fas fa-shopping-cart fa-2x"></i></a>
         </div>
-        <div class="site-header__top-btn">
-            <a href="/login.php"><i class="fas fa-user-circle fa-2x""></i></a>
-        </div>
-        <div class="site-header__top-btn">
-            <a href="/logout.php"><i class="fas fa-sign-out-alt fa-2x""></i></a>
-        </div>
+ <?php   
+    if(!isset($_SESSION['Customer_ID']))
+    {
+      echo  '<div class="site-header__top-btn">
+            <a href="/login.php"><i class="fas fa-user-circle fa-2x"></i></a>
+        </div>';
+    } else {
+
+       echo '<div class="site-header__top-btn">
+            <a href="/logout.php"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+        </div>';
+    }    
+?>
 
         <div class="site-header__main-logo">
-            <img src="/img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo">
+            <a href="/index.php"><img src="/img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo"></a>
         </div>
 
         <nav class="row">
             <ul class="site-header__nav">
                 <li class="site-header__nav-item">
-                    <a href="plp.php" class="btn--sign">doghouse</a>
+                    <a href="/index.php" class="btn--sign">doghouse</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="" class="btn--sign">barkery blvd</a>
+                    <a href="/plp.php?category_id=1" class="btn--sign">barkery blvd</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="" class="btn--sign">accessory ave</a>
+                    <a href="/plp.php?category_id=2" class="btn--sign">accessory ave</a>
                 </li>
                 <li class="site-header__nav-item">
-                    <a href="" class="btn--sign">rescue road</a>
+                    <a href="/plp.php?category_id=3" class="btn--sign">rescue road</a>
                 </li>
                 <li class="site-header__nav-item">
                     <a href="customer_service/contact.php" class="btn--sign">contact us</a>

@@ -521,8 +521,6 @@ th {
   font-family: "CarlitoRegular";
   font-weight: bold;
   font-size: 1.25em;
-  margin-left: 1%;
-  width: 95%;
 }
 .btn--green {
   background-color: #2E9347;
@@ -1244,6 +1242,38 @@ hr {
   clear: both;
 }
 
+/* STICKY LEFT SIDEBAR NAVIGATION*/
+.customer-service__main {
+  margin-left: 10em;
+  /*AT LEAST SAME WIDTH AS SIDE NAVBAR*/
+  padding-left: 35px;
+  padding-bottom: 35px;
+}
+.customer-service__sidebar {
+  height: 100%;
+  width: 10em;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2E9347;
+  overflow-x: hidden;
+  padding-top: 3em;
+}
+.customer-service__sidebar ul {
+  list-style: none;
+}
+.customer-service__sidebar a {
+  padding: 1em;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #FFF;
+  display: block;
+}
+.customer-service__sidebar a:hover {
+  color: #000;
+}
+
 .welcome {
   position: relative;
 }
@@ -1421,11 +1451,10 @@ h4 {
   list-style-type: none;
   margin: 10px;
   padding: 3%;
-  overflow: hidden;
-  width: 100%;
+  text-align: center;
 }
 .site-header__nav-item {
-  float: left;
+  display: inline-block;
   margin-left: 2.75%;
 }
 .site-header__top-btn {
@@ -1448,40 +1477,6 @@ h4 {
 }
 .styleguide__main {
   margin-top: 50px;
-}
-
-/* STICKY LEFT SIDEBAR NAVIGATION*/
-.sidebar {
-  height: 100%;
-  width: 10em;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #2E9347;
-  overflow-x: hidden;
-  padding-top: 3em;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar a {
-  padding: 1em;
-  text-decoration: none;
-  font-size: 1.3em;
-  color: #FFF;
-  display: block;
-}
-
-.sidebar a:hover {
-  color: #000;
-}
-
-main {
-  margin-left: 10em;
-  /*AT LEAST SAME WIDTH AS SIDE NAVBAR*/
 }
 
 .margin-b--md {
