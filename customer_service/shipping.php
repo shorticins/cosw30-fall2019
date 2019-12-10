@@ -1,5 +1,4 @@
 <?php include('../includes/header.php'); ?>
-<?php include('../includes/cus_nav_bar.php'); ?>
 
 <style>
     h1 {font-size: 3em; text-align: center; margin-top: 5%; margin-left: auto; margin-right: auto;}
@@ -8,6 +7,7 @@
 </style>
 
 <main class="customer-service__main container">
+<?php include('../includes/cus_nav_bar.php'); ?>
 
 <h1>Shipping</h1>
 

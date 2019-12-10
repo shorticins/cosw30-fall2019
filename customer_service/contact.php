@@ -1,5 +1,4 @@
 <?php include('../includes/header.php'); ?>
-<?php include('../includes/cus_nav_bar.php'); ?>
 
 <style>
     h1 {font-size: 3em; text-align: center; margin-top: 5%; margin-left: auto; margin-right: auto;}
@@ -8,6 +7,8 @@
 </style>
 
 <main class="col-lg-8 m-1 col-md-12 customer-service__main container" id="container1">
+    <?php include('../includes/cus_nav_bar.php'); ?>
+
     <div class="col align-content-center text-center">
         <h1>Contact Form</h1>
         <p class="font-weight-bold">All fields are required.</p>
