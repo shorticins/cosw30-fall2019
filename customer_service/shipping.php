@@ -9,7 +9,7 @@
 
 <?php include('../includes/cus_nav_bar.php'); ?>
 
-<?php include('../includes/corousel.php'); ?>
+
 
 <main>
 
