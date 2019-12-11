@@ -38,7 +38,7 @@
                     <td>' .$customer['Customer_State']. '</td>
                     <td>' .$customer['Customer_Zip']. '</td>
                     <td>' .$customer['Customer_Password']. '</td>
-                    <td><a href="category.php?id=' . $customer['Customer_ID'] . '">Edit</a></td>
+                    <td><a href="customer.php?id=' . $customer['Customer_ID'] . '">Edit</a></td>
                     </tr>';
             }
         ?>
