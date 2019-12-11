@@ -1,6 +1,6 @@
 <!-- START FOOTER -->
     <div class="road">
-        <p><img src="img/roadlogo.png" width="100%"></p>
+        <p><img src="/img/roadlogo.png" width="100%"></p>
     </div>
 
     <footer class="site-footer container">
@@ -22,7 +22,7 @@
                 <li class="site-footer__list-item one column"><a href="/">News</a></li>
                 <li class="site-footer__list-item one column"><a href="/">Blog</a></li>
                 <li class="site-footer__list-item one column"><a href="/">Careers</a></li>
-                <li class="site-footer__list-item one column"><a href="/">Contact</a></li>
+                <li class="site-footer__list-item one column"><a href="/customer_service/contact.php">Contact</a></li>
             </ul>
         </nav>
     </footer>

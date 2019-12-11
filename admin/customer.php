@@ -1,6 +1,29 @@
 <?php include("includes/header.php");
-      include("model/database.php");
-      include("model/category.php");
+      include("model/customer.php");
+
+
+   $Customer_ID = $_GET['id'];
+
+    if(!isset($Customer_ID)) {
+        header("Location: /admin/customers.php");
+        exit;
+    }
+
+    /// Function from (model/customer.php)
+    $Customer = getCustomer($Customer_ID);
+
+
+    $Customer_ID = $Customer['Customer_ID'];
+    $Customer_First_Name = $Customer['Customer_First_Name'];
+    $Customer_Last_Name = $Customer['Customer_Last_Name'];
+    $Customer_Email = $Customer['Customer_Email'];
+    $Customer_Phone = $Customer['Customer_Phone'];
+    $Customer_Address = $Customer['Customer_Address'];
+    $Customer_City = $Customer['Customer_City'];
+    $Customer_State = $Customer['Customer_State'];
+    $Customer_Zip = $Customer['Customer_Zip'];
+    $Customer_Password = $Customer['Customer_Password'];
+
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
@@ -106,9 +129,6 @@
         }
     }
 
-$query = 'SELECT * FROM CUSTOMER';
-
-$result = mysqli_query($connection, $query);
 
 ?>
 
