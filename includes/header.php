@@ -23,34 +23,21 @@
         <div class="site-header__top-btn">
             <a href="/shopping-bag.php"><i class="fas fa-shopping-cart fa-2x"></i></a>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
-        <div class="site-header__top-btn">
-            <a href="/login.php"><i class="fas fa-user-circle fa-2x""></i></a>
-        </div>
-        <div class="site-header__top-btn">
-            <a href="/logout.php"><i class="fas fa-sign-out-alt fa-2x""></i></a>
-        </div>
-<<<<<<< HEAD
-=======
-=======
- <?php   
-    if(!isset($_SESSION['Customer_ID']))
-    {
-      echo  '<div class="site-header__top-btn">
-            <a href="/login.php"><i class="fas fa-user-circle fa-2x"></i></a>
-        </div>';
-    } else {
 
-       echo '<div class="site-header__top-btn">
-            <a href="/logout.php"><i class="fas fa-sign-out-alt fa-2x"></i></a>
-        </div>';
-    }    
-?>
->>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+
+        <?php   
+            if(!isset($_SESSION['Customer_ID']))
+            {
+            echo  '<div class="site-header__top-btn">
+                    <a href="/login.php"><i class="fas fa-user-circle fa-2x"></i></a>
+                </div>';
+            } else {
+
+            echo '<div class="site-header__top-btn">
+                    <a href="/logout.php"><i class="fas fa-sign-out-alt fa-2x"></i></a>
+                </div>';
+            }    
+        ?>
 
         <div class="site-header__main-logo">
             <a href="/index.php"><img src="/img/white_background_logo.png" class="site-header__logo" alt="treatstreet logo"></a>

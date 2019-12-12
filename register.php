@@ -14,12 +14,13 @@ include('includes/header.php');
 $first_name = "";
 $last_name = "";
 $email = "";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 $password = "";
 $confirm_password = "";
+$phone = "";
+$address = "";
+$city = "";
+$state = "";
+$zip = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST["first_name"];
@@ -27,17 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
-<<<<<<< HEAD
-=======
-=======
-$phone = "";
-$address = "";
-$city = "";
-$state = "";
-$zip = "";
-$password = "";
-$confirm_password = "";
-
+}
 ?>
 
 
@@ -83,9 +74,6 @@ $confirm_password = "";
     </main>
 
 <?php
-
->>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST["first_name"];

@@ -23,18 +23,6 @@ if(is_array($reviews)) {
         <tr>
             <th>Rating Id</th>
             <th>Product Id</th>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
-            <th>Customer Id</th>
-            <th>Rating Score</th>
-            <th>Rating Review</th>
-            <th>Edit</th>
-            <th>Delete</th>
-<<<<<<< HEAD
-=======
-=======
             <th>Product Name</th>
             <th>Customer Id</th>
             <th>Customer First Name</th>
@@ -42,8 +30,6 @@ if(is_array($reviews)) {
             <th>Rating Score</th>
             <th>Rating Review</th>
             <th>Edit</th> 
->>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
         </tr>
     </thead>
 
@@ -52,7 +38,10 @@ if(is_array($reviews)) {
     foreach($reviews as $review){
         echo "<tr><td>".$review['Rating_ID']."</td>";
         echo "<td>".$review['Product_ID']."</td>";
+        echo "<td>".$review['product_name']."</td>";
         echo "<td>".$review['Customer_ID']."</td>";
+        echo "<td>".$review['Customer_First_Name']."</td>";
+        echo "<td>".$review['Customer_Last_Name']."</td>";
         echo "<td>".$review['Rating_Score']."</td>";
         echo "<td>".$review['Rating_Review']."</td>";
         echo '<form action="review.php" method="POST">
@@ -60,27 +49,19 @@ if(is_array($reviews)) {
               <input type="hidden" name="action_type" value="editReview">
               <td><input type="submit" value="Edit"></td>
               </form>';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
-        echo '<form action="reviews.php" method="POST">
-              <input type="hidden" name="review_id" value="' . $review['Rating_ID'] . '">
-              <input type="hidden" name="action_type" value="deleteReview">
-              <td><input type="submit" value="Delete"></td>
-              </form>';
-<<<<<<< HEAD
-=======
-=======
+
+        // echo '<form action="reviews.php" method="POST">
+        //       <input type="hidden" name="review_id" value="' . $review['Rating_ID'] . '">
+        //       <input type="hidden" name="action_type" value="deleteReview">
+        //       <td><input type="submit" value="Delete"></td>
+        //       </form>';
+
         //tsuser does not have delete privilages
         /*echo '<form action="reviews.php" method="POST">
               <input type="hidden" name="review_id" value="' . $review['Rating_ID'] . '">
               <input type="hidden" name="action_type" value="deleteReview">
               <td><input type="submit" value="Delete"></td>
               </form>';*/
->>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
-
                         
     }
     echo "</tbody></table>";
