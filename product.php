@@ -21,6 +21,24 @@ $product = getProduct($id);
     $Product_Price        = $product['Product_Price'];
     $Product_Image        = $product['Product_Image'];
     $Product_Rating       = $product['Product_Rating'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+
+
+
+//Acquire all rating information for this product
+$rating = getRating($id);
+    $Rating_ID      = $rating['Rating_ID'];
+    $Rating_Score   = $rating['Rating_Score'];
+    $Rating_Review  = $rating['Rating_Review '];
+    // $Product_ID     = $rating['Product_ID'];
+    // $Customer_ID    = $rating['Customer_ID'];
+    
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -33,6 +51,14 @@ $rating = getRating($id);
     // $Customer_ID    = $rating['Customer_ID'];
     
 
+
+//Acquire average rating for this product
+$average_rating = getAvgRating($id);
+
+
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+
 //Acquire total number of reviews for this product
 $total_reviews = getProductReviews($id);
 
@@ -40,12 +66,17 @@ $total_reviews = getProductReviews($id);
 $average_rating = getAvgRating($id);
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 
 //Acquire total number of reviews for this product
 $total_reviews = getProductReviews($id);
 
-
-
+<<<<<<< HEAD
+=======
+=======
 //Product Reviews
 $custReviews = getReviews($id);
     $totalRows = 0;
@@ -65,6 +96,40 @@ function stars($rating){
         echo '<i class="far fa-star"></i>';
     }
 }
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+
+
+//Product Reviews
+$custReviews = getReviews($id);
+    $totalRows = 0;
+    foreach ($custReviews as $row){
+        $totalRows++;
+    }
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+//Output Appropriate star reviews
+function stars($rating){
+    $rating = floor($rating);
+    $black_stars = 5 - $rating;
+    for ($i = 0; $i < $rating; $i ++) {
+        echo '<i class="far fa-star u-color--green"></i>';
+    }
+    for ($i = 0; $i < $black_stars; $i ++) {
+        echo '<i class="far fa-star"></i>';
+    }
+}
+<<<<<<< HEAD
+=======
+=======
+//Product Recommendations  
+$recProducts = recdProduct(3);
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 
 
 
@@ -198,6 +263,10 @@ $recProducts = recdProduct(3);
     <div class="row">
         <div class="twelve columns">
             <form id="addRevForm" class="form__hide" action="product.php?id=<?php echo $id; ?>" method="POST">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
                 <label for="fname">First Name: </label>
                     <input class="u-full-width" type="text" name="fname" id="fname" value="">
                 <label for="lname">Last Name: </label>
@@ -208,6 +277,67 @@ $recProducts = recdProduct(3);
                     <textarea class="u-full-width" name="custRev" id="custRev" value=""
                          placeholder="Write your review here..." max="500"></textarea>
                 <a class="btn btn--green btn--small btn--block" href="">Submit</a>
+<<<<<<< HEAD
+=======
+=======
+                <label for="review_first_name">First Name: </label>
+                    <input class="u-full-width" type="text" name="review_first_name" id="review_first_name">
+                    
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_first_name)) {
+                                        echo '<p class="alert--error alert-warning">First Name must be entered</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <label for="review_last_name">Last Name: </label>
+                    <input class="u-full-width" type="text" name="review_last_name" id="review_last_name">
+
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_last_name)) {
+                                        echo '<p class="alert--error alert-warning">Last Name must be entered</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <label for="review_rating">Rating: </label>
+                    <input class="u-full-width" type="number" name="review_rating" id="review_rating" min="1" max="5" 
+                        placeholder="Rating score scale is 1 to 5"> 
+
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_rating)) {
+                                        echo '<p class="alert--error alert-warning">Rating must be selected</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <label for="review_custRev">Customer Review: </label>
+                    <textarea class="u-full-width" name="review_custRev" id="review_custRev"
+                         placeholder="Write your review here..." max="500"></textarea>
+
+                        <?php 
+                            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                                if($_POST['formName'] == "formValue") {
+                                    if(empty($review_custRev)) {
+                                        echo '<p class="alert--error alert-warning">Review comment must be entered</p>';
+                                    } 
+                                }
+                            } 
+                        ?>
+
+                <input type="hidden" name="formName" value="formValue"/>
+                <button class="btn btn--green btn--small btn--block btn--post">SUBMIT</button>
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
             </form>
         </div>
     </div>

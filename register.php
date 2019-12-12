@@ -14,6 +14,10 @@ include('includes/header.php');
 $first_name = "";
 $last_name = "";
 $email = "";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 $password = "";
 $confirm_password = "";
 
@@ -23,6 +27,65 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
     $confirm_password = $_POST["confirm_password"];
+<<<<<<< HEAD
+=======
+=======
+$phone = "";
+$address = "";
+$city = "";
+$state = "";
+$zip = "";
+$password = "";
+$confirm_password = "";
+
+?>
+
+
+    <main class="container">
+
+        <h1>Register Today</h1>
+        <hr>
+
+        <form action="/register.php" method="POST">
+            <label for="first_name">First Name:</label><br>
+            <input type="text" name="first_name" id="first_name" value="<?php echo $first_name; ?>" required><br>
+
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" name="last_name" id="last_name" value="<?php echo $last_name; ?>" required><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" name="email" id="email" value="<?php echo $email; ?>" required><br>
+
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" name="phone" id="phone" value="<?php echo $phone; ?>" required><br>
+
+            <label for="address">Address:</label><br>
+            <input type="text" name="address" id="address" value="<?php echo $address; ?>" required><br>
+
+            <label for="city">City:</label><br>
+            <input type="text" name="city" id="city" value="<?php echo $city; ?>" required><br>
+
+            <label for="state">State:</label><br>
+            <input type="text" name="state" id="state" value="<?php echo $state; ?>" required><br>
+
+            <label for="zip">Zipcode:</label><br>
+            <input type="number" name="zip" id="zip" value="<?php echo $zip; ?>" required><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password" value="<?php echo $password; ?>" required><br>
+
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" name="confirm_password" id="confirm_password" value="<?php echo $confirm_password; ?>" required><br>
+
+            <button>Register!</button>
+        </form>
+
+    </main>
+
+<?php
+
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST["first_name"];
