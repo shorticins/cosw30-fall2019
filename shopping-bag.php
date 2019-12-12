@@ -1,68 +1,60 @@
 <?php 
 session_start();
-//session_unset();
-include('includes/database1.php');
 include('includes/header.php'); 
-
-$_SESSION["bag"][] = $_REQUEST["id"];
-$_SESSION["bag"][] = $_REQUEST["quantity"];
-
-/* $date = date(DATE_W3C);
-$sql = "INSERT INTO CUSTOMER_ORDER (Customer_ID, Product_ID, Product_Quantity, Order_Date)
-VALUES (1, 8, 3, '$date')";
-
-if ($connection->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
-*/
 ?>
 <main class="container">
 
     <h1>Shopping Bag</h1>
     
-    <div class="row">
-        <div class="two columns">
-             <image>
-               <?php
-                 $query = "SELECT * FROM PRODUCT
-                            WHERE product_id=" . $_REQUEST["id"];
-                 $result = mysqli_query($connection, $query);
+    <?php
+    if(isset($_SESSION['bag'])) {
+        include('model/product.php');
+        // Output all of the products in the bag
+        // $_SESSION["bag"][] = $_REQUEST["id"];
+        // $_SESSION["bag"][] = $_REQUEST["quantity"];
 
-                 //mysqli_num_rows($result)
-                 $row = mysqli_fetch_assoc($result);
-                echo "<img src='img/" . $row["Product_Image"] . "' width='100'>"
- 
-                 ?>
-                
-            </image>
-        </div>
-        
-        <div class="five columns">
-                <p><?php echo $row["product_name"] ?></p>
-                <p><?php echo $row["product_desc"] ?></p>
-                
-                <img src="img/delivery_truck.png">
-                <a href="">Remove product</a>
-                
-        </div>
-        <div class="three columns">
-            <p>Quantity</p>
-            <label class="">
-             <p><?php echo $_REQUEST["quantity"]?></p>  <!--<select class=""><?php
-                    /*for ($i = 0; $i < 36; $i++) {
-                        echo "<option value='$i'>$i</option>";
-                    } */ ?>
-                </select>-->
-            </label>
-        </div>
-        
-        <div class="two columns">
-            <p>price</p>
-            <p><?php echo "$" . $row["Product_Price"] ?></p>
-        </div>
-    </div>
+        foreach($_SESSION['bag'] as $product_id) {
+            $row = getProduct($product_id);
+
+            if(is_array($row)) {
+                $product_image  = $row['Product_Image'];
+                $product_name   = $row['product_name'];
+                $product_desc   = $row['product_desc'];
+                $product_price  = $row['Product_Price'];
+
+                echo "<div class='row'>
+                        <div class='two columns'>
+                            <img src='img/$product_image' width='100'>
+                        </div>
+            
+                        <div class='five columns'>
+                            <p>$product_name</p>
+                            <p>$product_desc</p>
+                            
+                            <img src='img/delivery_truck.png'>
+                            <a href=''>Remove product</a>
+                        </div>
+
+                        <div class='three columns'>
+                            <p>Quantity</p>
+                            <label></label>
+                        </div>
+            
+                        <div class='two columns'>
+                            <p>price</p>
+                            <p>$product_price</p>
+                        </div>
+                    </div>";
+            } else {
+                echo "<p>No products added to bag";
+            }
+        }
+    } else {
+        echo "<p>No products added to bag";
+    }
+    ?>
+    
+    
 
     <div class="row">
         <div class="nine columns">
@@ -78,20 +70,11 @@ if ($connection->query($sql) === TRUE) {
                     }
                     echo '$' . number_format($subtotal,2,".",",");
                     ?></p>
-                
-                   <!-- <p>Shipping</p>
-                    <p>Free if over $35; othetwise applied during checkout</p>
-               
-                    <p>Estimated Tax</p>
-                    <p><span>Amount</span></p>
-                
-                    <p>Estimated Total</p>
-                    <p><span>Amount</span></p>-->
             <button>Checkout</button>
         </div>
     </div>
 
-<!-- optional <button>Empty Cart</button>  -->
+
 </main>
 
 <?php include('includes/footer.php'); ?>

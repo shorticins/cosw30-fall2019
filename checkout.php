@@ -1,5 +1,6 @@
 <?php 
-include('includes/database.php');
+session_start();
+include('model/database.php');
 include('includes/header.php'); ?>
 <main class="container">
     <h1>Checkout</h1>

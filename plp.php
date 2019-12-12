@@ -4,7 +4,11 @@
 <?php
 
 //fetch products table from server
-$rows = getProducts();
+if(isset($_GET['category_id'])){	
+    $rows = getProductsByCategory($_GET['category_id']);	
+} else {	
+    $rows = getProducts();	
+}
 
 //count number of rows in products table
 $totalRows = 0;
