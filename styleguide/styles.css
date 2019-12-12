@@ -1409,12 +1409,15 @@ h4 {
   display: none;
 }
 
+<<<<<<< HEAD
+=======
 .btn--post {
   width: 100%;
   margin-top: 1em;
   line-height: 1em;
 }
 
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
 .site-footer {
   color: #000;
   text-align: center;

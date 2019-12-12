@@ -5,7 +5,7 @@ function getProducts() {
     include('database.php');
 
     $query = 'SELECT * FROM PRODUCT';
-   $result = mysqli_query($connection, $query);
+    $result = mysqli_query($connection, $query);
 
     if($result) {
        return mysqli_fetch_all($result, MYSQLI_ASSOC);

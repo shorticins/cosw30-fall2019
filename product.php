@@ -21,6 +21,24 @@ $product = getProduct($id);
     $Product_Price        = $product['Product_Price'];
     $Product_Image        = $product['Product_Image'];
     $Product_Rating       = $product['Product_Rating'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+
+
+
+//Acquire all rating information for this product
+$rating = getRating($id);
+    $Rating_ID      = $rating['Rating_ID'];
+    $Rating_Score   = $rating['Rating_Score'];
+    $Rating_Review  = $rating['Rating_Review '];
+    // $Product_ID     = $rating['Product_ID'];
+    // $Customer_ID    = $rating['Customer_ID'];
+    
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -38,12 +56,27 @@ $rating = getRating($id);
 $average_rating = getAvgRating($id);
 
 
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 
 //Acquire total number of reviews for this product
 $total_reviews = getProductReviews($id);
 
+//Acquire average rating for this product
+$average_rating = getAvgRating($id);
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+
+//Acquire total number of reviews for this product
+$total_reviews = getProductReviews($id);
+
+<<<<<<< HEAD
+=======
+=======
 //Product Reviews
 $custReviews = getReviews($id);
     $totalRows = 0;
@@ -63,62 +96,46 @@ function stars($rating){
         echo '<i class="far fa-star"></i>';
     }
 }
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+
+
+//Product Reviews
+$custReviews = getReviews($id);
+    $totalRows = 0;
+    foreach ($custReviews as $row){
+        $totalRows++;
+    }
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+//Output Appropriate star reviews
+function stars($rating){
+    $rating = floor($rating);
+    $black_stars = 5 - $rating;
+    for ($i = 0; $i < $rating; $i ++) {
+        echo '<i class="far fa-star u-color--green"></i>';
+    }
+    for ($i = 0; $i < $black_stars; $i ++) {
+        echo '<i class="far fa-star"></i>';
+    }
+}
+<<<<<<< HEAD
+=======
+=======
+//Product Recommendations  
+$recProducts = recdProduct(3);
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 
 
 
 
 //Product Recommendations  
 $recProducts = recdProduct(3);
-
-
-
-
-
-//Once "Add a Review" form is submitted 
-//add data to RATING table 
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $review_first_name  = $_POST['review_first_name'];
-    $review_last_name   = $_POST['review_last_name'];
-    $review_rating      = $_POST['review_rating'];
-    $review_custRev     = mysqli_real_escape_string($connection, $_POST['review_custRev']);
-   
-    
-    if($_POST['formName'] == "formValue") {
-        if(empty($review_first_name) || empty($review_last_name) || empty($review_rating) || 
-            empty($review_custRev)) {
-            echo '<p class="alert--error alert-warning">Error! One or more fields in the "Review From" were left empty.</p>';
-            
-        } else {
-            $query_customer = "SELECT Customer_ID FROM CUSTOMER 
-		                        WHERE Customer_First_Name = '$review_first_name'
-		                        AND Customer_Last_Name = '$review_last_name'";
-
-            $customer_result = mysqli_query($connection, $query_customer);
-            
-            
-            if ($customer_result) {
-	            $custId_fetch = mysqli_fetch_assoc($customer_result);
-                $custId = $custId_fetch['Customer_ID'];
-                
-                if (empty($custId)) {
-                    echo '<p class="alert--error alert-warning">Error: Customer does not exist';
-                } else {
-	
-                    $query_insert = "INSERT INTO 
-                                RATING (Product_ID, Customer_ID, Rating_Score, Rating_Review)
-	                            VALUES ($id, $custId, $review_rating, '$review_custRev')";
-	                $insert_result = mysqli_query($connection, $query_insert);
-                
-                    if ($insert_result) {
-                        echo '<META HTTP-EQUIV="Refresh" Content="0; URL=product.php?id='.$id.'">';
-	                } else {
-		                echo '<p class="alert--error alert-warning">Error: Review was not added. Try Again Later<p>';
-	                }
-                }
-            }
-        }
-    }
-}
 
 
 ?>
@@ -246,6 +263,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="row">
         <div class="twelve columns">
             <form id="addRevForm" class="form__hide" action="product.php?id=<?php echo $id; ?>" method="POST">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+                <label for="fname">First Name: </label>
+                    <input class="u-full-width" type="text" name="fname" id="fname" value="">
+                <label for="lname">Last Name: </label>
+                    <input class="u-full-width" type="text" name="lname" id="lname" value=""> <br>
+                <label for="rating">Rating: </label>
+                    <input class="u-full-width" type="number" name="rating" id="rating" min="1" max="5" value=""> <br>
+                <label for="custRev">Customer Review: </label>
+                    <textarea class="u-full-width" name="custRev" id="custRev" value=""
+                         placeholder="Write your review here..." max="500"></textarea>
+                <a class="btn btn--green btn--small btn--block" href="">Submit</a>
+<<<<<<< HEAD
+=======
+=======
                 <label for="review_first_name">First Name: </label>
                     <input class="u-full-width" type="text" name="review_first_name" id="review_first_name">
                     
@@ -302,6 +336,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <input type="hidden" name="formName" value="formValue"/>
                 <button class="btn btn--green btn--small btn--block btn--post">SUBMIT</button>
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
             </form>
         </div>
     </div>
@@ -360,11 +396,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     //Function sets Review Form to Display form upon 
     //clicking "Add a Review" button
     function showRevForm() {
-        if(revForm.style.display == "block") {
-            revForm.style.display = "none";
-        } else {
-            revForm.style.display = "block";
-        }
+        revForm.style.display = "block";
     }
     
 </script>

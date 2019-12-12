@@ -24,7 +24,6 @@ $reviewQueryArray = getQueryProductReviewCount();
 <main class="container">
 
 <?php
-
 //outer for loop produces rows
 $currentRow = 0;
 
@@ -51,7 +50,6 @@ for ($j = 0; $j <= 2; $j++){
 }
 
 echo '</div>';
-
 }
 ?>
 

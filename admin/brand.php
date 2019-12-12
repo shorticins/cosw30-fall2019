@@ -1,15 +1,16 @@
 <?php include("includes/header.php");
       include("model/database.php");
       include("model/brand.php");
+      session_start();
 
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_msg = [];
-        if(empty($_POST['Brand_ID'])) {
-                $error_msg[0] = 'Brand ID field cannot be empty.';
+            if(empty($_POST['Brand_ID'])) {
+                $error_msg[0] = 'This field cannot be empty.';
             } else {
                 $Brand_ID = trim($_POST['Brand_ID']);
-            }
-
+            } 
+        
             if(empty($_POST['Brand_Name'])) {
                 $error_msg[1] = 'Brand Name field cannot be empty.';
             } else {
@@ -23,144 +24,88 @@
             } 
 
         switch($_POST['submit']) {
-            case "addBrand":
-                $add_msg = [];
-                if(empty($error_msg)) {
-                    $addBrand = "INSERT INTO BRAND (Brand_ID, Brand_Name, Brand_Desc) 
-                                 VALUES ('$Brand_ID','$Brand_Name','$Brand_Desc')";
-                    if($result = mysqli_query($connection, $addBrand)) {
-                        $add_msg[0] = 'Brand has been added to the database.';
-                    } else {
-                        $add_msg[1] = 'There was an error adding brand to the database, please try again.';
-                    }
-                }
-            ;
             case "update":
-                $update_msg = [];
                 if(empty($error_msg)) {
                     $updateBrand = "UPDATE BRAND
-                                     SET Brand_ID = '$Brand_ID',
-                                         Brand_Name = '$Brand_Name',
-                                         Brand_Desc = '$Brand_Desc',
-                                     WHERE id = $id";
+                                     SET Brand_Name = '$Brand_Name',
+                                         Brand_Desc = '$Brand_Desc'
+                                     WHERE Brand_ID = '$Brand_ID'";
+
                     if($result = mysqli_query($connection, $updateBrand)) {
-                        $update_msg[0] = 'Brand has been updated.';
-                        header('Location: brands.php');
+                        $_SESSION['Brand_Name'] = $Brand_Name . ' has been updated.';
+                        header('Location: brands.php?success=1');
                         exit;
-                    } else {
-                        $update_msg[1] = 'There was an error updating brand, please try again.';
-                    }
-                }  
-            ;
-            case "delete":
-            ;
+                    } 
+                } else {
+                    $update_msg = 'There was an error updating ' . $Brand_Name . ', please try again.';
+                }
+            break;
+            case "archive":
+                if(empty($error_msg)) {
+                    $archiveBrand = "UPDATE BRAND
+                                     SET Archive = '1'
+                                     WHERE Brand_ID = '$Brand_ID'";
+
+                    if($result = mysqli_query($connection, $archiveBrand)) {
+                        $_SESSION['Brand_Name'] = $Brand_Name . ' has been archived.';
+                        header('Location: brands.php?success=2');
+                        exit;
+                    } 
+                } else {
+                    $archive_msg = 'There was an error archiving ' . $Brand_Name . ', please try again.';
+                } 
+            break;
         }
     }
+elseif($_SERVER['REQUEST_METHOD'] == 'GET') {
+    //print $_GET["id"];
+    $get_id = $_GET["id"];
+    // Create your query
+    $query = "SELECT * FROM BRAND 
+              WHERE Brand_ID = $get_id
+              AND Archive = '0'";
+    //print $query;
+    // Run your query
+    $result_update = mysqli_query($connection, $query);
 
-
-//QUERY THE DATABASE AND STORE ALL USERS INTO A VARIABLE
-
-// Create your query
-$query = 'SELECT * FROM BRAND';
-
-// Run your query
-$result = mysqli_query($connection, $query);
-
-// // Check if the database returned anything
-// if($result) {
-//     $brands = mysqli_fetch_all($result, MYSQLI_ASSOC);
-//     //print_r($rows);
-// } else {
-//     // Output an error
-//     echo "<p>Error</p>";
-// }
-
-//add brand informtation to db
-// if(isset($_POST['add'])) {    
-//     $Brand_ID = $_POST['Brand_ID'];
-//     $Brand_Name = $_POST['Brand_Name'];
-//     $Brand_Desc = $_POST['Brand_Desc'];    
-        
-//     // check empty fields
-//     if(empty($Brand_ID) || empty($Brand_Name) || empty($Brand_Desc)) {                
-//         if(empty($Brand_ID)) {
-//             echo "<font color='red'>ID field is empty.</font><br/>";
-//         }
-        
-//         if(empty($Brand_Name)) {
-//             echo "<font color='red'>Brand name field is empty.</font><br/>";
-//         }
-        
-//         if(empty($Brand_Desc)) {
-//             echo "<font color='red'>Brand description field is empty.</font><br/>";
-//         }
-        
-//         //link to the previous page
-//         echo "<br/><a href='brands.php'>Go Back</a>";
-//     } else { 
-//         // if all the fields are filled (not empty)             
-//         //insert data to database
-//         $result = mysqli_query($mysqli, "INSERT INTO BRAND(Brand_ID, Brand_Name, Brand_Desc) VALUES('$Brand_ID','$Brand_Name','$Brand_Desc')");
-        
-//         //redirect to brands list
-//          header("Location: brands.php");
-//     }
-// }
-// //update brand information in db
-// if(isset($_POST['update']))
-// {    
-//     $id = $_POST['id'];
-//     $Brand_ID = $_POST['Brand_ID'];
-//     $Brand_Name = $_POST['Brand_Name'];
-//     $Brand_Desc = $_POST['Brand_Desc'];    
-    
-//     // Check for empty fields
-//     if(empty($Brand_ID) || empty($Brand_Name) || empty($Brand_Desc)) {            
-//         if(empty($Brand_Name)) {
-//             echo "<font color='red'>Brand name field is empty.</font><br/>";
-//         }
-        
-//         if(empty($Brand_Desc)) {
-//             echo "<font color='red'>Brand description field is empty.</font><br/>";
-//         }
-            
-//     } else {    
-//         //Update Query
-//         $query = "UPDATE BRAND SET Brand_ID='$Brand_ID' Brand_Name='$Brand_Name', Brand_Desc='$Brand_Desc' WHERE id=$id";
-//         $result = mysqli_query($connection, $query);
-//        // print_r($result);
-        
-        
-//         //redirecting to brands list
-//         header("Location: brands.php");
-//     }
-// }
-// $id = $_GET['id'];
- 
-// //selecting data associated with this particular id
-// $result = mysqli_query($connection, "SELECT * FROM BRAND WHERE id=$id");
-//  print_r($result);
-// while($res = mysqli_fetch_array($result))
-// {
-//     $Brand_Name = $res['Brand_Name'];
-//     $Brand_Desc = $res['Brand_Desc'];
-// }
+    if($result_update) {
+        $brands = mysqli_fetch_all($result_update, MYSQLI_ASSOC);    
+        foreach ($brands as $brand) {            
+            $Brand_ID = $brand['Brand_ID'];
+            $Brand_Name = $brand['Brand_Name'];
+            $Brand_Desc = $brand['Brand_Desc'];
+        }
+    } 
+     // else {
+        // Output an error
+        //echo "<p>GET server request Error</p>";
+    //;}
+}    
 
 ?>
 
 <main class="col-lg-8 m-1 col-md-12">
     <div class="col align-content-center text-center">
         <h1>Brand Information</h1>
-        <p class="font-weight-bold">Please enter Brand Information.</p>
+        <p class="font-weight-bold">To update brand information, complete the fields below and click the 
+        <span class="text-success">Update</span> button.<br>
+        To remove this brand from the table, click the <span class="text-danger">Archive</span> button. 
+        Please be sure you are archiving the correct brand.</p>
     </div>
 
     <form method="POST" action="brand.php">
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="Brand_ID">Brand ID</label>
-                <input type="number" min="0" class="form-control form-control-lg" id="Brand_ID" name="Brand_ID" value="<?php echo $Brand_ID; ?>">
-                <?php if(isset($error_msg[0])) { echo '<p class="text-danger">' . $error_msg[0] . '</p>'; } ?>
-            </div>
+        <input type="hidden" id="Brand_ID" name="Brand_ID" value="<?php echo $Brand_ID; ?>">
+        <input type="hidden" id="Archive" name="Archive" value="<?php echo $Archive; ?>">
+
+        <?php 
+            if(isset($archive_msg)) { 
+                echo '<p class="alert alert-danger text-center" role="alert">' . $archive_msg . '</p>'; 
+            } elseif(isset($update_msg)) {
+                echo '<p class="alert alert-danger text-center" role="alert">' . $update_msg . '</p>'; 
+            }
+        ?>
+        
+        <div class="form-row justify-content-center">
             <div class="form-group col-md-6">
                 <label for="Brand_Name">Brand Name</label>
                 <input type="text" class="form-control form-control-lg" id="Brand_Name" name="Brand_Name" value="<?php echo $Brand_Name; ?>">
@@ -168,14 +113,12 @@ $result = mysqli_query($connection, $query);
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="Brand_Desc">Brand Description</label>
-            <input type="text" class="form-control form-control-lg" id="Brand_Desc" name="Brand_Desc" value="<?php echo $Brand_Desc; ?>">
-            <?php if(isset($error_msg[2])) { echo '<p class="text-danger">' . $error_msg[2] . '</p>'; } ?>
-        </div>
-
-        <div class="text-center">
-            <button class="btn-success" name="submit" value="addBrand" type="submit">Add</button>
+        <div class="form-row justify-content-center">
+            <div class="form-group col-md-6">
+                <label for="Brand_Desc">Brand Description</label>
+                <input type="text" class="form-control form-control-lg" id="Brand_Desc" name="Brand_Desc" value="<?php echo $Brand_Desc; ?>">
+                <?php if(isset($error_msg[2])) { echo '<p class="text-danger">' . $error_msg[2] . '</p>'; } ?>
+            </div>
         </div>
 
         <div class="text-center">
@@ -183,7 +126,12 @@ $result = mysqli_query($connection, $query);
         </div>
         
         <div class="text-center">
-            <button class="danger" name="submit" value="delete" type="submit">Delete</button>
+            <button class="btn-danger" name="submit" value="archive" type="submit">Archive</button>
+        </div>
+
+        <div class="text-center">
+            <a href="/admin/brands.php">
+            <button class="btn-outline-dark" type="button">Return</button></a>
         </div>
     </form>
 

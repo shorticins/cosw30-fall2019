@@ -10,17 +10,18 @@
   display: block;
 }
 
+.table, .text-success, .text-warning, input {
+    font-size: 1.1em !important;
+}
+
 @media only screen and (max-width: 600px) {
   footer {
-    background-color: rgb(230, 215, 173);
-    color:red;
+
   }
 }
 @media only screen and (max-width: 600px) {
   header {
 
-    background-color: rgb(000, 000, 000);
-    color: purple;
       }
   }
 

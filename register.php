@@ -9,11 +9,27 @@ if(isset($_SESSION['Customer_ID'])){
 }
 
 include('includes/header.php');
-include('model/database.php');
+
 
 $first_name = "";
 $last_name = "";
 $email = "";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+$password = "";
+$confirm_password = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $first_name = $_POST["first_name"];
+    $last_name = $_POST["last_name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirm_password = $_POST["confirm_password"];
+<<<<<<< HEAD
+=======
+=======
 $phone = "";
 $address = "";
 $city = "";
@@ -68,6 +84,8 @@ $confirm_password = "";
 
 <?php
 
+>>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
+>>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = $_POST["first_name"];
