@@ -7,9 +7,7 @@
 </style>
 
 <main class="customer-service__main container">
-
     <?php include('../includes/cus_nav_bar.php'); ?>
-    <?php include('../includes/corousel.php'); ?>
 
     <h1>Ordering</h1>
     <div id="container1">

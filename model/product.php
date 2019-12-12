@@ -88,7 +88,30 @@ function getAvgRating($product_id) {
     }
 }
 
+//Gets Product Review Total Count Table
+function getQueryProductReviewCount(){
+    include('database.php');
 
+    $query = "SELECT Product_ID, COUNT(*) AS Count FROM RATING GROUP BY Product_ID";
+    $result = mysqli_query($connection, $query);
+
+    if($result) {
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
+    } else {
+        return "Error: Error connecting to database";
+    }
+}
+
+//Compares a Product ID against Product Review Total Table, gets count or returns 0
+function fetchProductReviewCount($productId, $array){
+    $rows = $array;
+    foreach ($rows as $row){
+        if($row['Product_ID'] == $productId){
+            return $row['Count'];
+        }
+    }
+    return 0;
+}
 
 // Accepts the product_id
 // Returns number of reviews for the product 
@@ -110,8 +133,6 @@ function getProductReviews($product_id) {
         return "Error: getProductReviews()";
     }
 }
-
-
 
 // Accepts the product_id
 // Returns reviews associated to product_id

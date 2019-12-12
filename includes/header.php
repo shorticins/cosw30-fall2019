@@ -55,6 +55,9 @@
                 <li class="site-header__nav-item">
                     <a href="/plp.php?category_id=3" class="btn--sign">rescue road</a>
                 </li>
+                <li class="site-header__nav-item">
+                    <a href="customer_service/contact.php" class="btn--sign">contact us</a>
+                </li>
             </ul>
         </nav>
 
