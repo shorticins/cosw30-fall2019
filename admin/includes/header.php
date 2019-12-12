@@ -11,13 +11,13 @@
     <link href="/admin/css/admin_styles.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="container-fluid">
     <div class="row">
-        <div class="col-2 bg-light sidebar">
+        <div class="col-sm-12 col-md-2 bg-light sidebar">
             <header>
                 <nav>
                     <ul class="nav d-lg-inline">
-                        <li class="nav-item"><a class="nav-link" href="/"><img src="/admin/images/treatstreet_logo.png" alt="Treat Street Logo"></a></li>
+                        <li class="nav-item"><a class="nav-link" href="/"><img src="/admin/images/small_logo.png" alt="Treat Street Logo" class="img-fluid"></a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin">Dashboard</a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin/brands.php">Brands</a></li>
                         <li class="nav-item"><a class="nav-link" href="/admin/categories.php">Categories</a></li>

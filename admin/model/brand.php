@@ -4,7 +4,7 @@
 function getBrands() {
     include('database.php');
 
-    $query = 'SELECT * FROM BRAND';
+    $query = 'SELECT * FROM BRAND WHERE Archive="0"';
     $result = mysqli_query($connection, $query);
 
     if($result) {
@@ -24,7 +24,8 @@ function getBrands() {
             $id = $_POST['id'];
             $Brand_ID = $_POST['Brand_ID'];
             $Brand_Name = $_POST['Brand_Name'];
-            $Brand_Desc = $_POST['Brand_Desc'];    
+            $Brand_Desc = $_POST['Brand_Desc'];   
+            $Archive = $_POST['Archive'];
             
             // Check for empty fields
             if(empty($Brand_ID) || empty($Brand_Name) || empty($Brand_Desc)) {            
