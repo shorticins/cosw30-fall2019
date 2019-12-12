@@ -1,9 +1,7 @@
-<?php include('includes/header.php'); ?>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
+<?php 
+session_start();
+include('includes/header.php'); 
+?>
 
 <main class="container">
     <h1>Shopping Bag</h1>
@@ -231,69 +229,79 @@
 </main>
 
 <?php include('includes/footer.php'); ?>
-<<<<<<< HEAD
-=======
-=======
-<main class="container">
-=======
+
 <main class="container shopping-bag">
->>>>>>> c9bbd1537cfd592842bdc3c57d413e9c91d2e0b2
     <h1>Shopping Bag</h1>
     
-    <div class="row">
-        <div class="two columns">
-             <image>
-                <a href="image pulled from database"></a>
-            </image>
-        </div>
-        
-        <div class="five columns">
-                <p>Label of Product</p>
-                <p>Description</p>
-                <p>Size</p>
-                <svg="truck icon"></svg>
-                <a href="">Remove product</a>
-                <a href="">Save for Later</a>
-        </div>
-        <div class="three columns">
-            <p>Quantity</p>
-            <label class="">
-                <select class=""><?php
-                    for ($i = 0; $i < 36; $i++) {
-                        echo "<option value='$i'>$i</option>";
-                    } ?>
-                </select>
-            </label>
-        </div>
-        
-        <div class="two columns">
-            <p>price</p>
-        </div>
-    </div>
+    <?php
+    if(isset($_SESSION['bag'])) {
+        include('model/product.php');
+        // Output all of the products in the bag
+        // $_SESSION["bag"][] = $_REQUEST["id"];
+        // $_SESSION["bag"][] = $_REQUEST["quantity"];
+
+        foreach($_SESSION['bag'] as $product_id) {
+            $row = getProduct($product_id);
+
+            if(is_array($row)) {
+                $product_image  = $row['Product_Image'];
+                $product_name   = $row['product_name'];
+                $product_desc   = $row['product_desc'];
+                $product_price  = $row['Product_Price'];
+
+                echo "<div class='row'>
+                        <div class='two columns'>
+                            <img src='img/$product_image' width='100'>
+                        </div>
+            
+                        <div class='five columns'>
+                            <p>$product_name</p>
+                            <p>$product_desc</p>
+                            
+                            <img src='img/delivery_truck.png'>
+                            <a href=''>Remove product</a>
+                        </div>
+
+                        <div class='three columns'>
+                            <p>Quantity</p>
+                            <label></label>
+                        </div>
+            
+                        <div class='two columns'>
+                            <p>price</p>
+                            <p>$product_price</p>
+                        </div>
+                    </div>";
+            } else {
+                echo "<p>No products added to bag";
+            }
+        }
+    } else {
+        echo "<p>No products added to bag";
+    }
+    ?>
+    
+    
 
     <div class="row">
         <div class="nine columns">
             <p>Have any question? Please Call </p>
         </div>
         <div class="three columns">
-                    <p>Subtotal</p>
-                    <p><span>Cost</span></p>
-                
-                    <p>Shipping</p>
-                    <p><span>Amount</span></p>
-               
-                    <p>Estimated Tax</p>
-                    <p><span>Amount</span></p>
-                
-                    <p>Estimated Total</p>
-                    <p><span>Amount</span></p>
+                    <p>Subtotal: 
+                    <?php 
+                    $subtotal = 0;
+                    $arrayCount = count($_SESSION["bag"]);
+                    for ($i = 0; $i <= $arrayCount; $i += 2){
+                        $subtotal += ($row["Product_Price"] * $_SESSION["bag"][$i+1]);
+                    }
+                    echo '$' . number_format($subtotal,2,".",",");
+                    ?></p>
             <button>Checkout</button>
         </div>
     </div>
 
-<!-- optional <button>Empty Cart</button>  -->
+
 </main>
 
 <?php include('includes/footer.php'); ?>
->>>>>>> 61483aad389d8ea5003e5ba21061d00e77cf3768
->>>>>>> 1ab77493bea28efc0bb36d06f2fdce55636e534c
